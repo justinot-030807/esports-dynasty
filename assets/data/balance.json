@@ -1,0 +1,168 @@
+{
+  "version": "1.0.0",
+  "canvas": {
+    "width": 360,
+    "height": 640
+  },
+  "grid": {
+    "tile_size": 32
+  },
+  "starting": {
+    "money": 50000,
+    "fame": 0,
+    "fans": 50,
+    "house_tier": 0,
+    "starting_players": 3
+  },
+  "time": {
+    "weeks_per_month": 4,
+    "months_per_year": 12,
+    "weeks_per_year": 48,
+    "total_years": 10,
+    "total_weeks": 480,
+    "speed_1x_seconds": 8.0,
+    "speed_2x_seconds": 4.0,
+    "speed_4x_seconds": 2.0
+  },
+  "salaries_weekly": {
+    "Rookie": 400,
+    "Amateur": 900,
+    "Semi-Pro": 2500,
+    "Pro": 7000,
+    "Star": 20000,
+    "Legend": 60000
+  },
+  "house_tiers": [
+    {
+      "id": "rented_room",
+      "name": "Rented Room",
+      "grid_w": 8,
+      "grid_h": 6,
+      "cost": 0,
+      "fame_req": 0,
+      "rent_monthly": 2000,
+      "staff_slots": 1,
+      "roster_cap": 6
+    },
+    {
+      "id": "apartment",
+      "name": "Apartment",
+      "grid_w": 12,
+      "grid_h": 8,
+      "cost": 80000,
+      "fame_req": 100,
+      "rent_monthly": 8000,
+      "staff_slots": 2,
+      "roster_cap": 8
+    },
+    {
+      "id": "small_house",
+      "name": "Small House",
+      "grid_w": 16,
+      "grid_h": 10,
+      "cost": 400000,
+      "fame_req": 500,
+      "rent_monthly": 30000,
+      "staff_slots": 3,
+      "roster_cap": 10
+    },
+    {
+      "id": "pro_house",
+      "name": "Pro Gaming House",
+      "grid_w": 20,
+      "grid_h": 14,
+      "cost": 3000000,
+      "fame_req": 2500,
+      "rent_monthly": 150000,
+      "staff_slots": 5,
+      "roster_cap": 12
+    },
+    {
+      "id": "esports_hq",
+      "name": "Esports Arena HQ",
+      "grid_w": 24,
+      "grid_h": 16,
+      "cost": 20000000,
+      "fame_req": 9000,
+      "rent_monthly": 800000,
+      "staff_slots": 6,
+      "roster_cap": 15
+    }
+  ],
+  "fatigue_effects": {
+    "train": 12,
+    "scrim": 8,
+    "stream": 5,
+    "rest": -25,
+    "free_time": -10,
+    "tired_threshold": 60,
+    "exhausted_threshold": 85
+  },
+  "ranks": [
+    {
+      "name": "Rookie",
+      "min_ovr": 0,
+      "max_ovr": 34
+    },
+    {
+      "name": "Amateur",
+      "min_ovr": 35,
+      "max_ovr": 49
+    },
+    {
+      "name": "Semi-Pro",
+      "min_ovr": 50,
+      "max_ovr": 64
+    },
+    {
+      "name": "Pro",
+      "min_ovr": 65,
+      "max_ovr": 79
+    },
+    {
+      "name": "Star",
+      "min_ovr": 80,
+      "max_ovr": 91
+    },
+    {
+      "name": "Legend",
+      "min_ovr": 92,
+      "max_ovr": 100
+    }
+  ],
+  "difficulty_multipliers": {
+    "easy": {
+      "income": 1.25,
+      "ai_power": 0.95
+    },
+    "normal": {
+      "income": 1.0,
+      "ai_power": 1.0
+    },
+    "hard": {
+      "income": 0.8,
+      "ai_power": 1.1
+    }
+  },
+  "evaluation_ranks": [
+    { "title": "Garage Owner", "min_score": 0 },
+    { "title": "Local Hero", "min_score": 500 },
+    { "title": "Provincial Pride", "min_score": 1500 },
+    { "title": "National Treasure", "min_score": 3500 },
+    { "title": "Asia's Finest", "min_score": 7500 },
+    { "title": "World Dynasty", "min_score": 15000 }
+  ],
+  "legacy_perks": [
+    { "id": "extra_cash_1", "cost": 2, "cash_bonus": 25000 },
+    { "id": "extra_cash_2", "cost": 4, "cash_bonus": 50000 },
+    { "id": "comfy_bed", "cost": 3 },
+    { "id": "pro_desk", "cost": 4 },
+    { "id": "legend_coach", "cost": 5 },
+    { "id": "dynasty_emblem", "cost": 2, "fame_bonus": 100 }
+  ],
+  "performance": {
+    "default_target_fps": 60,
+    "low_power_fps": 30,
+    "max_pathfinding_per_frame": 4
+  }
+}

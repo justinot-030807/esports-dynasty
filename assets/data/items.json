@@ -1,0 +1,100 @@
+[
+  {
+    "id": "pc_desk",
+    "name": "Gaming PC Desk",
+    "category": "pc",
+    "size_x": 2,
+    "size_y": 1,
+    "price": 6000,
+    "fame_req": 0,
+    "station": "pc",
+    "training_mult": 1.0,
+    "desc": "Standard 1-station gaming desk."
+  },
+  {
+    "id": "bunk_bed",
+    "name": "Bunk Bed",
+    "category": "bed",
+    "size_x": 2,
+    "size_y": 1,
+    "price": 8000,
+    "fame_req": 0,
+    "station": "bed",
+    "fatigue_recovery": 25,
+    "sleep_capacity": 2,
+    "desc": "Sleeps 2 players comfortably."
+  },
+  {
+    "id": "kitchen",
+    "name": "Kitchen",
+    "category": "kitchen",
+    "size_x": 2,
+    "size_y": 2,
+    "price": 10000,
+    "fame_req": 0,
+    "station": "kitchen",
+    "morale_weekly": 4,
+    "desc": "Nutritious meals give +4 morale per week."
+  },
+  {
+    "id": "trophy_shelf",
+    "name": "Trophy Shelf",
+    "category": "decor",
+    "size_x": 2,
+    "size_y": 1,
+    "price": 5000,
+    "fame_req": 0,
+    "station": "shelf",
+    "style": 2,
+    "capacity": 6,
+    "desc": "Displays trophies and adds prestige."
+  },
+  {
+    "id": "pro_desk",
+    "name": "Pro Desk",
+    "category": "pc",
+    "size_x": 2,
+    "size_y": 1,
+    "price": 30000,
+    "fame_req": 150,
+    "station": "pc",
+    "training_mult": 1.25,
+    "desc": "High refresh monitors boost training x1.25."
+  },
+  {
+    "id": "gaming_chair",
+    "name": "Gaming Chair",
+    "category": "chair",
+    "size_x": 1,
+    "size_y": 1,
+    "price": 2500,
+    "fame_req": 0,
+    "station": "none",
+    "fatigue_reduction": 0.1,
+    "desc": "-10% fatigue gain while playing."
+  },
+  {
+    "id": "streaming_booth",
+    "name": "Streaming Booth",
+    "category": "media",
+    "size_x": 2,
+    "size_y": 2,
+    "price": 25000,
+    "fame_req": 100,
+    "station": "stream",
+    "stream_slots": 2,
+    "desc": "Acoustic panels for streaming content."
+  },
+  {
+    "id": "generator",
+    "name": "Generator",
+    "category": "utility",
+    "size_x": 1,
+    "size_y": 1,
+    "price": 40000,
+    "fame_req": 200,
+    "station": "none",
+    "brownout_protection": true,
+    "desc": "Prevents brownouts during storms."
+  }
+]

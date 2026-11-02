@@ -1,0 +1,1318 @@
+{
+  "flagship_rivals": [
+    {
+      "id": "kidlat",
+      "name": "Kidlat Esports",
+      "captain": "Mark 'Thunder' Santos",
+      "catchphrase": "Kidlat sa bilis, walang kawala!",
+      "colors": [
+        "#1B2A49",
+        "#F5B700"
+      ],
+      "tier": 1
+    },
+    {
+      "id": "bakal",
+      "name": "Bakal Wolves",
+      "captain": "Bryan 'Iron' Mendoza",
+      "catchphrase": "Bakal ang puso namin!",
+      "colors": [
+        "#4A5568",
+        "#E5484D"
+      ],
+      "tier": 2
+    },
+    {
+      "id": "dagat",
+      "name": "Dagat Dragons",
+      "captain": "Kyle 'Tide' Cruz",
+      "catchphrase": "Lulubog kayo sa alon!",
+      "colors": [
+        "#1A365D",
+        "#3FA7FF"
+      ],
+      "tier": 2
+    },
+    {
+      "id": "mayon",
+      "name": "Mayon Flames",
+      "captain": "Jerome 'Magma' Reyes",
+      "catchphrase": "Sasabog ang galing!",
+      "colors": [
+        "#9B2C2C",
+        "#F5B700"
+      ],
+      "tier": 3
+    },
+    {
+      "id": "tarsier",
+      "name": "Tarsier Tactics",
+      "captain": "Angelo 'Gimbal' Ramos",
+      "catchphrase": "Maliliit pero matatalas!",
+      "colors": [
+        "#2C7A7B",
+        "#3DBE5A"
+      ],
+      "tier": 3
+    },
+    {
+      "id": "pawikan",
+      "name": "Pawikan Prime",
+      "captain": "Patrick 'Shield' Torres",
+      "catchphrase": "Tibay hanggang dulo!",
+      "colors": [
+        "#22543D",
+        "#9B5DE5"
+      ],
+      "tier": 4
+    },
+    {
+      "id": "agila",
+      "name": "Agila Ascend",
+      "captain": "Christian 'Apex' Ocampo",
+      "catchphrase": "Lilipad sa tugatog!",
+      "colors": [
+        "#744210",
+        "#F5B700"
+      ],
+      "tier": 5
+    },
+    {
+      "id": "banaue",
+      "name": "Banaue Bulls",
+      "captain": "Francis 'Terra' Castro",
+      "catchphrase": "Hagdan-hagdang tagumpay!",
+      "colors": [
+        "#276749",
+        "#DD6B20"
+      ],
+      "tier": 5
+    }
+  ],
+  "ai_teams": [
+    {
+      "id": "team_1",
+      "name": "Internet Cafe Kings",
+      "tier": 1,
+      "region": "Manila",
+      "colors": [
+        "#2D3748",
+        "#ECC94B"
+      ],
+      "rating": 35,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_2",
+      "name": "Barangay Busters",
+      "tier": 1,
+      "region": "Quezon City",
+      "colors": [
+        "#E53E3E",
+        "#FFFFFF"
+      ],
+      "rating": 36,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_3",
+      "name": "Sari-Sari Squad",
+      "tier": 1,
+      "region": "Cavite",
+      "colors": [
+        "#DD6B20",
+        "#3182CE"
+      ],
+      "rating": 37,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_4",
+      "name": "Tambay Titans",
+      "tier": 1,
+      "region": "Cebu",
+      "colors": [
+        "#319795",
+        "#D69E2E"
+      ],
+      "rating": 38,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_5",
+      "name": "Pisonet Prodigies",
+      "tier": 1,
+      "region": "Davao",
+      "colors": [
+        "#805AD5",
+        "#F6E05E"
+      ],
+      "rating": 39,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_6",
+      "name": "Kalye Crusaders",
+      "tier": 1,
+      "region": "Bulacan",
+      "colors": [
+        "#D53F8C",
+        "#4FD1C5"
+      ],
+      "rating": 40,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_7",
+      "name": "Tondo Torpedoes",
+      "tier": 1,
+      "region": "Tondo",
+      "colors": [
+        "#C53030",
+        "#ED8936"
+      ],
+      "rating": 41,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_8",
+      "name": "Quiapo Quickstrike",
+      "tier": 1,
+      "region": "Quiapo",
+      "colors": [
+        "#2B6CB0",
+        "#F6AD55"
+      ],
+      "rating": 35,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_9",
+      "name": "Pasig Panthers",
+      "tier": 1,
+      "region": "Pasig",
+      "colors": [
+        "#2C7A7B",
+        "#CBD5E0"
+      ],
+      "rating": 36,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_10",
+      "name": "Makati Matrix",
+      "tier": 1,
+      "region": "Makati",
+      "colors": [
+        "#4C51BF",
+        "#A0AEC0"
+      ],
+      "rating": 37,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_11",
+      "name": "Cubao Cobras",
+      "tier": 1,
+      "region": "Cubao",
+      "colors": [
+        "#6B46C1",
+        "#FAF089"
+      ],
+      "rating": 38,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_12",
+      "name": "Marikina Marksmen",
+      "tier": 1,
+      "region": "Marikina",
+      "colors": [
+        "#975A16",
+        "#ECC94B"
+      ],
+      "rating": 39,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_13",
+      "name": "Taguig Turbos",
+      "tier": 1,
+      "region": "Taguig",
+      "colors": [
+        "#285E61",
+        "#BEE3F8"
+      ],
+      "rating": 40,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_14",
+      "name": "Caloocan Comets",
+      "tier": 1,
+      "region": "Caloocan",
+      "colors": [
+        "#7B341E",
+        "#FEEBC8"
+      ],
+      "rating": 41,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_15",
+      "name": "Mandaluyong Mystics",
+      "tier": 1,
+      "region": "Mandaluyong",
+      "colors": [
+        "#553C9A",
+        "#E9D8FD"
+      ],
+      "rating": 35,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_16",
+      "name": "Pateros Prowlers",
+      "tier": 1,
+      "region": "Pateros",
+      "colors": [
+        "#702459",
+        "#FED7E2"
+      ],
+      "rating": 36,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_17",
+      "name": "Malabon Manta",
+      "tier": 1,
+      "region": "Malabon",
+      "colors": [
+        "#234E52",
+        "#E6FFFA"
+      ],
+      "rating": 37,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_18",
+      "name": "Navotas Navigators",
+      "tier": 1,
+      "region": "Navotas",
+      "colors": [
+        "#2A4365",
+        "#EBF8FF"
+      ],
+      "rating": 38,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_19",
+      "name": "Valenzuela Vipers",
+      "tier": 1,
+      "region": "Valenzuela",
+      "colors": [
+        "#742A2A",
+        "#FFF5F5"
+      ],
+      "rating": 39,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_20",
+      "name": "Paranaque Patriots",
+      "tier": 1,
+      "region": "Paranaque",
+      "colors": [
+        "#22543D",
+        "#F0FFF4"
+      ],
+      "rating": 40,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_21",
+      "name": "Lipa Lancers",
+      "tier": 2,
+      "region": "Batangas",
+      "colors": [
+        "#C05621",
+        "#FEEBC8"
+      ],
+      "rating": 51,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_22",
+      "name": "Angeles Aces",
+      "tier": 2,
+      "region": "Pampanga",
+      "colors": [
+        "#2C5282",
+        "#E2E8F0"
+      ],
+      "rating": 45,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_23",
+      "name": "Naga Ninjas",
+      "tier": 2,
+      "region": "Camarines Sur",
+      "colors": [
+        "#744210",
+        "#FAF089"
+      ],
+      "rating": 46,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_24",
+      "name": "Iloilo Ironclads",
+      "tier": 2,
+      "region": "Iloilo",
+      "colors": [
+        "#285E61",
+        "#81E6D9"
+      ],
+      "rating": 47,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_25",
+      "name": "Bacolod Blades",
+      "tier": 2,
+      "region": "Negros",
+      "colors": [
+        "#6B46C1",
+        "#D6BCFA"
+      ],
+      "rating": 48,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_26",
+      "name": "Tacloban Typhoons",
+      "tier": 2,
+      "region": "Leyte",
+      "colors": [
+        "#1A365D",
+        "#90CDF4"
+      ],
+      "rating": 49,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_27",
+      "name": "Zamboanga Zephyrs",
+      "tier": 2,
+      "region": "Zamboanga",
+      "colors": [
+        "#702459",
+        "#FBB6CE"
+      ],
+      "rating": 50,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_28",
+      "name": "Cagayan Cyclones",
+      "tier": 2,
+      "region": "Misamis",
+      "colors": [
+        "#1C4532",
+        "#9AE6B4"
+      ],
+      "rating": 51,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_29",
+      "name": "General Santos Giants",
+      "tier": 2,
+      "region": "South Cotabato",
+      "colors": [
+        "#742A2A",
+        "#FEB2B2"
+      ],
+      "rating": 45,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_30",
+      "name": "Baguio Blizzards",
+      "tier": 2,
+      "region": "Benguet",
+      "colors": [
+        "#2B6CB0",
+        "#EBF8FF"
+      ],
+      "rating": 46,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_31",
+      "name": "Batangas Barakos",
+      "tier": 3,
+      "region": "Batangas",
+      "colors": [
+        "#7B341E",
+        "#ED8936"
+      ],
+      "rating": 57,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_32",
+      "name": "Pampanga Parols",
+      "tier": 3,
+      "region": "Pampanga",
+      "colors": [
+        "#975A16",
+        "#F6E05E"
+      ],
+      "rating": 58,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_33",
+      "name": "Laguna Legends",
+      "tier": 3,
+      "region": "Laguna",
+      "colors": [
+        "#2C7A7B",
+        "#BEE3F8"
+      ],
+      "rating": 59,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_34",
+      "name": "Cebu Centurions",
+      "tier": 3,
+      "region": "Cebu",
+      "colors": [
+        "#22543D",
+        "#C6F6D5"
+      ],
+      "rating": 60,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_35",
+      "name": "Davao Destroyers",
+      "tier": 3,
+      "region": "Davao",
+      "colors": [
+        "#4A5568",
+        "#CBD5E0"
+      ],
+      "rating": 61,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_36",
+      "name": "Bicol Berserkers",
+      "tier": 3,
+      "region": "Bicol",
+      "colors": [
+        "#9B2C2C",
+        "#FEB2B2"
+      ],
+      "rating": 55,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_37",
+      "name": "Palawan Pearls",
+      "tier": 3,
+      "region": "Palawan",
+      "colors": [
+        "#234E52",
+        "#E6FFFA"
+      ],
+      "rating": 56,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_38",
+      "name": "Bohol Boars",
+      "tier": 3,
+      "region": "Bohol",
+      "colors": [
+        "#744210",
+        "#FAF089"
+      ],
+      "rating": 57,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_39",
+      "name": "Luzon Leviathans",
+      "tier": 4,
+      "region": "North Luzon",
+      "colors": [
+        "#1A365D",
+        "#63B3ED"
+      ],
+      "rating": 68,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_40",
+      "name": "Visayas Vanguards",
+      "tier": 4,
+      "region": "Central Visayas",
+      "colors": [
+        "#276749",
+        "#9AE6B4"
+      ],
+      "rating": 69,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_41",
+      "name": "Mindanao Monarchs",
+      "tier": 4,
+      "region": "South Mindanao",
+      "colors": [
+        "#7B341E",
+        "#F6AD55"
+      ],
+      "rating": 70,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_42",
+      "name": "NCR Nomads",
+      "tier": 4,
+      "region": "Metro Manila",
+      "colors": [
+        "#553C9A",
+        "#B794F4"
+      ],
+      "rating": 71,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_43",
+      "name": "Sierra Madre Sentinels",
+      "tier": 4,
+      "region": "East Luzon",
+      "colors": [
+        "#22543D",
+        "#68D391"
+      ],
+      "rating": 65,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_44",
+      "name": "Cordillera Crest",
+      "tier": 4,
+      "region": "Highlands",
+      "colors": [
+        "#744210",
+        "#ECC94B"
+      ],
+      "rating": 66,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_45",
+      "name": "Sulu Sea Sharks",
+      "tier": 4,
+      "region": "Island South",
+      "colors": [
+        "#2C5282",
+        "#76E4F7"
+      ],
+      "rating": 67,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_46",
+      "name": "Archipelago Apex",
+      "tier": 4,
+      "region": "Islands",
+      "colors": [
+        "#285E61",
+        "#E6FFFA"
+      ],
+      "rating": 68,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_47",
+      "name": "Manila Megastars",
+      "tier": 5,
+      "region": "NPL",
+      "colors": [
+        "#2B6CB0",
+        "#F6E05E"
+      ],
+      "rating": 79,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_48",
+      "name": "Gilas Gaming",
+      "tier": 5,
+      "region": "NPL",
+      "colors": [
+        "#C53030",
+        "#3182CE"
+      ],
+      "rating": 80,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_49",
+      "name": "Maharlika Movement",
+      "tier": 5,
+      "region": "NPL",
+      "colors": [
+        "#D69E2E",
+        "#1A202C"
+      ],
+      "rating": 81,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_50",
+      "name": "Pearl Phoenix",
+      "tier": 5,
+      "region": "NPL",
+      "colors": [
+        "#E53E3E",
+        "#FFFAF0"
+      ],
+      "rating": 75,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_51",
+      "name": "Katipunan Kings",
+      "tier": 5,
+      "region": "NPL",
+      "colors": [
+        "#805AD5",
+        "#EBF8FF"
+      ],
+      "rating": 76,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_52",
+      "name": "Archon Alliance",
+      "tier": 5,
+      "region": "NPL",
+      "colors": [
+        "#319795",
+        "#2D3748"
+      ],
+      "rating": 77,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_53",
+      "name": "Seoul Slayers",
+      "tier": 6,
+      "region": "South Korea",
+      "colors": [
+        "#2B6CB0",
+        "#E53E3E"
+      ],
+      "rating": 88,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_54",
+      "name": "Tokyo Phantoms",
+      "tier": 6,
+      "region": "Japan",
+      "colors": [
+        "#1A202C",
+        "#E53E3E"
+      ],
+      "rating": 89,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_55",
+      "name": "Taipei Titans",
+      "tier": 6,
+      "region": "Taiwan",
+      "colors": [
+        "#3182CE",
+        "#FFFFFF"
+      ],
+      "rating": 90,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_56",
+      "name": "Bangkok Basilisks",
+      "tier": 6,
+      "region": "Thailand",
+      "colors": [
+        "#D69E2E",
+        "#2C5282"
+      ],
+      "rating": 91,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_57",
+      "name": "Jakarta Juggernauts",
+      "tier": 6,
+      "region": "Indonesia",
+      "colors": [
+        "#C53030",
+        "#FFFFFF"
+      ],
+      "rating": 85,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_58",
+      "name": "Hanoi Hydras",
+      "tier": 6,
+      "region": "Vietnam",
+      "colors": [
+        "#E53E3E",
+        "#ECC94B"
+      ],
+      "rating": 86,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_59",
+      "name": "Kuala Lumpur Krakens",
+      "tier": 6,
+      "region": "Malaysia",
+      "colors": [
+        "#319795",
+        "#F6E05E"
+      ],
+      "rating": 87,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_60",
+      "name": "Singapore Sovereigns",
+      "tier": 6,
+      "region": "Singapore",
+      "colors": [
+        "#C53030",
+        "#FFFFFF"
+      ],
+      "rating": 88,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_61",
+      "name": "Sydney Storm",
+      "tier": 6,
+      "region": "Australia",
+      "colors": [
+        "#2C5282",
+        "#F6AD55"
+      ],
+      "rating": 89,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_62",
+      "name": "Auckland Aurora",
+      "tier": 6,
+      "region": "New Zealand",
+      "colors": [
+        "#1A202C",
+        "#4FD1C5"
+      ],
+      "rating": 90,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_63",
+      "name": "Berlin Blitz",
+      "tier": 7,
+      "region": "Europe",
+      "colors": [
+        "#D69E2E",
+        "#1A202C"
+      ],
+      "rating": 101,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_64",
+      "name": "Paris Paragon",
+      "tier": 7,
+      "region": "Europe",
+      "colors": [
+        "#2B6CB0",
+        "#E53E3E"
+      ],
+      "rating": 95,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_65",
+      "name": "London Legion",
+      "tier": 7,
+      "region": "Europe",
+      "colors": [
+        "#C53030",
+        "#2C5282"
+      ],
+      "rating": 96,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_66",
+      "name": "Nordic Nova",
+      "tier": 7,
+      "region": "Scandinavia",
+      "colors": [
+        "#3182CE",
+        "#E2E8F0"
+      ],
+      "rating": 97,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_67",
+      "name": "NA Dynasty",
+      "tier": 7,
+      "region": "North America",
+      "colors": [
+        "#2B6CB0",
+        "#E53E3E"
+      ],
+      "rating": 98,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_68",
+      "name": "Pacific Power",
+      "tier": 7,
+      "region": "North America",
+      "colors": [
+        "#2C7A7B",
+        "#FAF089"
+      ],
+      "rating": 99,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_69",
+      "name": "Sao Paulo Samurai",
+      "tier": 7,
+      "region": "South America",
+      "colors": [
+        "#22543D",
+        "#ECC94B"
+      ],
+      "rating": 100,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_70",
+      "name": "Buenos Aires Blades",
+      "tier": 7,
+      "region": "South America",
+      "colors": [
+        "#63B3ED",
+        "#FFFFFF"
+      ],
+      "rating": 101,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_71",
+      "name": "Beijing Behemoths",
+      "tier": 7,
+      "region": "China",
+      "colors": [
+        "#C53030",
+        "#ECC94B"
+      ],
+      "rating": 95,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    },
+    {
+      "id": "team_72",
+      "name": "Shanghai Shenlong",
+      "tier": 7,
+      "region": "China",
+      "colors": [
+        "#9B2C2C",
+        "#D69E2E"
+      ],
+      "rating": 96,
+      "styles": {
+        "rush": 0.25,
+        "teamfight": 0.25,
+        "scale": 0.25,
+        "split": 0.25
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+name: esports_dynasty
+description: "Portrait Android management sim built with Flutter + Flame."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flame: ^1.35.1
+  shared_preferences: ^2.5.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/assets_manifest.json
+    - assets/data/
+    - assets/images/branding/
+    - assets/images/characters/gamer_m01/
+    - assets/images/ui/
+    - assets/images/icons/
+    - assets/images/banners/
+    - assets/images/furniture/
+    - assets/images/house/
+    - assets/images/
+
+  fonts:
+    - family: PixelifySans
+      fonts:
+        - asset: assets/fonts/PixelifySans-Regular.ttf

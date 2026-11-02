@@ -1,0 +1,254 @@
+{
+  "branding/app_icon": {
+    "file": "assets/images/branding/app_icon.png",
+    "width": 2048,
+    "height": 2048,
+    "category": "branding",
+    "notes": "App icon"
+  },
+  "branding/logo": {
+    "file": "assets/images/branding/logo.png",
+    "width": 2752,
+    "height": 1536,
+    "category": "branding",
+    "notes": "Title logo"
+  },
+  "branding/splash": {
+    "file": "assets/images/branding/splash.png",
+    "width": 1536,
+    "height": 2752,
+    "category": "branding",
+    "notes": "Splash screen"
+  },
+  "characters/gamer_m01/front_idle": {
+    "file": "assets/images/characters/gamer_m01/gamer_m01_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "Gamer M01 gamer_m01_front_idle.png"
+  },
+  "characters/gamer_m01/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m01/gamer_m01_front_idle_hd.png",
+    "width": 830,
+    "height": 1298,
+    "category": "character",
+    "notes": "HD trimmed"
+  },
+  "characters/gamer_m01/front_step1": {
+    "file": "assets/images/characters/gamer_m01/gamer_m01_front_step1.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "Gamer M01 gamer_m01_front_step1.png"
+  },
+  "characters/gamer_m01/front_step1_hd": {
+    "file": "assets/images/characters/gamer_m01/gamer_m01_front_step1_hd.png",
+    "width": 844,
+    "height": 1319,
+    "category": "character",
+    "notes": "HD trimmed"
+  },
+  "characters/gamer_m01/front_step2": {
+    "file": "assets/images/characters/gamer_m01/gamer_m01_front_step2.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "Gamer M01 gamer_m01_front_step2.png"
+  },
+  "characters/gamer_m01/front_step2_hd": {
+    "file": "assets/images/characters/gamer_m01/gamer_m01_front_step2_hd.png",
+    "width": 848,
+    "height": 1317,
+    "category": "character",
+    "notes": "HD trimmed"
+  },
+  "ui/panel": {
+    "file": "assets/images/ui/panel.png",
+    "width": 2485,
+    "height": 1405,
+    "category": "ui",
+    "notes": "Window panel nine-patch"
+  },
+  "ui/btn_green": {
+    "file": "assets/images/ui/btn_green.png",
+    "width": 831,
+    "height": 600,
+    "category": "ui",
+    "notes": "Button Green OK"
+  },
+  "ui/btn_red": {
+    "file": "assets/images/ui/btn_red.png",
+    "width": 832,
+    "height": 601,
+    "category": "ui",
+    "notes": "Button Red Cancel"
+  },
+  "ui/btn_yellow": {
+    "file": "assets/images/ui/btn_yellow.png",
+    "width": 832,
+    "height": 601,
+    "category": "ui",
+    "notes": "Button Yellow Option"
+  },
+  "icons/icon_money": {
+    "file": "assets/images/icons/icon_money.png",
+    "width": 326,
+    "height": 313,
+    "category": "icons",
+    "notes": "Icon icon_money.png"
+  },
+  "icons/icon_fans": {
+    "file": "assets/images/icons/icon_fans.png",
+    "width": 327,
+    "height": 290,
+    "category": "icons",
+    "notes": "Icon icon_fans.png"
+  },
+  "icons/icon_fame": {
+    "file": "assets/images/icons/icon_fame.png",
+    "width": 337,
+    "height": 313,
+    "category": "icons",
+    "notes": "Icon icon_fame.png"
+  },
+  "icons/icon_trophy": {
+    "file": "assets/images/icons/icon_trophy.png",
+    "width": 337,
+    "height": 335,
+    "category": "icons",
+    "notes": "Icon icon_trophy.png"
+  },
+  "icons/icon_calendar": {
+    "file": "assets/images/icons/icon_calendar.png",
+    "width": 302,
+    "height": 313,
+    "category": "icons",
+    "notes": "Icon icon_calendar.png"
+  },
+  "icons/icon_energy": {
+    "file": "assets/images/icons/icon_energy.png",
+    "width": 281,
+    "height": 335,
+    "category": "icons",
+    "notes": "Icon icon_energy.png"
+  },
+  "icons/icon_mood": {
+    "file": "assets/images/icons/icon_mood.png",
+    "width": 290,
+    "height": 291,
+    "category": "icons",
+    "notes": "Icon icon_mood.png"
+  },
+  "icons/icon_training": {
+    "file": "assets/images/icons/icon_training.png",
+    "width": 427,
+    "height": 223,
+    "category": "icons",
+    "notes": "Icon icon_training.png"
+  },
+  "icons/icon_stream": {
+    "file": "assets/images/icons/icon_stream.png",
+    "width": 392,
+    "height": 335,
+    "category": "icons",
+    "notes": "Icon icon_stream.png"
+  },
+  "banners/banner_t1": {
+    "file": "assets/images/banners/banner_t1.png",
+    "width": 447,
+    "height": 595,
+    "category": "banners",
+    "notes": "T1 Internet Cafe Cup"
+  },
+  "banners/banner_t2": {
+    "file": "assets/images/banners/banner_t2.png",
+    "width": 476,
+    "height": 641,
+    "category": "banners",
+    "notes": "T2 Town League"
+  },
+  "banners/banner_t3": {
+    "file": "assets/images/banners/banner_t3.png",
+    "width": 518,
+    "height": 760,
+    "category": "banners",
+    "notes": "T3 Provincial Championship"
+  },
+  "banners/banner_t5": {
+    "file": "assets/images/banners/banner_t5.png",
+    "width": 524,
+    "height": 1026,
+    "category": "banners",
+    "notes": "T5 National Pro League"
+  },
+  "banners/banner_t7": {
+    "file": "assets/images/banners/banner_t7.png",
+    "width": 560,
+    "height": 1218,
+    "category": "banners",
+    "notes": "T7 World Championship"
+  },
+  "banners/banner_t4": {
+    "file": "assets/images/banners/banner_t4.png",
+    "width": 518,
+    "height": 760,
+    "category": "banners",
+    "notes": "T4 Regional (tinted fallback)"
+  },
+  "banners/banner_t6": {
+    "file": "assets/images/banners/banner_t6.png",
+    "width": 524,
+    "height": 1026,
+    "category": "banners",
+    "notes": "T6 APAC Masters (tinted fallback)"
+  },
+  "furniture/pc_desk": {
+    "file": "assets/images/furniture/pc_desk.png",
+    "width": 1209,
+    "height": 1249,
+    "category": "furniture",
+    "notes": "Gaming PC Desk & Chair"
+  },
+  "furniture/bunk_bed": {
+    "file": "assets/images/furniture/bunk_bed.png",
+    "width": 1071,
+    "height": 1323,
+    "category": "furniture",
+    "notes": "Bunk Bed"
+  },
+  "furniture/kitchen": {
+    "file": "assets/images/furniture/kitchen.png",
+    "width": 1254,
+    "height": 853,
+    "category": "furniture",
+    "notes": "Kitchen"
+  },
+  "furniture/trophy_shelf": {
+    "file": "assets/images/furniture/trophy_shelf.png",
+    "width": 1014,
+    "height": 1252,
+    "category": "furniture",
+    "notes": "Trophy Shelf"
+  },
+  "house/room_background": {
+    "file": "assets/images/house/room_background.png",
+    "width": 1309,
+    "height": 1276,
+    "category": "house",
+    "notes": "Full isometric room background"
+  },
+  "house/wall_section": {
+    "file": "assets/images/house/wall_section.png",
+    "width": 1309,
+    "height": 630,
+    "category": "house",
+    "notes": "Wall section with window & poster"
+  },
+  "house/floor_tile": {
+    "file": "assets/images/house/floor_tile.png",
+    "width": 1309,
+    "height": 646,
+    "category": "house",
+    "notes": "Isometric floor tile base"
+  }
+}

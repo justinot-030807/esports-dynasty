@@ -1,0 +1,80 @@
+[
+  {
+    "id": "coach",
+    "role": "coach",
+    "name": "Head Coach",
+    "desc": "Nagpapataas ng training efficiency (+6% kada level) at nagbubukas ng strategies.",
+    "levels": [
+      { "level": 1, "salary": 2500, "train_bonus": 0.06, "upgrade_cost": 10000 },
+      { "level": 2, "salary": 4500, "train_bonus": 0.12, "upgrade_cost": 25000 },
+      { "level": 3, "salary": 7500, "train_bonus": 0.18, "upgrade_cost": 60000 },
+      { "level": 4, "salary": 12000, "train_bonus": 0.24, "upgrade_cost": 150000 },
+      { "level": 5, "salary": 20000, "train_bonus": 0.30, "upgrade_cost": 0 }
+    ]
+  },
+  {
+    "id": "analyst",
+    "role": "analyst",
+    "name": "Analyst",
+    "desc": "Nagbibigay ng tumpak na scouting data at match prep power bonus (+0.5 kada level).",
+    "levels": [
+      { "level": 1, "salary": 2000, "scout_acc": 0.40, "prep_power": 0.5, "upgrade_cost": 8000 },
+      { "level": 2, "salary": 3800, "scout_acc": 0.55, "prep_power": 1.0, "upgrade_cost": 20000 },
+      { "level": 3, "salary": 6500, "scout_acc": 0.70, "prep_power": 1.5, "upgrade_cost": 50000 },
+      { "level": 4, "salary": 10500, "scout_acc": 0.80, "prep_power": 2.0, "upgrade_cost": 120000 },
+      { "level": 5, "salary": 17000, "scout_acc": 0.90, "prep_power": 2.5, "upgrade_cost": 0 }
+    ]
+  },
+  {
+    "id": "manager",
+    "role": "manager",
+    "name": "General Manager",
+    "desc": "Nagpapataas ng sponsor payouts (+8% kada level) at nagpapababa ng transfer fees (-4% kada level).",
+    "levels": [
+      { "level": 1, "salary": 2200, "sponsor_bonus": 0.08, "fee_discount": 0.04, "upgrade_cost": 9000 },
+      { "level": 2, "salary": 4000, "sponsor_bonus": 0.16, "fee_discount": 0.08, "upgrade_cost": 22000 },
+      { "level": 3, "salary": 7000, "sponsor_bonus": 0.24, "fee_discount": 0.12, "upgrade_cost": 55000 },
+      { "level": 4, "salary": 11000, "sponsor_bonus": 0.32, "fee_discount": 0.16, "upgrade_cost": 130000 },
+      { "level": 5, "salary": 18000, "sponsor_bonus": 0.40, "fee_discount": 0.20, "upgrade_cost": 0 }
+    ]
+  },
+  {
+    "id": "psychologist",
+    "role": "psychologist",
+    "name": "Sports Psychologist",
+    "desc": "Nagpapabilis ng morale recovery (+10% kada level) at pumipigil sa tilt at burnout.",
+    "levels": [
+      { "level": 1, "salary": 2400, "morale_rec": 0.10, "upgrade_cost": 10000 },
+      { "level": 2, "salary": 4200, "morale_rec": 0.20, "upgrade_cost": 24000 },
+      { "level": 3, "salary": 7200, "morale_rec": 0.30, "upgrade_cost": 58000 },
+      { "level": 4, "salary": 11500, "morale_rec": 0.40, "upgrade_cost": 140000 },
+      { "level": 5, "salary": 19000, "morale_rec": 0.50, "upgrade_cost": 0 }
+    ]
+  },
+  {
+    "id": "cook",
+    "role": "cook",
+    "name": "Cook (Kusinero)",
+    "desc": "Nagpapabilis ng fatigue recovery (+8% kada level) at nagbibigay ng masarap na meals para sa morale.",
+    "levels": [
+      { "level": 1, "salary": 1800, "fatigue_rec": 0.08, "morale_boost": 3, "upgrade_cost": 7500 },
+      { "level": 2, "salary": 3200, "fatigue_rec": 0.16, "morale_boost": 5, "upgrade_cost": 18000 },
+      { "level": 3, "salary": 5500, "fatigue_rec": 0.24, "morale_boost": 7, "upgrade_cost": 45000 },
+      { "level": 4, "salary": 9000, "fatigue_rec": 0.32, "morale_boost": 10, "upgrade_cost": 100000 },
+      { "level": 5, "salary": 15000, "fatigue_rec": 0.40, "morale_boost": 14, "upgrade_cost": 0 }
+    ]
+  },
+  {
+    "id": "producer",
+    "role": "streamProducer",
+    "name": "Stream Producer",
+    "desc": "Nagpapataas ng streaming revenue (+10% kada level) at fan acquisition (+5% kada level).",
+    "levels": [
+      { "level": 1, "salary": 1900, "stream_rev": 0.10, "fans_boost": 0.05, "upgrade_cost": 8500 },
+      { "level": 2, "salary": 3500, "stream_rev": 0.20, "fans_boost": 0.10, "upgrade_cost": 20000 },
+      { "level": 3, "salary": 6000, "stream_rev": 0.30, "fans_boost": 0.15, "upgrade_cost": 48000 },
+      { "level": 4, "salary": 9800, "stream_rev": 0.40, "fans_boost": 0.20, "upgrade_cost": 110000 },
+      { "level": 5, "salary": 16000, "stream_rev": 0.50, "fans_boost": 0.25, "upgrade_cost": 0 }
+    ]
+  }
+]

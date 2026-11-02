@@ -1,0 +1,46 @@
+[
+  {
+    "version": "1.1",
+    "name": "Midlane Roaming Meta",
+    "favored_strategy": "Rush",
+    "nerfed_strategy": "Scale",
+    "changes": [
+      "Mid power +3",
+      "Rush strategy +3",
+      "Scale strategy -3"
+    ]
+  },
+  {
+    "version": "1.2",
+    "name": "Tank Durability Update",
+    "favored_strategy": "Scale",
+    "nerfed_strategy": "Rush",
+    "changes": [
+      "Tank durability +4",
+      "Scale strategy +3",
+      "Rush strategy -3"
+    ]
+  },
+  {
+    "version": "1.3",
+    "name": "Speed & Vision Patch",
+    "favored_strategy": "Split",
+    "nerfed_strategy": "Teamfight",
+    "changes": [
+      "Roamer speed +3",
+      "Split strategy +3",
+      "Teamfight strategy -3"
+    ]
+  },
+  {
+    "version": "1.4",
+    "name": "Deathball Teamfight Era",
+    "favored_strategy": "Teamfight",
+    "nerfed_strategy": "Split",
+    "changes": [
+      "Objective control +3",
+      "Teamfight strategy +3",
+      "Split strategy -3"
+    ]
+  }
+]

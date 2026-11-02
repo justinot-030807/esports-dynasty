@@ -1,0 +1,452 @@
+[
+  {
+    "id": "first_win",
+    "title": "Unang Panalo!",
+    "category": "competition",
+    "desc": "Manalo sa iyong pinakaunang opisyal na tournament series.",
+    "reward_money": 3000,
+    "reward_fame": 15,
+    "reward_fans": 100
+  },
+  {
+    "id": "t1_champion",
+    "title": "Barangay Kingpin",
+    "category": "competition",
+    "desc": "Maging kampeon sa alinmang Tier 1 Community Tournament.",
+    "reward_money": 10000,
+    "reward_fame": 50,
+    "reward_fans": 300
+  },
+  {
+    "id": "t2_champion",
+    "title": "Town Conqueror",
+    "category": "competition",
+    "desc": "Makamit ang tropeo sa alinmang Tier 2 Town League o Cup.",
+    "reward_money": 30000,
+    "reward_fame": 150,
+    "reward_fans": 1000
+  },
+  {
+    "id": "t3_champion",
+    "title": "Provincial Pride",
+    "category": "competition",
+    "desc": "Maging kampeon sa Tier 3 Provincial Championship.",
+    "reward_money": 80000,
+    "reward_fame": 400,
+    "reward_fans": 3000
+  },
+  {
+    "id": "t4_champion",
+    "title": "Regional Giant",
+    "category": "competition",
+    "desc": "Magwagi sa Tier 4 Regional Finals o Showdown.",
+    "reward_money": 200000,
+    "reward_fame": 900,
+    "reward_fans": 8000
+  },
+  {
+    "id": "t5_champion",
+    "title": "National Hero",
+    "category": "competition",
+    "desc": "Maging kampeon sa Tier 5 National Pro League.",
+    "reward_money": 500000,
+    "reward_fame": 2200,
+    "reward_fans": 25000
+  },
+  {
+    "id": "t6_champion",
+    "title": "APAC Master",
+    "category": "competition",
+    "desc": "Makamit ang kampeonato sa Tier 6 Asia Pacific Masters.",
+    "reward_money": 1500000,
+    "reward_fame": 5000,
+    "reward_fans": 80000
+  },
+  {
+    "id": "t7_champion",
+    "title": "World Dynasty",
+    "category": "competition",
+    "desc": "Itanghal na World Champion sa Tier 7 World Championship!",
+    "reward_money": 5000000,
+    "reward_fame": 12000,
+    "reward_fans": 250000
+  },
+  {
+    "id": "flawless_sweep",
+    "title": "Walang Kawala (Sweep!)",
+    "category": "competition",
+    "desc": "Manalo sa isang Bo3 o Bo5 series nang walang talo (2-0 o 3-0).",
+    "reward_money": 8000,
+    "reward_fame": 30,
+    "reward_fans": 250
+  },
+  {
+    "id": "rival_slayer",
+    "title": "Kidlat Killer",
+    "category": "competition",
+    "desc": "Talunin ang alinman sa 8 Flagship Rival Teams sa opisyal na laban.",
+    "reward_money": 12000,
+    "reward_fame": 60,
+    "reward_fans": 500
+  },
+  {
+    "id": "house_apartment",
+    "title": "Umakyat sa Apartment",
+    "category": "base",
+    "desc": "Lumipat mula sa Rented Room patungo sa Apartment.",
+    "reward_money": 15000,
+    "reward_fame": 40,
+    "reward_fans": 200
+  },
+  {
+    "id": "house_small_house",
+    "title": "Sariling Bahay",
+    "category": "base",
+    "desc": "Mag-upgrade patungong Small House gaming facility.",
+    "reward_money": 40000,
+    "reward_fame": 100,
+    "reward_fans": 600
+  },
+  {
+    "id": "house_pro_mansion",
+    "title": "Pro Gaming Mansion",
+    "category": "base",
+    "desc": "Magbukas ng Pro Gaming House para sa buong roster at academy.",
+    "reward_money": 150000,
+    "reward_fame": 350,
+    "reward_fans": 2000
+  },
+  {
+    "id": "house_esports_hq",
+    "title": "Esports Arena HQ",
+    "category": "base",
+    "desc": "Ipatayo ang pinakatuktok na Esports Arena HQ facility!",
+    "reward_money": 1000000,
+    "reward_fame": 1500,
+    "reward_fans": 10000
+  },
+  {
+    "id": "combo_scrim_room",
+    "title": "Scrim Room Masters",
+    "category": "base",
+    "desc": "Maglagay ng 5 o higit pang PC Desks upang i-activate ang Scrim Room combo.",
+    "reward_money": 10000,
+    "reward_fame": 25,
+    "reward_fans": 150
+  },
+  {
+    "id": "combo_kainan",
+    "title": "Salo-Salo sa Kainan",
+    "category": "base",
+    "desc": "I-activate ang Kainan combo sa pamamagitan ng Dining Table katabi ng Kusina.",
+    "reward_money": 5000,
+    "reward_fame": 20,
+    "reward_fans": 100
+  },
+  {
+    "id": "comfort_5_stars",
+    "title": "5-Star Hotel Vibe",
+    "category": "base",
+    "desc": "Abutin ang 5 Stars House Comfort rating.",
+    "reward_money": 25000,
+    "reward_fame": 80,
+    "reward_fans": 500
+  },
+  {
+    "id": "generator_installed",
+    "title": "Ligtas sa Brownout",
+    "category": "base",
+    "desc": "Maglagay ng Generator upang mapigilan ang brownout interruptions.",
+    "reward_money": 8000,
+    "reward_fame": 30,
+    "reward_fans": 100
+  },
+  {
+    "id": "scout_prodigy",
+    "title": "Natagpuang Prodigy",
+    "category": "roster",
+    "desc": "Mag-scout o mag-recruit ng player na may 5 Stars Potential.",
+    "reward_money": 15000,
+    "reward_fame": 50,
+    "reward_fans": 300
+  },
+  {
+    "id": "roster_full_five",
+    "title": "Kumpletong Barkada",
+    "category": "roster",
+    "desc": "Magkaroon ng 5 aktibong starters sa team.",
+    "reward_money": 5000,
+    "reward_fame": 15,
+    "reward_fans": 100
+  },
+  {
+    "id": "legend_developed",
+    "title": "Panganay na Alamat",
+    "category": "roster",
+    "desc": "Paangatin ang OVR ng kahit isang manlalaro hanggang 92+ (Legend Rank).",
+    "reward_money": 100000,
+    "reward_fame": 300,
+    "reward_fans": 2500
+  },
+  {
+    "id": "academy_graduate",
+    "title": "Galing sa Bangko",
+    "category": "roster",
+    "desc": "Isabak ang isang Academy / Bench player bilang starter sa isang tournament.",
+    "reward_money": 10000,
+    "reward_fame": 25,
+    "reward_fans": 200
+  },
+  {
+    "id": "chemistry_max",
+    "title": "Konektado ang Utak",
+    "category": "roster",
+    "desc": "Abutin ang 100 Team Chemistry sa iyong starters.",
+    "reward_money": 30000,
+    "reward_fame": 80,
+    "reward_fans": 600
+  },
+  {
+    "id": "fans_500",
+    "title": "500 Loyal Supporters",
+    "category": "fans",
+    "desc": "Makaipon ng 500 fans sa iyong fanbase.",
+    "reward_money": 8000,
+    "reward_fame": 20,
+    "reward_fans": 100
+  },
+  {
+    "id": "fans_2500",
+    "title": "Barangay Pride",
+    "category": "fans",
+    "desc": "Makaipon ng 2,500 fans sa iyong fanbase.",
+    "reward_money": 25000,
+    "reward_fame": 60,
+    "reward_fans": 300
+  },
+  {
+    "id": "fans_10000",
+    "title": "Trending sa Pilipinas",
+    "category": "fans",
+    "desc": "Makaipon ng 10,000 active fans.",
+    "reward_money": 80000,
+    "reward_fame": 150,
+    "reward_fans": 1000
+  },
+  {
+    "id": "fans_100000",
+    "title": "National Army of Fans",
+    "category": "fans",
+    "desc": "Makaipon ng 100,000 die-hard fans sa buong bansa!",
+    "reward_money": 500000,
+    "reward_fame": 1000,
+    "reward_fans": 10000
+  },
+  {
+    "id": "money_100k",
+    "title": "Unang 6 Digits",
+    "category": "economy",
+    "desc": "Makaipon ng P100,000 na pondo sa kaban ng team.",
+    "reward_money": 10000,
+    "reward_fame": 25,
+    "reward_fans": 150
+  },
+  {
+    "id": "money_1m",
+    "title": "Milyonaryong Manager",
+    "category": "economy",
+    "desc": "Makaipon ng P1,000,000 na pondo sa kaban ng team.",
+    "reward_money": 80000,
+    "reward_fame": 200,
+    "reward_fans": 1500
+  },
+  {
+    "id": "money_10m",
+    "title": "Esports Tycoon",
+    "category": "economy",
+    "desc": "Makaipon ng P10,000,000 na pondo sa kaban ng team.",
+    "reward_money": 500000,
+    "reward_fame": 1200,
+    "reward_fans": 8000
+  },
+  {
+    "id": "sponsor_signed",
+    "title": "May Sponsor Na Kami!",
+    "category": "economy",
+    "desc": "Pumirma sa iyong unang corporate sponsorship contract.",
+    "reward_money": 5000,
+    "reward_fame": 20,
+    "reward_fans": 100
+  },
+  {
+    "id": "sponsor_goal_met",
+    "title": "Tupad ang Pangako",
+    "category": "economy",
+    "desc": "Makumpleto ang target goal ng isang active sponsor at makuha ang bonus.",
+    "reward_money": 15000,
+    "reward_fame": 40,
+    "reward_fans": 250
+  },
+  {
+    "id": "staff_level_5",
+    "title": "World-Class Mentor",
+    "category": "base",
+    "desc": "Ipa-level up ang kahit sinong staff member patungong Level 5.",
+    "reward_money": 50000,
+    "reward_fame": 100,
+    "reward_fans": 500
+  },
+  {
+    "id": "season_awards_mvp",
+    "title": "Season MVP Trophy",
+    "category": "competition",
+    "desc": "Magwagi ang isa sa iyong mga manlalaro bilang Season MVP sa Awards Night.",
+    "reward_money": 100000,
+    "reward_fame": 300,
+    "reward_fans": 2000
+  },
+  {
+    "id": "season_awards_toty",
+    "title": "Team of the Year",
+    "category": "competition",
+    "desc": "Makamit ang Team of the Year award sa Season Awards Night.",
+    "reward_money": 200000,
+    "reward_fame": 500,
+    "reward_fans": 5000
+  },
+  {
+    "id": "hall_of_fame_entry",
+    "title": "Imortal sa Kasaysayan",
+    "category": "dynasty",
+    "desc": "Magkaroon ng permanenteng tala sa Hall of Fame.",
+    "reward_money": 80000,
+    "reward_fame": 250,
+    "reward_fans": 1500
+  },
+  {
+    "id": "transfer_poach",
+    "title": "Big Time Signing",
+    "category": "roster",
+    "desc": "Bumili ng star player mula sa kalabang AI team sa Transfer Window.",
+    "reward_money": 25000,
+    "reward_fame": 80,
+    "reward_fans": 800
+  },
+  {
+    "id": "retirement_ceremony",
+    "title": "Isabit ang Jersey",
+    "category": "roster",
+    "desc": "Magdaos ng marangal na retirement ceremony para sa isang beteranong player.",
+    "reward_money": 30000,
+    "reward_fame": 120,
+    "reward_fans": 1000
+  },
+  {
+    "id": "decade_dynasty",
+    "title": "10-Year Esports Dynasty",
+    "category": "dynasty",
+    "desc": "Makumpleto ang buong 10 Taon ng career simulation nang hindi nababangkarote!",
+    "reward_money": 2000000,
+    "reward_fame": 5000,
+    "reward_fans": 50000
+  },
+  {
+    "id": "coach_transition",
+    "title": "Bagong Tagapagturo",
+    "category": "roster",
+    "desc": "I-convert ang isang retiradong beterano bilang opisyal na miyembro ng Coaching Staff.",
+    "reward_money": 20000,
+    "reward_fame": 100,
+    "reward_fans": 800
+  },
+  {
+    "id": "bailout_survivor",
+    "title": "Bumangon sa Bangkarote",
+    "category": "business",
+    "desc": "Muling makabangon sa positibong pondo matapos makaranas ng bankruptcy warning.",
+    "reward_money": 25000,
+    "reward_fame": 150,
+    "reward_fans": 1200
+  },
+  {
+    "id": "multi_division_champ",
+    "title": "Tri-Crown Dynasty",
+    "category": "competition",
+    "desc": "Magwagi ng kampeonato sa higit sa isang laro o dibisyon (AC, SZ, o LI).",
+    "reward_money": 150000,
+    "reward_fame": 600,
+    "reward_fans": 5000
+  },
+  {
+    "id": "streak_5",
+    "title": "On Fire!",
+    "category": "competition",
+    "desc": "Magtala ng 5 sunod-sunod na panalo sa mga opisyal na tournament matches.",
+    "reward_money": 20000,
+    "reward_fame": 75,
+    "reward_fans": 600
+  },
+  {
+    "id": "streak_10",
+    "title": "Unstoppable Juggernaut",
+    "category": "competition",
+    "desc": "Magtala ng 10 sunod-sunod na panalo nang walang patid sa kompetisyon.",
+    "reward_money": 60000,
+    "reward_fame": 250,
+    "reward_fans": 2000
+  },
+  {
+    "id": "millionaire_club",
+    "title": "Milyonaryong Organisasyon",
+    "category": "business",
+    "desc": "Makaipon ng higit sa P5,000,000 sa bank account ng esports club.",
+    "reward_money": 100000,
+    "reward_fame": 300,
+    "reward_fans": 3000
+  },
+  {
+    "id": "fanatic_army",
+    "title": "Dambuhalang Fanbase",
+    "category": "business",
+    "desc": "Magkaroon ng higit sa 50,000 tagahanga sa buong kapuluan.",
+    "reward_money": 80000,
+    "reward_fame": 400,
+    "reward_fans": 5000
+  },
+  {
+    "id": "super_house",
+    "title": "Esports Palace",
+    "category": "facility",
+    "desc": "Ma-upgrade ang gaming house sa Tier 5 Grand Estate.",
+    "reward_money": 150000,
+    "reward_fame": 500,
+    "reward_fans": 4000
+  },
+  {
+    "id": "scrim_master",
+    "title": "Grind Never Stops",
+    "category": "facility",
+    "desc": "Mabuo at maipagpatuloy ang Scrim Room combo sa loob ng higit 20 linggo.",
+    "reward_money": 25000,
+    "reward_fame": 100,
+    "reward_fans": 1000
+  },
+  {
+    "id": "perfect_chemistry",
+    "title": "Parang Magkakapatid",
+    "category": "roster",
+    "desc": "Makamit ang 90+ team chemistry rating sa mga aktibong starters.",
+    "reward_money": 35000,
+    "reward_fame": 150,
+    "reward_fans": 1500
+  },
+  {
+    "id": "combo_chill_lounge",
+    "title": "Tambayan ng Barkada",
+    "category": "facility",
+    "desc": "Mabuo ang Chill Lounge combo sa pamamagitan ng sofa at relaxation furniture.",
+    "reward_money": 15000,
+    "reward_fame": 60,
+    "reward_fans": 500
+  }
+]

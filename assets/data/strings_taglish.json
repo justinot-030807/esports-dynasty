@@ -1,0 +1,34 @@
+{
+  "news_ticker": [
+    "Bagong tournament season binuksan na sa Maynila!",
+    "Lakas Telecom nag-alok ng bagong sponsorship packages para sa grassroots teams.",
+    "Grabe ang laban kagabi sa Internet Cafe Cup, dikit hanggang Game 3!",
+    "Kuya Kuryente nagbabala ng posibleng brownout dahil sa paparating na bagyo.",
+    "Viral ngayon ang 1v5 clutch ng isang bagitong carry sa ranked match!",
+    "Sari-sari store sa kanto nagpalagay ng esports banner para suportahan ang lokal na koponan.",
+    "Team captain nahuling kumakain ng silog habang nag-scrim! Full morale boost!",
+    "Pampanga naghahanap ng bagong esports talents para sa darating na Provincial Championship."
+  ],
+  "mika_dialogues": {
+    "welcome": "Mabuhay Boss! Ako si Manang Mika, ang assistant manager mo. Handa na ba ang gaming house natin?",
+    "month_report": "Eto na ang buwanang ulat Boss! Maganda ang takbo ng ating pondo at fans.",
+    "match_day": "Boss, laban na natin ngayon! Ihanda ang lineup at pumili ng magandang estratehiya."
+  },
+  "match_commentary": [
+    "Grabe ang clutch ni {player}!",
+    "Wiped out ang squad!",
+    "Unbelievable rotation mula sa {team}!",
+    "Nakuha ang Lord objective ng napakalinis!",
+    "Double kill para kay {player}!",
+    "Triple kill! Nagwawala si {player} sa clash!",
+    "Mabilis ang rush tactics ng {team} sa opening minutes!",
+    "Scale meta gumagana sa late game, lumalakas na sila!",
+    "Split push pumupunit sa outer turret!",
+    "Dikit ang laban! Sinong unang bibigay?!",
+    "Base defense hold mula kay {player}! Buhay pa ang pag-asa!",
+    "Pumasok ang perpektong flanking maneuver mula sa likod!",
+    "Critical hit sa carry! Napurnada ang push ng kalaban!",
+    "Ninakaw ang neutral objective! Anong klaseng smite 'yun?!",
+    "GG call na! Dinudurog na ang main base crystal!"
+  ]
+}

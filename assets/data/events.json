@@ -1,0 +1,806 @@
+[
+  {
+    "id": "EVT_BROWNOUT",
+    "title": "Brownout sa Barangay!",
+    "category": "house",
+    "text": "Biglang namatay ang kuryente sa buong subdivision habang nagpa-practice!",
+    "choices": [
+      {
+        "text": "Paganahin ang generator",
+        "condition": "has_generator",
+        "outcome": { "morale": 2, "text": "Ligtas! Tuloy ang ensayo dahil may Generator." }
+      },
+      {
+        "text": "Magpahinga at magkuwentuhan",
+        "outcome": { "morale": 6, "fatigue": -12, "chemistry": 2, "text": "Masayang bonding sa dilim gamit ang kandila." }
+      },
+      {
+        "text": "Pumunta sa internet cafe",
+        "cost": 1500,
+        "outcome": { "fatigue": 6, "text": "Nakatapos ng scrim pero pagod ang team sa init." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_VIRAL_CLIP",
+    "title": "Nag-Viral ang Clutch Play!",
+    "category": "community",
+    "text": "May nag-upload sa TikTok ng 1v3 outplay ng player mo kagabi. Umani ng 500k views!",
+    "choices": [
+      {
+        "text": "I-share sa official team page",
+        "outcome": { "fans": 150, "fame": 15, "text": "+150 Fans at trending ang team!" }
+      },
+      {
+        "text": "Hayaan lang, humble muna",
+        "outcome": { "morale": 4, "text": "Focus pa rin sa laro at disiplina." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_SARI_SARI_SPONSOR",
+    "title": "Aling Nena's Sari-Sari Sponsorship",
+    "category": "business",
+    "text": "Nag-alok si Aling Nena ng libreng meryenda at P2,500 basta may logo siya sa jersey!",
+    "choices": [
+      {
+        "text": "Pumayag at isuot ang logo",
+        "outcome": { "money": 2500, "morale": 4, "text": "May libreng bananacue at malamig na sago't gulaman!" }
+      },
+      {
+        "text": "Magalang na tanggihan",
+        "outcome": { "text": "Naghintay muna ng mas malalaking electronics sponsor." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_TOXIC_CHAT",
+    "title": "Toxic Chat Controversy",
+    "category": "community",
+    "text": "Nahuling nag-trash talk sa ranked game ang isang starter mo laban sa sikat na streamer!",
+    "choices": [
+      {
+        "text": "Mag-issue ng Public Apology",
+        "outcome": { "fans": -20, "morale": -5, "fame": 5, "text": "Naging professional ang tingin ng publiko." }
+      },
+      {
+        "text": "Patawan ng Team Fine ang player",
+        "outcome": { "money": 3000, "morale": -12, "chemistry": -2, "text": "Nadisiplina pero sumama ang loob ng player." }
+      },
+      {
+        "text": "Ipagtanggol ang player (Clap back!)",
+        "outcome": { "fans": 80, "fame": -15, "morale": 8, "text": "Naghiyawan ang loyal fans pero nainis ang league officials." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_MATCH_FIXING_BRIBE",
+    "title": "Kakaibang Alok sa Chat",
+    "category": "business",
+    "text": "May misteryosong syndicate financier na nag-message: 'Magtalo kayo sa Game 1 sa darating na laban, may P50,000 kayo agad.'",
+    "choices": [
+      {
+        "text": "Tanggihan at I-report sa Liga!",
+        "outcome": { "fame": 30, "morale": 10, "chemistry": 5, "text": "Hinangaan ang integridad ng iyong koponan!" }
+      },
+      {
+        "text": "Tanggapin ang bayad (Delikado!)",
+        "outcome": { "money": 50000, "morale": -25, "flag": "bribe_taken", "text": "Malaking pera ngunit balisa at guilty ang mga bata." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_BRIBE_FALLOUT",
+    "title": "Integrity Investigation!",
+    "category": "competition",
+    "condition": "flag:bribe_taken",
+    "text": "Dumating ang Esports Integrity Commission upang mag-imbestiga sa kahina-hinalang match betting!",
+    "choices": [
+      {
+        "text": "Magbayad ng piyansa at multa",
+        "cost": 60000,
+        "outcome": { "fame": -80, "fans": -200, "text": "Naiwasan ang lifetime ban ngunit sira ang reputasyon." }
+      },
+      {
+        "text": "Isisi sa isang bench player",
+        "outcome": { "morale": -40, "chemistry": -25, "fame": -40, "text": "Naligtas ang lisensya pero nawasak ang tiwala ng team." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_FIBER_CUT",
+    "title": "Naputol ang Fiber Cable!",
+    "category": "house",
+    "text": "Dinaanan ng dump truck ang poste sa kanto! Putol ang internet sa buong street.",
+    "choices": [
+      {
+        "text": "Lumipat sa 5G Backup Router",
+        "condition": "has_router",
+        "outcome": { "morale": 2, "text": "Mabilis na lumipat sa backup fiber router!" }
+      },
+      {
+        "text": "Bumili ng Mobile Hotspot load",
+        "cost": 2000,
+        "outcome": { "fatigue": 4, "text": "Mataas ang ping pero nakatapos ng laban." }
+      },
+      {
+        "text": "Mag-VOD Review offline",
+        "outcome": { "morale": 3, "fatigue": -8, "chemistry": 3, "text": "Natuto ng bagong draft analysis sa whiteboard." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_BAON_NANAY",
+    "title": "Dumating ang Nanay ni Kidlat!",
+    "category": "player_life",
+    "text": "May dalang kaldero ng kare-kare at leche flan ang nanay ng iyong starter!",
+    "choices": [
+      {
+        "text": "Pagsaluhan ng buong team",
+        "outcome": { "morale": 12, "fatigue": -15, "chemistry": 4, "text": "Busog ang lahat! Ramdam ang pamilya sa gaming house." }
+      },
+      {
+        "text": "I-vlog ang family visit",
+        "outcome": { "fans": 90, "morale": 8, "text": "Naging wholesome content sa Facebook page!" }
+      }
+    ]
+  },
+  {
+    "id": "EVT_BURNOUT_WARNING",
+    "title": "Sintomas ng Burnout",
+    "category": "player_life",
+    "text": "Napansin mong namumula ang mata at laging tulala ang iyong midlaner dahil sa magdamagang solo queue.",
+    "choices": [
+      {
+        "text": "Sapilitang 3 araw na leave",
+        "outcome": { "morale": 15, "fatigue": -25, "text": "Bumalik ang sigla at talas ng isip ng player." }
+      },
+      {
+        "text": "Pakonsulta sa Psychologist",
+        "condition": "has_psychologist",
+        "outcome": { "morale": 10, "fatigue": -15, "text": "Nakatulong ang mental coaching ng Psychologist!" }
+      },
+      {
+        "text": "Painumin ng kape, laban lang!",
+        "outcome": { "morale": -15, "fatigue": 20, "text": "Lalong bumagsak ang konsentrasyon sa practice." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_HOMESICK",
+    "title": "Nalulungkot sa Bahay",
+    "category": "player_life",
+    "text": "Umiiyak sa tawag ang pinakabatang rookie mo; miss na niya ang probinsya at pamilya.",
+    "choices": [
+      {
+        "text": "Pauwiin sa weekend at sagutin ang pamasahe",
+        "cost": 3500,
+        "outcome": { "morale": 20, "chemistry": 2, "text": "Bumalik na ganado at may dalang pasalubong!" }
+      },
+      {
+        "text": "Mag-videoke night ang buong team",
+        "cost": 1000,
+        "outcome": { "morale": 10, "chemistry": 5, "fatigue": -5, "text": "Nawala ang lungkot dahil sa tugtugan at tawanan." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_TYPHOON_LEAK",
+    "title": "Tumutulo ang Bubong sa Bagyo!",
+    "category": "house",
+    "text": "Hagupit ng habagat! May tulo sa kisame diretso sa tapat ng mga gaming PC!",
+    "choices": [
+      {
+        "text": "Ilipat agad ang mga PC at maglagay ng timba",
+        "outcome": { "fatigue": 8, "morale": -3, "text": "Nailigtas ang gamit sa baha." }
+      },
+      {
+        "text": "Magpatawag ng emergency tubero at karpintero",
+        "cost": 4500,
+        "outcome": { "morale": 4, "text": "Naayos agad ang bubong bago pa lumala." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_PC_CAPACITOR",
+    "title": "Pumutok ang Power Supply!",
+    "category": "house",
+    "text": "May umamoy na sunog at sumabog ang capacitor sa isang training PC desk!",
+    "choices": [
+      {
+        "text": "Bumili agad ng branded Gold PSU",
+        "cost": 6500,
+        "outcome": { "morale": 5, "text": "Ligtas at mas maayos pa ang kuryente ng desk." }
+      },
+      {
+        "text": "Pahiramin muna ng spare laptop",
+        "outcome": { "morale": -6, "text": "Mababa ang FPS kaya naiirita ang player." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_RIVAL_TRASH_TALK",
+    "title": "Parinig ng Kidlat Esports",
+    "category": "competition",
+    "text": "Nag-post ang captain ng Kidlat Esports sa Twitter: 'Swak lang sa amateur league ang Agila, madaling tiklupin.'",
+    "choices": [
+      {
+        "text": "Pumatol: 'Tingnan natin sa entablado!'",
+        "outcome": { "fans": 120, "morale": 8, "text": "Nag-init ang rival hype sa fans!" }
+      },
+      {
+        "text": "Seen lang. Patunayan sa laro.",
+        "outcome": { "fame": 10, "chemistry": 3, "text": "Naging kalmado at focused ang koponan." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_RIVAL_POACHING",
+    "title": "Panunukso ng Bakal Wolves",
+    "category": "business",
+    "text": "Nalaman mong lihim na kinakausap ng Bakal Wolves ang star player mo at inaalok ng dobleng sahod!",
+    "choices": [
+      {
+        "text": "Taasan ang contract offer ngayon din",
+        "cost": 8000,
+        "outcome": { "morale": 12, "text": "Pumirma ng contract extension ang player!" }
+      },
+      {
+        "text": "Ipaalala ang pangarap at kapatiran ng team",
+        "outcome": { "chemistry": 6, "morale": 5, "text": "Pumili ang player na manatili dahil sa samahan." }
+      },
+      {
+        "text": "Isumbong ang illegal tampering sa League Office",
+        "outcome": { "fame": 15, "text": "Pinagmulta ang Bakal Wolves ng liga." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_LEAKED_PATCH",
+    "title": "Naka-leak na Patch Notes!",
+    "category": "competition",
+    "text": "May nag-post sa Reddit ng leaked advance patch notes para sa susunod na season meta!",
+    "choices": [
+      {
+        "text": "Ipa-aral agad sa Analyst para mauna sa meta",
+        "outcome": { "fame": 10, "morale": 6, "text": "Handa na ang bagong strategy bago pa lumabas ang patch!" }
+      },
+      {
+        "text": "Mag-scrim gamit ang kasalukuyang patch pa rin",
+        "outcome": { "text": "Nanatiling steady sa kasalukuyang meta." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_COACH_CAPTAIN_CLASH",
+    "title": "Alitan sa Draft Room",
+    "category": "team",
+    "text": "Nagtalo ang Head Coach at ang Captain kung sino ang uunahing i-pick sa decider game!",
+    "choices": [
+      {
+        "text": "Kumampi sa Coach (Disiplina at Data)",
+        "outcome": { "morale": -4, "fame": 5, "text": "Sinunod ang libro; tumaas ang respeto sa coach." }
+      },
+      {
+        "text": "Kumampi sa Captain (Player Instinct)",
+        "outcome": { "morale": 8, "chemistry": -2, "text": "Nabuhayan ng loob ang captain sa kanyang comfort pick." }
+      },
+      {
+        "text": "Magkompromiso sa gitna",
+        "outcome": { "chemistry": 5, "morale": 5, "text": "Nahanap ang balance sa tulong ng buong roster." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_FAN_MEETUP",
+    "title": "Grand Fans Day sa Mall",
+    "category": "community",
+    "text": "Nag-imbita ang local mall para sa isang meet-and-greet at photo op ng iyong koponan!",
+    "choices": [
+      {
+        "text": "Pumunta at mamigay ng team stickers at posters",
+        "cost": 3000,
+        "outcome": { "fans": 250, "fame": 20, "morale": 8, "text": "Dinumog ng kabataan ang event! Dumami ang supporters." }
+      },
+      {
+        "text": "Magpadala lamang ng recorded video greeting",
+        "outcome": { "fans": 40, "text": "Nakatipid sa pagod pero bitin ang mga tagahanga." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_CHARITY_STREAM",
+    "title": "Charity Stream para sa Biktima ng Baha",
+    "category": "community",
+    "text": "Nais ng mga manlalaro na mag-24 hour charity stream upang makalikom ng tulong para sa nasalanta.",
+    "choices": [
+      {
+        "text": "Suportahan at mag-donate ng P10,000 mula sa kaban",
+        "cost": 10000,
+        "outcome": { "fame": 45, "fans": 350, "morale": 10, "fatigue": 10, "text": "Pinuri sa social media ang kabayanihan ng team!" }
+      },
+      {
+        "text": "Stream lang nang walang donation galing sa team",
+        "outcome": { "fans": 120, "fatigue": 12, "morale": 4, "text": "Nakatulong ang boses at platform ng mga players." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_COLLEGE_EXAM",
+    "title": "Conflict sa Midterm Exam",
+    "category": "player_life",
+    "text": "May major exam ang iyong star roamer sa sabado, kasabay ng tournament match day!",
+    "choices": [
+      {
+        "text": "Hayaan siyang mag-exam; gamitin ang sub",
+        "outcome": { "morale": 12, "chemistry": 3, "text": "Mataas ang nakuha sa exam at masaya ang pamilya." }
+      },
+      {
+        "text": "Pakiusapan ang prof para sa special exam",
+        "cost": 1500,
+        "outcome": { "fatigue": 5, "morale": 4, "text": "Pumayag ang dean; nakapaglaro pa rin!" }
+      }
+    ]
+  },
+  {
+    "id": "EVT_PISONET_CHALLENGE",
+    "title": "Hamon ng mga Pisonet Grinders",
+    "category": "competition",
+    "text": "May underground squad mula sa pisonet sa kanto na humahamon ng showmatch: pustahan P5,000!",
+    "choices": [
+      {
+        "text": "Tanggapin ang hamon at turuan ng leksyon",
+        "cost": 5000,
+        "outcome": { "money": 10000, "morale": 8, "fans": 60, "text": "Madaling panalo! Nakuha ang pustahan at respeto." }
+      },
+      {
+        "text": "Tanggihan: Professional players tayo",
+        "outcome": { "fame": 5, "text": "Naiwasan ang gulo at puyat." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_STREAMER_COLLAB",
+    "title": "Collab kay Boss Pekto",
+    "category": "community",
+    "text": "Gusto ng sikat na FB Gaming streamer na si Boss Pekto na mag-duo stream kasama ang carry mo!",
+    "choices": [
+      {
+        "text": "Tanggapin ang collab stream",
+        "outcome": { "fans": 300, "money": 8000, "fatigue": 8, "text": "Hagalpakan sa katatawanan ang 40,000 live viewers!" }
+      },
+      {
+        "text": "Tanggihan para makatutok sa scrim",
+        "outcome": { "morale": 2, "text": "Mas masinop ang ensayo ngayong linggo." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_SCAM_SPONSOR",
+    "title": "Mahiwagang Crypto Sponsor",
+    "category": "business",
+    "text": "Isang fly-by-night crypto token ang nag-aalok ng P100,000 upfront ngunit kailangang i-promote ng players sa personal nilang accounts.",
+    "choices": [
+      {
+        "text": "Tanggihan: Amoy scam ang proyekto",
+        "outcome": { "fame": 15, "morale": 4, "text": "Naiwasan ang malaking eskandalo sa fans." }
+      },
+      {
+        "text": "Pirmahan at tanggapin ang P100,000",
+        "outcome": { "money": 100000, "fame": -40, "fans": -150, "flag": "scam_signed", "text": "Nakuha ang pera pero biglang nag-rugpull ang coin!" }
+      }
+    ]
+  },
+  {
+    "id": "EVT_HIGH_SCHOOL_VISIT",
+    "title": "Campus Esports Career Talk",
+    "category": "community",
+    "text": "Inimbitahan ang iyong manager sa isang National High School upang magsalita tungkol sa healthy esports gaming.",
+    "choices": [
+      {
+        "text": "Pumunta at magbigay ng inspirasyon",
+        "outcome": { "fame": 25, "fans": 180, "morale": 6, "text": "Mensaheng disiplina at edukasyon ang ibinahagi." }
+      },
+      {
+        "text": "Humingi ng paumanhin dahil busy sa playoffs",
+        "outcome": { "text": "Nakapag-focus sa game preparations." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_BARANGAY_LECHON",
+    "title": "Fiesta Lechon Blowout!",
+    "category": "team",
+    "text": "Fiesta sa barangay! Nagpadala si Kapitan ng buong lechon baboy sa gaming house.",
+    "choices": [
+      {
+        "text": "Lafang time! Pagsaluhan ng buong staff at roster",
+        "outcome": { "morale": 16, "fatigue": -10, "chemistry": 6, "text": "Nabusog ang lahat! Sobrang sarap ng balat." }
+      },
+      {
+        "text": "Ipamahagi ang kalahati sa mga kapitbahay",
+        "outcome": { "morale": 10, "fans": 100, "fame": 10, "text": "Lalong minahal ng komunidad ang gaming house!" }
+      }
+    ]
+  },
+  {
+    "id": "EVT_AIRCON_BREAKDOWN",
+    "title": "Pumalya ang Aircon sa Init!",
+    "category": "house",
+    "text": "Sumuko ang compressor sa gitna ng tag-init. Naging pugon ang gaming room!",
+    "choices": [
+      {
+        "text": "Magpalinis at magpa-freon agad",
+        "cost": 3000,
+        "outcome": { "morale": 4, "text": "Malamig na ulit ang buong bahay." }
+      },
+      {
+        "text": "Tiyagain muna gamit ang bentilador",
+        "outcome": { "fatigue": 10, "morale": -8, "text": "Tagaktak ang pawis ng mga manlalaro habang nag-eensayo." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_PRODIGY_SCOUT_TIP",
+    "title": "Tip Mula sa Internet Cafe Scout",
+    "category": "player_life",
+    "text": "May namataang 16-anyos na bata sa Tondo na hindi pa natatalo sa 50 sunod-sunod na ranked games!",
+    "choices": [
+      {
+        "text": "Magpadala ng pamasahe at alukin ng Tryout",
+        "cost": 4000,
+        "outcome": { "fame": 10, "morale": 5, "flag": "scout_tip_recruited", "text": "Pumayag ang bata at magulang na sumubok sa team!" }
+      },
+      {
+        "text": "Hayaan muna, marami pa tayong players",
+        "outcome": { "text": "Kinuha siya ng ibang team kinabukasan." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_LATE_FOR_SCRIM",
+    "title": "Na-trapik sa EDSA!",
+    "category": "team",
+    "text": "Naipit sa bus sa EDSA ang dalawang players galing sa seminar; 1 oras nang naghihintay ang kalaban sa scrim!",
+    "choices": [
+      {
+        "text": "Mag-Angkas ride sila agad para makahabol",
+        "cost": 800,
+        "outcome": { "fatigue": 4, "text": "Nakahabol sa game bago mag-forfeit!" }
+      },
+      {
+        "text": "Humingi ng paumanhin at i-reschedule ang scrim",
+        "outcome": { "chemistry": -2, "morale": -3, "text": "Nainis ang kalabang pro team." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_NEW_JERSEY_DROP",
+    "title": "Official Team Jersey Launch",
+    "category": "business",
+    "text": "Handa na ang dry-fit jerseys na may bagong team logo at Philippine flag emblem!",
+    "choices": [
+      {
+        "text": "Magpa-pre-order sa fans",
+        "cost": 5000,
+        "outcome": { "money": 18000, "fans": 140, "fame": 10, "text": "Sold out sa unang araw ng bentahan!" }
+      },
+      {
+        "text": "Ipamigay nang libre sa top supporters",
+        "cost": 4000,
+        "outcome": { "fans": 280, "morale": 6, "text": "Puno ng team colors ang crowd sa susunod na tournament." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_ENERGY_DRINK_OVERDOSE",
+    "title": "Nanginig sa Sobrang Energy Drink",
+    "category": "player_life",
+    "text": "Uminom ng 4 na lata ng energy drink ang carry mo para magpuyat; nanginginig ang kamay sa kaba!",
+    "choices": [
+      {
+        "text": "Painumin ng maraming tubig at patulugin",
+        "outcome": { "morale": 4, "fatigue": -8, "text": "Kumalma ang pulso at nakabawi ng lakas." }
+      },
+      {
+        "text": "Pagalitan dahil sa kapabayaan",
+        "outcome": { "morale": -10, "text": "Nainis ang player pero natuto ng leksyon sa kalusugan." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_TIKTOK_DANCE",
+    "title": "Viral Team TikTok Dance",
+    "category": "community",
+    "text": "Niyaya ng Cook ang buong roster na magsayaw ng trending Budots challenge sa kusina!",
+    "choices": [
+      {
+        "text": "I-upload at gawing official TikTok entry",
+        "outcome": { "fans": 220, "morale": 10, "chemistry": 4, "text": "Milyon-milyon ang nag-share! Sobrang cute ng team." }
+      },
+      {
+        "text": "Pribado lang, baka ma-bash tayo",
+        "outcome": { "morale": 5, "chemistry": 3, "text": "Masaya pa rin ang tawanan sa gaming house." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_RAT_CHEWED_CABLE",
+    "title": "Kinagat ng Daga ang Ethernet Cable!",
+    "category": "house",
+    "text": "Biglang nawalan ng signal ang PC #3; pagtingin sa ilalim, ngatngat ng daga ang kable!",
+    "choices": [
+      {
+        "text": "Palitan ng shielded CAT7 cable at maglagay ng bitag",
+        "cost": 1200,
+        "outcome": { "morale": 2, "text": "Maayos na ulit ang koneksyon at nahuli ang salarin." }
+      },
+      {
+        "text": "Dugtungin gamit ang electrical tape",
+        "outcome": { "fatigue": 4, "morale": -4, "text": "Pabugso-bugso ang packet loss sa scrim." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_COFFEE_SPILLED",
+    "title": "Natapong 3-in-1 sa Keyboard!",
+    "category": "house",
+    "text": "Napatid sa silya ang support player at natapon ang mainit na kape sa mechanical keyboard!",
+    "choices": [
+      {
+        "text": "Bumili ng bagong RGB mechanical keyboard",
+        "cost": 3500,
+        "outcome": { "morale": 5, "text": "Mas masarap pang pumindot sa bagong keyboard." }
+      },
+      {
+        "text": "Patuyuin at hugasan ng alcohol",
+        "outcome": { "morale": -3, "text": "Medyo malagkit pa rin ang spacebar." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_SURPRISE_INVITE",
+    "title": "Imbitasyon sa Invitational Cup",
+    "category": "competition",
+    "text": "Dahil sa magandang performance, binigyan ang team ng direct slot sa isang private exhibition tournament!",
+    "choices": [
+      {
+        "text": "Sumali at magpakitang gilas",
+        "outcome": { "fame": 35, "fans": 160, "fatigue": 10, "text": "Pinatunayang karapat-dapat sa pinakamataas na antas!" }
+      },
+      {
+        "text": "Tumanggi upang makapagpahinga ang mga starters",
+        "outcome": { "fatigue": -15, "morale": 5, "text": "Sariwa ang lakas ng players sa darating na opisyal na laban." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_STREET_FLOOD",
+    "title": "Baha sa Harap ng Bahay!",
+    "category": "house",
+    "text": "Hanggang tuhod ang baha sa labas dahil sa baradong kanal. Hindi makalabas ang delivery ng pagkain!",
+    "choices": [
+      {
+        "text": "Magluto si Kusinero gamit ang natirang sardinas at itlog",
+        "condition": "has_cook",
+        "outcome": { "morale": 8, "chemistry": 4, "text": "Napakasarap ng sinangag at tortang sardinas!" }
+      },
+      {
+        "text": "Lumusong sa baha para bumili sa tindahan",
+        "cost": 1000,
+        "outcome": { "fatigue": 12, "morale": -5, "text": "Nakalusong sa baha; kailangang uminom ng gamot kontra leptospirosis." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_GIRLFRIEND_DRAMA",
+    "title": "LQ sa Telepono",
+    "category": "player_life",
+    "text": "Nag-away sa cellphone ang tank player mo at ang kanyang nobya bago magsimula ang tournament series!",
+    "choices": [
+      {
+        "text": "Kausapin nang masinsinan at patahanin",
+        "outcome": { "morale": 8, "chemistry": 3, "text": "Nakahinga nang maluwag at nagkaayos din sila." }
+      },
+      {
+        "text": "Kumpiskahin ang phone: 'Game muna!'",
+        "outcome": { "morale": -14, "text": "Nagtampo at naging tilt-prone sa unang game." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_MAYOR_COMMENDATION",
+    "title": "Pagkilala Mula sa City Hall",
+    "category": "community",
+    "text": "Pinarangalan ng Punong Lungsod ang inyong koponan para sa pagbibigay ng karangalan sa lungsod!",
+    "choices": [
+      {
+        "text": "Dumalo sa City Hall flag ceremony at tanggapin ang Plaque",
+        "outcome": { "fame": 50, "fans": 300, "money": 15000, "text": "May cash incentive mula sa sports commission!" }
+      },
+      {
+        "text": "Magpadala ng proxy representative",
+        "outcome": { "fame": 20, "fans": 80, "text": "Tinanggap ang pagkilala nang walang abala sa ensayo." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_KARAOKE_NIGHT",
+    "title": "Biritan sa Karaoke Machine",
+    "category": "team",
+    "text": "Nanghiram ng videoke machine ang team manager para sa Sabado ng gabi!",
+    "choices": [
+      {
+        "text": "Kumanta ng 'My Way' at 'Bakit Pa Ba'",
+        "cost": 1500,
+        "outcome": { "morale": 18, "chemistry": 8, "fatigue": -8, "text": "Nawala ang pressure! Buong puso ang birit ng team." }
+      },
+      {
+        "text": "I-bawal baka magreklamo ang kapitbahay",
+        "outcome": { "morale": -3, "text": "Tahimik ang gabi pero medyo bitin ang saya." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_SNEAKER_COLLAB",
+    "title": "Streetwear Brand Collab",
+    "category": "business",
+    "text": "Gusto ng sikat na local streetwear brand na gawing models ang inyong mga manlalaro!",
+    "choices": [
+      {
+        "text": "Pumayag sa photoshoot at photoshoot contract",
+        "outcome": { "money": 25000, "fans": 200, "fame": 25, "fatigue": 6, "text": "Pumorma ang mga bata! Astig ang fit sa poster." }
+      },
+      {
+        "text": "Tanggihan: Esports jerseys lang ang isuot",
+        "outcome": { "morale": 2, "text": "Napanatili ang purong esports look." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_FANS_GIFT_BANNER",
+    "title": "Regalong Custom Banner ng Fans",
+    "category": "community",
+    "text": "Nag-ambagan ang mga taga-suporta para gumawa ng hand-woven embroidered banner para sa inyong gaming house!",
+    "choices": [
+      {
+        "text": "Isabit sa gitna ng living room",
+        "outcome": { "morale": 12, "chemistry": 5, "fame": 10, "text": "Araw-araw na inspirasyon ang tapat na pagmamahal ng fans." }
+      },
+      {
+        "text": "Mag-post ng pasasalamat online kasama ang banner",
+        "outcome": { "fans": 160, "morale": 8, "text": "Lalong tumibay ang suporta ng fan club." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_WATER_INTERRUPTION",
+    "title": "Nawalan ng Tubig ang Subdibisyon!",
+    "category": "house",
+    "text": "Nag-anunsyo ang water concessionaire ng 24-oras na emergency water interruption!",
+    "choices": [
+      {
+        "text": "Magpa-deliver ng 10 galon ng mineral water",
+        "cost": 1000,
+        "outcome": { "morale": 2, "text": "May inumin at pang-hilamos ang lahat." }
+      },
+      {
+        "text": "Magtiis at huwag munang maligo",
+        "outcome": { "morale": -8, "fatigue": 6, "text": "Medyo maasim ang simoy sa gaming room kinabukasan." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_ACADEMY_TALENT_BOOM",
+    "title": "Sumiklab ang Academy Scrim!",
+    "category": "team",
+    "text": "Tinalo ng inyong mga academy bench players ang mga beteranong starters sa internal scrim!",
+    "choices": [
+      {
+        "text": "Purihin ang Academy at bigyan ng bonus",
+        "cost": 3000,
+        "outcome": { "morale": 10, "chemistry": 4, "text": "Lalong nagpursigi ang mga bagong sibol na manlalaro!" }
+      },
+      {
+        "text": "Gawing babala sa mga starters na walang ligtas sa bangko",
+        "outcome": { "morale": -4, "fatigue": 6, "text": "Nanginig ang mga starters; mas naging seryoso sa ensayo." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_RIVAL_CAPTAIN_RETIRES",
+    "title": "Nagretiro ang Alamat ng Bakal Wolves",
+    "category": "competition",
+    "text": "Opisyal nang nag-retiro ang maalamat na captain ng Bakal Wolves matapos ang 10 taong karera.",
+    "choices": [
+      {
+        "text": "Magpaabot ng pagpupugay sa press release",
+        "outcome": { "fame": 20, "morale": 6, "text": "Kinilala ang inyong sportsmanship sa buong rehiyon." }
+      },
+      {
+        "text": "Subukang i-hire siya bilang Head Coach!",
+        "cost": 25000,
+        "outcome": { "fame": 40, "morale": 15, "flag": "legend_coach_acquired", "text": "Pumayag siyang sumama sa iyong coaching staff!" }
+      }
+    ]
+  },
+  {
+    "id": "EVT_SZ_SMOKE_LINEUP",
+    "title": "Viral Smoke Lineup sa Strike Zone",
+    "category": "team",
+    "text": "Naimbento ng Strike Zone squad ang isang pixel-perfect one-way smoke sa B-site na nag-viral sa TikTok!",
+    "choices": [
+      {
+        "text": "I-upload ang tutorial video sa YouTube para sa fans",
+        "outcome": { "fans": 450, "fame": 25, "text": "Sumabog ang views ng video! Dumami ang sumusubaybay na FPS fans." }
+      },
+      {
+        "text": "Itago bilang sikretong alas sa susunod na tournament",
+        "outcome": { "morale": 8, "fame": 15, "text": "Kumpiyansa ang squad na walang makakatapat sa kanilang site execute!" }
+      }
+    ]
+  },
+  {
+    "id": "EVT_SZ_ECO_ARGUMENT",
+    "title": "Mainitang Force Buy Debate",
+    "category": "team",
+    "text": "Nagkainitan sa team meeting: gustong mag-force buy ng Entry Fragger pero pilit na nag-se-save ang IGL para sa AWP!",
+    "choices": [
+      {
+        "text": "Pakinggan ang IGL: buong squad mag-full eco",
+        "outcome": { "morale": 4, "text": "Naging disiplinado ang rounds at nakabili ng complete rifles sa susunod na round." }
+      },
+      {
+        "text": "Bumili ng upgraded gaming mice para sa buong FPS squad",
+        "cost": 6000,
+        "outcome": { "morale": 14, "fame": 15, "text": "Gumaan ang pakiramdam ng players! Ang sarap daw pumindot ng bagong mice." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_LI_AIRDROP_GREED",
+    "title": "Airdrop Ambush sa Last Island",
+    "category": "player",
+    "text": "Sa gitna ng scrim, naubos ang Last Island squad nang sabay-sabay sumugod sa Airdrop crate para sa Level 3 Armor!",
+    "choices": [
+      {
+        "text": "Pagalitan at ipa-review ang scrim VOD",
+        "outcome": { "morale": -3, "fame": 10, "text": "Natuto ang squad sa spacing at baiting tactics." }
+      },
+      {
+        "text": "Tawanan na lang at magpa-deliver ng milk tea",
+        "cost": 1500,
+        "outcome": { "morale": 10, "fans": 100, "text": "Nawala ang tensyon! Pinagtawanan na lang nila ang clip sa live stream." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_LI_ZONE_HEAL_OFF",
+    "title": "Epic Heal-Off sa Final Circle",
+    "category": "competition",
+    "text": "Naipit sa ilalim ng tulay ang Last Island squad habang nasa taas ang kalaban. Nauwi sa marathon heal-off gamit ang First Aid Kits!",
+    "choices": [
+      {
+        "text": "Panoorin at i-clip ang nakakatawang panalo",
+        "outcome": { "fame": 30, "fans": 500, "morale": 8, "text": "Clutch victory! Ginawang meme ang pasensya ng Medic sa chat." }
+      }
+    ]
+  },
+  {
+    "id": "EVT_CLUB_EXPANSION_HYPE",
+    "title": "Multi-Esports Club Expansion",
+    "category": "business",
+    "text": "Nabalitaan sa esports community na nagbubukas ang inyong organisasyon ng mga bagong dibisyon sa iba't ibang laro!",
+    "choices": [
+      {
+        "text": "Mag-host ng community showmatch at live announcement",
+        "cost": 5000,
+        "outcome": { "fame": 60, "fans": 1200, "morale": 10, "text": "Umapaw ang suporta ng fans sa inyong multi-gaming dynasty!" }
+      },
+      {
+        "text": "Maglabas ng simpleng text announcement sa social media",
+        "outcome": { "fame": 20, "fans": 250, "text": "Marami ang nasabik na makita ang bagong rosters sa kompetisyon." }
+      }
+    ]
+  }
+]

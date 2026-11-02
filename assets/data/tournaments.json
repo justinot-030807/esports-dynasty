@@ -1,0 +1,1071 @@
+[
+  {
+    "id": "T1-ICC1",
+    "name": "Internet Cafe Cup: Spring",
+    "tier": 1,
+    "division": "arena_clash",
+    "weeks": [5, 7],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 0, "max": 499},
+    "entry_fee": 500,
+    "travel_cost": 0,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 1,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 10000,
+      "fame": 50,
+      "fans": 300,
+      "circuit_points": 100,
+      "trophy": "trophy_bronze_t1"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t1"
+  },
+  {
+    "id": "T1-CAMPUS",
+    "name": "Campus Clash",
+    "tier": 1,
+    "division": "arena_clash",
+    "weeks": [9, 13],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 0, "max": 499},
+    "entry_fee": 500,
+    "travel_cost": 0,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "groups",
+        "teams": 8,
+        "groups_count": 2,
+        "advance_count": 2,
+        "bo": 1
+      },
+      {
+        "type": "single_elim",
+        "teams": 4,
+        "bo": 1,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 15000,
+      "fame": 75,
+      "fans": 500,
+      "circuit_points": 120,
+      "trophy": "trophy_school"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t1"
+  },
+  {
+    "id": "T1-ICC2",
+    "name": "Internet Cafe Cup: Summer",
+    "tier": 1,
+    "division": "arena_clash",
+    "weeks": [21, 23],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 0, "max": 499},
+    "entry_fee": 500,
+    "travel_cost": 0,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 1,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 10000,
+      "fame": 50,
+      "fans": 300,
+      "circuit_points": 100,
+      "trophy": "trophy_bronze_t1"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t1"
+  },
+  {
+    "id": "T1-ICC3",
+    "name": "Internet Cafe Cup: Autumn",
+    "tier": 1,
+    "division": "arena_clash",
+    "weeks": [37, 40],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 0, "max": 499},
+    "entry_fee": 500,
+    "travel_cost": 0,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "double_elim",
+        "teams": 8,
+        "bo": 1,
+        "grand_final_bo": 3,
+        "gf_advantage": "upper"
+      }
+    ],
+    "rewards": {
+      "champion_prize": 12000,
+      "fame": 60,
+      "fans": 400,
+      "circuit_points": 100,
+      "trophy": "trophy_bronze_t1"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t1"
+  },
+  {
+    "id": "T2-TLS",
+    "name": "Town League: Spring",
+    "tier": 2,
+    "division": "arena_clash",
+    "weeks": [9, 15],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 100, "max": 1499},
+    "entry_fee": 1500,
+    "travel_cost": 0,
+    "slots": 6,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "round_robin",
+        "teams": 6,
+        "bo": 3
+      },
+      {
+        "type": "single_elim",
+        "teams": 4,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 60000,
+      "fame": 150,
+      "fans": 1500,
+      "circuit_points": 300,
+      "trophy": "trophy_silver_t2"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t2"
+  },
+  {
+    "id": "T2-TC",
+    "name": "Town Cup",
+    "tier": 2,
+    "division": "arena_clash",
+    "weeks": [25, 28],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 100, "max": 1499},
+    "entry_fee": 2000,
+    "travel_cost": 0,
+    "slots": 16,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 16,
+        "bo": 1,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 80000,
+      "fame": 200,
+      "fans": 2000,
+      "circuit_points": 350,
+      "trophy": "trophy_silver_t2"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t2"
+  },
+  {
+    "id": "T2-TLF",
+    "name": "Town League: Fall",
+    "tier": 2,
+    "division": "arena_clash",
+    "weeks": [33, 41],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 100, "max": 1499},
+    "entry_fee": 2500,
+    "travel_cost": 0,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "round_robin",
+        "teams": 8,
+        "bo": 3
+      },
+      {
+        "type": "single_elim",
+        "teams": 4,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 90000,
+      "fame": 220,
+      "fans": 2500,
+      "circuit_points": 400,
+      "trophy": "trophy_silver_t2"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t2"
+  },
+  {
+    "id": "T3-PQ",
+    "name": "Provincial Qualifier",
+    "tier": 3,
+    "division": "arena_clash",
+    "weeks": [16, 19],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 400, "max": 3999},
+    "entry_fee": 6000,
+    "travel_cost": 8000,
+    "slots": 16,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 16,
+        "bo": 1,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 150000,
+      "fame": 250,
+      "fans": 3000,
+      "circuit_points": 600,
+      "trophy": "trophy_gold_t3"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t3"
+  },
+  {
+    "id": "T3-PC",
+    "name": "Provincial Championship",
+    "tier": 3,
+    "division": "arena_clash",
+    "weeks": [29, 34],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 400, "max": 3999},
+    "entry_fee": 8000,
+    "travel_cost": 10000,
+    "slots": 16,
+    "qualify": [
+      {"from": "T2-TLS", "top": 3},
+      {"from": "T3-PQ", "top": 2},
+      {"from": "T2-TC", "top": 1},
+      {"fill": "circuit_rank"}
+    ],
+    "stages": [
+      {
+        "type": "double_elim",
+        "teams": 16,
+        "bo": 3,
+        "grand_final_bo": 5,
+        "gf_advantage": "upper"
+      }
+    ],
+    "rewards": {
+      "champion_prize": 250000,
+      "fame": 400,
+      "fans": 5000,
+      "circuit_points": 1000,
+      "trophy": "trophy_gold_t3"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t3"
+  },
+  {
+    "id": "T3-PWC",
+    "name": "Provincial Winter Cup",
+    "tier": 3,
+    "division": "arena_clash",
+    "weeks": [42, 44],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 400, "max": 3999},
+    "entry_fee": 8000,
+    "travel_cost": 10000,
+    "slots": 8,
+    "qualify": [
+      {"fill": "circuit_rank", "top": 8}
+    ],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 3,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 200000,
+      "fame": 350,
+      "fans": 4000,
+      "circuit_points": 800,
+      "trophy": "trophy_gold_t3"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t3"
+  },
+  {
+    "id": "T4-RQ",
+    "name": "Regional Qualifiers",
+    "tier": 4,
+    "division": "arena_clash",
+    "weeks": [17, 22],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 1200, "max": 7999},
+    "entry_fee": 25000,
+    "travel_cost": 35000,
+    "slots": 16,
+    "qualify": [
+      {"from": "T3-PC", "top": 4},
+      {"fill": "circuit_rank"}
+    ],
+    "stages": [
+      {
+        "type": "gsl_group",
+        "teams": 16,
+        "groups_count": 4,
+        "advance_count": 2,
+        "bo": 3
+      },
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 600000,
+      "fame": 700,
+      "fans": 12000,
+      "circuit_points": 2000,
+      "trophy": "trophy_t4"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t4"
+  },
+  {
+    "id": "T4-RS",
+    "name": "Regional Showdown",
+    "tier": 4,
+    "division": "arena_clash",
+    "weeks": [25, 28],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 1200, "max": 7999},
+    "entry_fee": 30000,
+    "travel_cost": 40000,
+    "slots": 16,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 16,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 700000,
+      "fame": 800,
+      "fans": 14000,
+      "circuit_points": 2200,
+      "trophy": "trophy_t4"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t4"
+  },
+  {
+    "id": "T4-RF",
+    "name": "Regional Finals",
+    "tier": 4,
+    "division": "arena_clash",
+    "weeks": [37, 41],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 1200, "max": 7999},
+    "entry_fee": 30000,
+    "travel_cost": 40000,
+    "slots": 8,
+    "qualify": [
+      {"from": "T4-RQ", "top": 4},
+      {"from": "T4-RS", "top": 2},
+      {"fill": "circuit_rank"}
+    ],
+    "stages": [
+      {
+        "type": "double_elim",
+        "teams": 8,
+        "bo": 3,
+        "grand_final_bo": 5,
+        "gf_advantage": "upper"
+      }
+    ],
+    "rewards": {
+      "champion_prize": 800000,
+      "fame": 900,
+      "fans": 15000,
+      "circuit_points": 2500,
+      "trophy": "trophy_t4"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t4"
+  },
+  {
+    "id": "T5-NPLS",
+    "name": "NPL Spring Split",
+    "tier": 5,
+    "division": "arena_clash",
+    "weeks": [3, 14],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 3000, "max": 19999},
+    "entry_fee": 100000,
+    "travel_cost": 150000,
+    "slots": 10,
+    "qualify": [
+      {"from": "T4-RF", "top": 2},
+      {"fill": "circuit_rank"}
+    ],
+    "stages": [
+      {
+        "type": "round_robin",
+        "teams": 10,
+        "bo": 3
+      },
+      {
+        "type": "single_elim",
+        "teams": 6,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 3000000,
+      "fame": 2200,
+      "fans": 50000,
+      "circuit_points": 6000,
+      "trophy": "trophy_t5"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t5"
+  },
+  {
+    "id": "T5-NPLU",
+    "name": "NPL Summer Split",
+    "tier": 5,
+    "division": "arena_clash",
+    "weeks": [17, 28],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 3000, "max": 19999},
+    "entry_fee": 100000,
+    "travel_cost": 150000,
+    "slots": 10,
+    "qualify": [
+      {"fill": "circuit_rank"}
+    ],
+    "stages": [
+      {
+        "type": "round_robin",
+        "teams": 10,
+        "bo": 3
+      },
+      {
+        "type": "single_elim",
+        "teams": 6,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 3000000,
+      "fame": 2200,
+      "fans": 50000,
+      "circuit_points": 6000,
+      "trophy": "trophy_t5"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t5"
+  },
+  {
+    "id": "T5-NC",
+    "name": "National Cup",
+    "tier": 5,
+    "division": "arena_clash",
+    "weeks": [33, 36],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 3000, "max": 19999},
+    "entry_fee": 80000,
+    "travel_cost": 120000,
+    "slots": 16,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 16,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 2500000,
+      "fame": 1800,
+      "fans": 40000,
+      "circuit_points": 5000,
+      "trophy": "trophy_t5"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t5"
+  },
+  {
+    "id": "T5-NF",
+    "name": "National Finals",
+    "tier": 5,
+    "division": "arena_clash",
+    "weeks": [41, 44],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 3000, "max": 19999},
+    "entry_fee": 120000,
+    "travel_cost": 150000,
+    "slots": 8,
+    "qualify": [
+      {"fill": "circuit_rank", "top": 8}
+    ],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 5,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 3500000,
+      "fame": 2500,
+      "fans": 60000,
+      "circuit_points": 7000,
+      "trophy": "trophy_t5"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t5"
+  },
+  {
+    "id": "T6-APQ",
+    "name": "APAC Pre-Qualifier",
+    "tier": 6,
+    "division": "arena_clash",
+    "weeks": [25, 29],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 5000, "max": 999999},
+    "entry_fee": 200000,
+    "travel_cost": 500000,
+    "slots": 32,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 32,
+        "bo": 1,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 5000000,
+      "fame": 3000,
+      "fans": 80000,
+      "circuit_points": 10000,
+      "trophy": "trophy_t6"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t6"
+  },
+  {
+    "id": "T6-APM",
+    "name": "APAC Masters",
+    "tier": 6,
+    "division": "arena_clash",
+    "weeks": [33, 40],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 6000, "max": 999999},
+    "entry_fee": 300000,
+    "travel_cost": 800000,
+    "slots": 16,
+    "qualify": [
+      {"from": "T5-NPLS", "top": 1},
+      {"from": "T5-NPLU", "top": 1},
+      {"from": "T5-NF", "top": 2},
+      {"from": "T6-APQ", "top": 2},
+      {"fill": "circuit_rank"}
+    ],
+    "stages": [
+      {
+        "type": "swiss",
+        "teams": 16,
+        "advance_count": 8,
+        "bo": 1,
+        "grand_final_bo": 3
+      },
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 10000000,
+      "fame": 5000,
+      "fans": 150000,
+      "circuit_points": 15000,
+      "trophy": "trophy_t6"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t6"
+  },
+  {
+    "id": "T6-APW",
+    "name": "APAC Winter Invitational",
+    "tier": 6,
+    "division": "arena_clash",
+    "weeks": [43, 45],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 6000, "max": 999999},
+    "entry_fee": 250000,
+    "travel_cost": 600000,
+    "slots": 8,
+    "qualify": [
+      {"fill": "circuit_rank", "top": 8}
+    ],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 3,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 7000000,
+      "fame": 3500,
+      "fans": 100000,
+      "circuit_points": 12000,
+      "trophy": "trophy_t6"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t6"
+  },
+  {
+    "id": "T7-WPI",
+    "name": "World Play-ins",
+    "tier": 7,
+    "division": "arena_clash",
+    "weeks": [41, 42],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 8000, "max": 999999},
+    "entry_fee": 0,
+    "travel_cost": 2000000,
+    "slots": 8,
+    "qualify": [
+      {"fill": "circuit_rank", "top": 16}
+    ],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 3,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 15000000,
+      "fame": 6000,
+      "fans": 200000,
+      "circuit_points": 20000,
+      "trophy": "trophy_t7"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t7"
+  },
+  {
+    "id": "T7-WG",
+    "name": "World Championship: Groups",
+    "tier": 7,
+    "division": "arena_clash",
+    "weeks": [43, 45],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 8000, "max": 999999},
+    "entry_fee": 0,
+    "travel_cost": 3000000,
+    "slots": 16,
+    "qualify": [
+      {"from": "T6-APM", "top": 2},
+      {"from": "T5-NF", "top": 1},
+      {"from": "T7-WPI", "top": 2},
+      {"fill": "circuit_rank"}
+    ],
+    "stages": [
+      {
+        "type": "groups",
+        "teams": 16,
+        "groups_count": 4,
+        "advance_count": 2,
+        "bo": 1
+      }
+    ],
+    "rewards": {
+      "champion_prize": 25000000,
+      "fame": 8000,
+      "fans": 300000,
+      "circuit_points": 30000,
+      "trophy": "trophy_t7"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t7"
+  },
+  {
+    "id": "T7-WP",
+    "name": "World Championship: Playoffs",
+    "tier": 7,
+    "division": "arena_clash",
+    "weeks": [46, 48],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 8000, "max": 999999},
+    "entry_fee": 0,
+    "travel_cost": 0,
+    "slots": 8,
+    "qualify": [
+      {"from": "T7-WG", "top": 8}
+    ],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 40000000,
+      "fame": 12000,
+      "fans": 500000,
+      "circuit_points": 40000,
+      "trophy": "trophy_t7"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t7"
+  },
+  {
+    "id": "T1-SZ-CC",
+    "name": "CyberCafe Shootout",
+    "tier": 1,
+    "division": "strike_zone",
+    "weeks": [6, 8],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 0, "max": 499},
+    "entry_fee": 600,
+    "travel_cost": 0,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 1,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 12000,
+      "fame": 60,
+      "fans": 400,
+      "circuit_points": 120,
+      "trophy": "trophy_bronze_t1"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t1"
+  },
+  {
+    "id": "T2-SZ-MTO",
+    "name": "Metro Tactical Open",
+    "tier": 2,
+    "division": "strike_zone",
+    "weeks": [14, 18],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 200, "max": 1499},
+    "entry_fee": 2500,
+    "travel_cost": 2000,
+    "slots": 6,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "round_robin",
+        "teams": 6,
+        "bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 45000,
+      "fame": 180,
+      "fans": 1500,
+      "circuit_points": 350,
+      "trophy": "trophy_bronze_t2"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t2"
+  },
+  {
+    "id": "T3-SZ-VM",
+    "name": "Visayas Tactical Major",
+    "tier": 3,
+    "division": "strike_zone",
+    "weeks": [26, 30],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 600, "max": 3999},
+    "entry_fee": 10000,
+    "travel_cost": 12000,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "double_elim",
+        "teams": 8,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 300000,
+      "fame": 500,
+      "fans": 6000,
+      "circuit_points": 1200,
+      "trophy": "trophy_gold_t3"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t3"
+  },
+  {
+    "id": "T4-SZ-NSL",
+    "name": "National Strike League",
+    "tier": 4,
+    "division": "strike_zone",
+    "weeks": [35, 41],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 1500, "max": 7999},
+    "entry_fee": 25000,
+    "travel_cost": 20000,
+    "slots": 16,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "swiss",
+        "teams": 16,
+        "rounds": 5,
+        "bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 1200000,
+      "fame": 1200,
+      "fans": 25000,
+      "circuit_points": 3500,
+      "trophy": "trophy_t4"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t4"
+  },
+  {
+    "id": "T5-SZ-APC",
+    "name": "APAC Strike Championship",
+    "tier": 5,
+    "division": "strike_zone",
+    "weeks": [44, 47],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 3000, "max": 999999},
+    "entry_fee": 50000,
+    "travel_cost": 60000,
+    "slots": 16,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "gsl_group",
+        "teams": 16,
+        "bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 5000000,
+      "fame": 3000,
+      "fans": 80000,
+      "circuit_points": 10000,
+      "trophy": "trophy_t5"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t5"
+  },
+  {
+    "id": "T1-LI-BD",
+    "name": "Barangay Drop Scrims",
+    "tier": 1,
+    "division": "last_island",
+    "weeks": [7, 9],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 0, "max": 499},
+    "entry_fee": 500,
+    "travel_cost": 0,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "single_elim",
+        "teams": 8,
+        "bo": 1,
+        "grand_final_bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 10000,
+      "fame": 50,
+      "fans": 350,
+      "circuit_points": 100,
+      "trophy": "trophy_bronze_t1"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t1"
+  },
+  {
+    "id": "T2-LI-SS",
+    "name": "Survival Series Luzon",
+    "tier": 2,
+    "division": "last_island",
+    "weeks": [15, 19],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 200, "max": 1499},
+    "entry_fee": 3000,
+    "travel_cost": 2000,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "round_robin",
+        "teams": 8,
+        "bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 50000,
+      "fame": 200,
+      "fans": 1800,
+      "circuit_points": 400,
+      "trophy": "trophy_bronze_t2"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t2"
+  },
+  {
+    "id": "T3-LI-IM",
+    "name": "Island Masters",
+    "tier": 3,
+    "division": "last_island",
+    "weeks": [27, 31],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 600, "max": 3999},
+    "entry_fee": 12000,
+    "travel_cost": 12000,
+    "slots": 8,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "double_elim",
+        "teams": 8,
+        "bo": 3,
+        "grand_final_bo": 5
+      }
+    ],
+    "rewards": {
+      "champion_prize": 320000,
+      "fame": 550,
+      "fans": 7000,
+      "circuit_points": 1300,
+      "trophy": "trophy_gold_t3"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t3"
+  },
+  {
+    "id": "T4-LI-PBR",
+    "name": "Philippine BR Championship",
+    "tier": 4,
+    "division": "last_island",
+    "weeks": [36, 42],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 1500, "max": 7999},
+    "entry_fee": 30000,
+    "travel_cost": 25000,
+    "slots": 16,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "swiss",
+        "teams": 16,
+        "rounds": 5,
+        "bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 1500000,
+      "fame": 1400,
+      "fans": 30000,
+      "circuit_points": 4000,
+      "trophy": "trophy_t4"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t4"
+  },
+  {
+    "id": "T5-LI-GSC",
+    "name": "Global Survival Cup",
+    "tier": 5,
+    "division": "last_island",
+    "weeks": [45, 48],
+    "registration": {"opens": -4, "closes": -1},
+    "fame": {"min": 3000, "max": 999999},
+    "entry_fee": 60000,
+    "travel_cost": 70000,
+    "slots": 16,
+    "qualify": [{"open": true}],
+    "stages": [
+      {
+        "type": "gsl_group",
+        "teams": 16,
+        "bo": 3
+      }
+    ],
+    "rewards": {
+      "champion_prize": 6000000,
+      "fame": 3500,
+      "fans": 100000,
+      "circuit_points": 12000,
+      "trophy": "trophy_t5"
+    },
+    "reschedule": "typhoon_ok",
+    "banner": "banner_t5"
+  }
+]
