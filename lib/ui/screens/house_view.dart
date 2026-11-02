@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
+import '../../core/constants.dart';
 import '../../models/game_state.dart';
 import '../../models/player.dart';
 import '../widgets/house_painter.dart';
@@ -46,6 +47,14 @@ class _HouseViewState extends State<HouseView> with SingleTickerProviderStateMix
   @override
   void initState() {
     super.initState();
+    // Normalize any legacy save player positions to isometric floor tile grid
+    for (final p in widget.state.players) {
+      if (p.posX < 1.0) p.posX = 1.5 + (p.posX * 3.5);
+      if (p.posY < 1.0) p.posY = 1.5 + (p.posY * 3.5);
+      p.targetX = p.posX;
+      p.targetY = p.posY;
+    }
+
     _animController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 10),
@@ -62,13 +71,13 @@ class _HouseViewState extends State<HouseView> with SingleTickerProviderStateMix
   }
 
   void _onTick() {
-    final dt = 0.016 * (widget.state.speedMultiplier == 0 ? 0.0 : widget.state.speedMultiplier.toDouble());
-    if (dt == 0) return;
+    final speed = widget.state.speedMultiplier == 0 ? 1.0 : widget.state.speedMultiplier.toDouble();
+    final dt = 0.016 * speed;
 
     _elapsedSeconds += dt;
     _walkTimer += dt;
 
-    // Advance walking frames (~8 fps = frame change every 0.12s)
+    // Advance walking frames (~8 fps)
     if (_walkTimer >= 0.12) {
       _walkTimer = 0;
       for (final p in widget.state.players) {
@@ -80,17 +89,17 @@ class _HouseViewState extends State<HouseView> with SingleTickerProviderStateMix
       }
     }
 
-    // Move players toward target stations
+    // Move players toward target stations on floor grid
     for (final p in widget.state.players) {
       final dx = p.targetX - p.posX;
       final dy = p.targetY - p.posY;
       final dist = sqrt(dx * dx + dy * dy);
 
-      if (dist > 0.01) {
+      if (dist > 0.05) {
         p.isWalking = true;
-        final speed = 0.18 * dt;
-        p.posX += (dx / dist) * min(dist, speed);
-        p.posY += (dy / dist) * min(dist, speed);
+        final step = 1.2 * dt;
+        p.posX += (dx / dist) * min(dist, step);
+        p.posY += (dy / dist) * min(dist, step);
       } else {
         p.posX = p.targetX;
         p.posY = p.targetY;
@@ -126,12 +135,12 @@ class _HouseViewState extends State<HouseView> with SingleTickerProviderStateMix
     final matches = widget.state.furniture.where((f) => f.station == nextStation).toList();
     if (matches.isNotEmpty) {
       final targetFurn = matches[_rng.nextInt(matches.length)];
-      // Convert tile coord to normalized pos (0.1..0.85)
-      p.targetX = (targetFurn.tileX * 36.0 + 30.0) / 360.0;
-      p.targetY = (targetFurn.tileY * 36.0 + 40.0) / 360.0;
+      // Stand right in front of the station on the floor
+      p.targetX = (targetFurn.tileX + 0.3).clamp(1.0, 5.5);
+      p.targetY = (targetFurn.tileY + 0.7).clamp(1.0, 5.5);
     } else {
-      p.targetX = 0.2 + _rng.nextDouble() * 0.6;
-      p.targetY = 0.3 + _rng.nextDouble() * 0.5;
+      p.targetX = 1.5 + _rng.nextDouble() * 3.5;
+      p.targetY = 1.5 + _rng.nextDouble() * 3.5;
     }
   }
 
@@ -148,7 +157,7 @@ class _HouseViewState extends State<HouseView> with SingleTickerProviderStateMix
       },
       child: ClipRect(
         child: Container(
-          color: const Color(0xFF131D33),
+          color: AppConstants.bgDark,
           child: CustomPaint(
             size: Size.infinite,
             painter: HousePainter(

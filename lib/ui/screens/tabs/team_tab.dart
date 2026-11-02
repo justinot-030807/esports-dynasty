@@ -30,7 +30,7 @@ class _TeamTabState extends State<TeamTab> {
     switch (c) {
       case PlayerCondition.great: return AppConstants.positiveGreen;
       case PlayerCondition.good: return AppConstants.energyBlue;
-      case PlayerCondition.normal: return Colors.grey;
+      case PlayerCondition.normal: return const Color(0xFF64748B);
       case PlayerCondition.tired: return AppConstants.moneyGold;
       case PlayerCondition.exhausted: return AppConstants.negativeRed;
     }
@@ -111,50 +111,56 @@ class _TeamTabState extends State<TeamTab> {
         children: [
           // Sub-header with Scouting, Staff, and Divisions buttons
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-            color: const Color(0xFF1B2A49),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            decoration: const BoxDecoration(
+              color: Color(0xFF1E293B),
+              border: Border(bottom: BorderSide(color: Color(0xFF334155), width: 1.5)),
+            ),
             child: Row(
               children: [
                 Expanded(
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppConstants.moneyGold,
-                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                     ),
-                    icon: const Icon(Icons.person_search, size: 13, color: AppConstants.darkNavy),
+                    icon: const Icon(Icons.person_search, size: 16, color: AppConstants.darkNavy),
                     label: const Text(
                       'SCOUT',
-                      style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, fontWeight: FontWeight.bold, color: AppConstants.darkNavy),
+                      style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: AppConstants.darkNavy),
                     ),
                     onPressed: _openScouting,
                   ),
                 ),
-                const SizedBox(width: 4),
+                const SizedBox(width: 6),
                 Expanded(
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppConstants.energyBlue,
-                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                     ),
-                    icon: const Icon(Icons.badge, size: 13, color: Colors.white),
+                    icon: const Icon(Icons.badge, size: 16, color: Colors.white),
                     label: const Text(
                       'STAFF',
-                      style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, fontWeight: FontWeight.bold, color: Colors.white),
+                      style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
                     ),
                     onPressed: _openStaff,
                   ),
                 ),
-                const SizedBox(width: 4),
+                const SizedBox(width: 6),
                 Expanded(
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF9B5DE5),
-                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                     ),
-                    icon: const Icon(Icons.hub, size: 13, color: Colors.white),
+                    icon: const Icon(Icons.hub, size: 16, color: Colors.white),
                     label: const Text(
                       'CLUB',
-                      style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, fontWeight: FontWeight.bold, color: Colors.white),
+                      style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
                     ),
                     onPressed: _openDivisions,
                   ),
@@ -165,9 +171,9 @@ class _TeamTabState extends State<TeamTab> {
 
           // Division filter chips
           Container(
-            height: 32,
+            height: 38,
             padding: const EdgeInsets.symmetric(horizontal: 8),
-            color: const Color(0xFF142036),
+            color: const Color(0xFF162032),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -193,24 +199,25 @@ class _TeamTabState extends State<TeamTab> {
                   onTap: () => _openPlayerDetail(p),
                   child: Container(
                     margin: const EdgeInsets.only(bottom: 8),
-                    padding: const EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF233458),
-                      borderRadius: BorderRadius.circular(6),
+                      color: const Color(0xFF1E293B),
+                      borderRadius: BorderRadius.circular(8),
                       border: Border.all(
-                        color: p.isStarter ? AppConstants.moneyGold : AppConstants.darkNavy,
-                        width: 2.0,
+                        color: p.isStarter ? AppConstants.moneyGold : const Color(0xFF334155),
+                        width: p.isStarter ? 2.0 : 1.5,
                       ),
                     ),
                     child: Row(
                       children: [
                         // Role Icon Box
                         Container(
-                          width: 38,
-                          height: 38,
+                          width: 44,
+                          height: 44,
                           decoration: BoxDecoration(
-                            color: AppConstants.darkNavy,
-                            borderRadius: BorderRadius.circular(4),
+                            color: const Color(0xFF0F172A),
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(color: const Color(0xFF334155), width: 1),
                           ),
                           child: Center(
                             child: Text(
@@ -218,13 +225,13 @@ class _TeamTabState extends State<TeamTab> {
                               style: const TextStyle(
                                 fontFamily: AppConstants.pixelFont,
                                 color: AppConstants.moneyGold,
-                                fontSize: 13,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 12),
 
                         // Name, OVR, Rank
                         Expanded(
@@ -239,29 +246,35 @@ class _TeamTabState extends State<TeamTab> {
                                       fontFamily: AppConstants.pixelFont,
                                       color: Colors.white,
                                       fontWeight: FontWeight.bold,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     ),
                                   ),
-                                  const SizedBox(width: 6),
+                                  const SizedBox(width: 8),
                                   Container(
-                                    padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                     decoration: BoxDecoration(
-                                      color: p.isStarter ? AppConstants.positiveGreen : Colors.grey.shade700,
-                                      borderRadius: BorderRadius.circular(3),
+                                      color: p.isStarter ? AppConstants.positiveGreen : const Color(0xFF475569),
+                                      borderRadius: BorderRadius.circular(4),
                                     ),
                                     child: Text(
                                       p.isStarter ? 'STARTER' : 'BENCH',
-                                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white),
+                                      style: const TextStyle(
+                                        fontFamily: AppConstants.pixelFont,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.white,
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
+                              const SizedBox(height: 3),
                               Text(
                                 '${p.realName} | [${p.divisionId.split('_').map((w) => w[0]).join().toUpperCase()}] ${p.roleDisplayName.toUpperCase()} | OVR ${p.ovr} (${p.rankTitle})',
                                 style: const TextStyle(
                                   fontFamily: AppConstants.pixelFont,
-                                  color: Colors.white70,
-                                  fontSize: 10,
+                                  color: Color(0xFFCBD5E1),
+                                  fontSize: 12,
                                 ),
                               ),
                             ],
@@ -273,28 +286,29 @@ class _TeamTabState extends State<TeamTab> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                              padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
                               decoration: BoxDecoration(
                                 color: condColor,
-                                borderRadius: BorderRadius.circular(3),
+                                borderRadius: BorderRadius.circular(4),
                               ),
                               child: Text(
                                 p.condition.name.toUpperCase(),
                                 style: const TextStyle(
                                   fontFamily: AppConstants.pixelFont,
-                                  fontSize: 9,
+                                  fontSize: 11,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white,
                                 ),
                               ),
                             ),
-                            const SizedBox(height: 3),
+                            const SizedBox(height: 4),
                             Text(
                               'P${p.weeklySalary}/wk',
                               style: const TextStyle(
                                 fontFamily: AppConstants.pixelFont,
                                 color: AppConstants.moneyGold,
-                                fontSize: 10,
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
@@ -320,14 +334,14 @@ class _TeamTabState extends State<TeamTab> {
           label,
           style: TextStyle(
             fontFamily: AppConstants.pixelFont,
-            fontSize: 8,
-            color: isSel ? Colors.white : Colors.white70,
+            fontSize: 11,
+            color: isSel ? Colors.white : const Color(0xFFCBD5E1),
             fontWeight: isSel ? FontWeight.bold : FontWeight.normal,
           ),
         ),
         selected: isSel,
         selectedColor: AppConstants.energyBlue,
-        backgroundColor: const Color(0xFF233458),
+        backgroundColor: const Color(0xFF1E293B),
         onSelected: (_) => setState(() => _divisionFilter = filterKey),
       ),
     );

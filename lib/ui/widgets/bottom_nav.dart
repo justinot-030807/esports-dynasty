@@ -4,7 +4,7 @@ import '../../core/constants.dart';
 enum NavTab { team, plan, compete, build, more }
 
 class BottomNav extends StatelessWidget {
-  final NavTab currentTab;
+  final NavTab? currentTab;
   final Function(NavTab tab) onTabSelected;
 
   const BottomNav({
@@ -16,17 +16,17 @@ class BottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 52,
+      height: 60,
       decoration: const BoxDecoration(
-        color: AppConstants.darkNavy,
+        color: Color(0xFF162032),
         border: Border(
-          top: BorderSide(color: Color(0xFF2B3A5E), width: 2),
+          top: BorderSide(color: Color(0xFF2A3B5C), width: 2),
         ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildNavItem(NavTab.team, 'Team', Icons.people),
+          _buildNavItem(NavTab.team, 'Team', Icons.people_alt),
           _buildNavItem(NavTab.plan, 'Plan', Icons.calendar_month),
           _buildNavItem(NavTab.compete, 'Compete', Icons.emoji_events),
           _buildNavItem(NavTab.build, 'Build', Icons.home_work),
@@ -39,28 +39,33 @@ class BottomNav extends StatelessWidget {
   Widget _buildNavItem(NavTab tab, String label, IconData icon) {
     final isSelected = currentTab == tab;
 
-    return GestureDetector(
-      onTap: () => onTabSelected(tab),
-      behavior: HitTestBehavior.opaque,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            icon,
-            size: 20,
-            color: isSelected ? AppConstants.moneyGold : Colors.white60,
+    return Expanded(
+      child: GestureDetector(
+        onTap: () => onTabSelected(tab),
+        behavior: HitTestBehavior.opaque,
+        child: Container(
+          color: isSelected ? const Color(0x22F5B700) : Colors.transparent,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                icon,
+                size: 24,
+                color: isSelected ? AppConstants.moneyGold : const Color(0xFF94A3B8),
+              ),
+              const SizedBox(height: 3),
+              Text(
+                label,
+                style: TextStyle(
+                  fontFamily: AppConstants.pixelFont,
+                  fontSize: 12,
+                  fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
+                  color: isSelected ? AppConstants.moneyGold : const Color(0xFF94A3B8),
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 2),
-          Text(
-            label,
-            style: TextStyle(
-              fontFamily: AppConstants.pixelFont,
-              fontSize: 10,
-              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-              color: isSelected ? AppConstants.moneyGold : Colors.white60,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

@@ -15,6 +15,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
   late AnimationController _fadeController;
+  String _statusText = 'Inihahanda ang Arena Clash...';
 
   @override
   void initState() {
@@ -29,14 +30,20 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
   Future<void> _initializeGame() async {
     // 1. Load asset manifest
+    setState(() => _statusText = 'Naglo-load ng Game Assets...');
     await AssetManager().loadManifest();
+
     // 2. Load all JSON data files
+    setState(() => _statusText = 'Naglo-load ng Tournaments & Items...');
     await DataService().loadAllData();
+
     // 3. Initialize settings & legacy state
+    setState(() => _statusText = 'Checking Updates & Cloud Saves...');
     await SettingsService().init();
     await LegacyService().init();
-    // 4. Small delay for splash presentation
-    await Future.delayed(const Duration(milliseconds: 1500));
+
+    // 4. Small delay for smooth splash presentation
+    await Future.delayed(const Duration(milliseconds: 900));
 
     if (mounted) {
       Navigator.of(context).pushReplacement(
@@ -77,7 +84,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [Color(0x33000000), Color(0xAA0F172A)],
+                colors: [Color(0x33000000), Color(0xCC0F172A)],
               ),
             ),
           ),
@@ -90,28 +97,48 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
               children: [
                 Image.asset(
                   AssetManager.logo,
-                  width: 260,
+                  width: 290,
                   fit: BoxFit.contain,
                   errorBuilder: (context, error, stackTrace) => const Text(
                     'ESPORTS DYNASTY',
                     style: TextStyle(
                       fontFamily: AppConstants.pixelFont,
-                      fontSize: 28,
+                      fontSize: 32,
                       fontWeight: FontWeight.bold,
                       color: AppConstants.moneyGold,
                     ),
                   ),
                 ),
-                const SizedBox(height: 12),
-                const Text(
-                  'Loading Philippine Esports Scene...',
-                  style: TextStyle(
-                    fontFamily: AppConstants.pixelFont,
-                    color: Colors.white70,
-                    fontSize: 12,
+                const SizedBox(height: 16),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF1E293B),
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: AppConstants.moneyGold, width: 1.5),
+                  ),
+                  child: const Text(
+                    'v1.2.0 • RELEASE EDITION',
+                    style: TextStyle(
+                      fontFamily: AppConstants.pixelFont,
+                      color: AppConstants.moneyGold,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 0.8,
+                    ),
                   ),
                 ),
-                const SizedBox(height: 60),
+                const SizedBox(height: 12),
+                Text(
+                  _statusText,
+                  style: const TextStyle(
+                    fontFamily: AppConstants.pixelFont,
+                    color: Color(0xFFE2E8F0),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                const SizedBox(height: 50),
               ],
             ),
           ),

@@ -39,7 +39,6 @@ class _PlanTabState extends State<PlanTab> {
         if (p.fatigue >= 60) {
           widget.state.currentPlan.playerActivities[p.id] = PlayerActivity.rest;
         } else {
-          // Train role's primary stat
           switch (p.role) {
             case PlayerRole.carry:
             case PlayerRole.entry:
@@ -73,9 +72,7 @@ class _PlanTabState extends State<PlanTab> {
   }
 
   void _repeatLastWeek() {
-    setState(() {
-      // Re-apply existing activities
-    });
+    setState(() {});
     widget.onPlanUpdated();
   }
 
@@ -94,8 +91,11 @@ class _PlanTabState extends State<PlanTab> {
         children: [
           // Team Focus selector
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-            color: const Color(0xFF1B2A49),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            decoration: const BoxDecoration(
+              color: Color(0xFF1E293B),
+              border: Border(bottom: BorderSide(color: Color(0xFF334155), width: 1.5)),
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -104,29 +104,52 @@ class _PlanTabState extends State<PlanTab> {
                   children: [
                     const Text(
                       'TEAM FOCUS:',
-                      style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 11, fontWeight: FontWeight.bold, color: AppConstants.moneyGold),
+                      style: TextStyle(
+                        fontFamily: AppConstants.pixelFont,
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                        color: AppConstants.moneyGold,
+                      ),
                     ),
-                    DropdownButton<TeamFocus>(
-                      value: widget.state.currentPlan.focus,
-                      dropdownColor: const Color(0xFF1B2A49),
-                      isDense: true,
-                      underline: const SizedBox.shrink(),
-                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, color: Colors.white),
-                      items: TeamFocus.values.map((f) {
-                        return DropdownMenuItem(
-                          value: f,
-                          child: Text(f.name.toUpperCase()),
-                        );
-                      }).toList(),
-                      onChanged: (val) {
-                        if (val != null) _setTeamFocus(val);
-                      },
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF0F172A),
+                        borderRadius: BorderRadius.circular(5),
+                        border: Border.all(color: AppConstants.moneyGold, width: 1),
+                      ),
+                      child: DropdownButton<TeamFocus>(
+                        value: widget.state.currentPlan.focus,
+                        dropdownColor: const Color(0xFF1E293B),
+                        isDense: true,
+                        underline: const SizedBox.shrink(),
+                        style: const TextStyle(
+                          fontFamily: AppConstants.pixelFont,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                        items: TeamFocus.values.map((f) {
+                          return DropdownMenuItem(
+                            value: f,
+                            child: Text(f.name.toUpperCase()),
+                          );
+                        }).toList(),
+                        onChanged: (val) {
+                          if (val != null) _setTeamFocus(val);
+                        },
+                      ),
                     ),
                   ],
                 ),
+                const SizedBox(height: 4),
                 Text(
                   widget.state.currentPlan.focusDescription,
-                  style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.white70),
+                  style: const TextStyle(
+                    fontFamily: AppConstants.pixelFont,
+                    fontSize: 12,
+                    color: Color(0xFFCBD5E1),
+                  ),
                 ),
               ],
             ),
@@ -135,36 +158,37 @@ class _PlanTabState extends State<PlanTab> {
           // Station Warning Bar if bottlenecked
           if (hasStationBottleneck)
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               color: AppConstants.negativeRed,
               child: Row(
                 children: [
-                  const Icon(Icons.warning, size: 14, color: Colors.white),
-                  const SizedBox(width: 6),
+                  const Icon(Icons.warning, size: 16, color: Colors.white),
+                  const SizedBox(width: 8),
                   Expanded(
                     child: Text(
                       'Kulang sa PC Desk! ($pcUsers gumagamit vs $pcCount pwesto) -30% effectiveness.',
-                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.white),
+                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
                     ),
                   ),
                 ],
               ),
             ),
 
-          // Quick Action Buttons: Auto Plan, Repeat Last Week
+          // Quick Action Buttons
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-            color: const Color(0xFF233458),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            color: const Color(0xFF162032),
             child: Row(
               children: [
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppConstants.positiveGreen,
-                      padding: const EdgeInsets.symmetric(vertical: 6),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                     ),
                     onPressed: _autoPlan,
-                    child: const Text('AUTO PLAN', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.white)),
+                    child: const Text('AUTO PLAN', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white)),
                   ),
                 ),
                 const SizedBox(width: 8),
@@ -172,10 +196,11 @@ class _PlanTabState extends State<PlanTab> {
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppConstants.energyBlue,
-                      padding: const EdgeInsets.symmetric(vertical: 6),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                     ),
                     onPressed: _repeatLastWeek,
-                    child: const Text('REPEAT LAST WEEK', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.white)),
+                    child: const Text('REPEAT LAST WEEK', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white)),
                   ),
                 ),
               ],
@@ -195,29 +220,30 @@ class _PlanTabState extends State<PlanTab> {
 
                 return Container(
                   margin: const EdgeInsets.only(bottom: 8),
-                  padding: const EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF233458),
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: AppConstants.darkNavy, width: 1.5),
+                    color: const Color(0xFF1E293B),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: const Color(0xFF334155), width: 1.5),
                   ),
                   child: Row(
                     children: [
                       Container(
-                        width: 32,
-                        height: 32,
+                        width: 38,
+                        height: 38,
                         decoration: BoxDecoration(
-                          color: AppConstants.darkNavy,
-                          borderRadius: BorderRadius.circular(4),
+                          color: const Color(0xFF0F172A),
+                          borderRadius: BorderRadius.circular(6),
+                          border: Border.all(color: const Color(0xFF334155), width: 1),
                         ),
                         child: Center(
                           child: Text(
                             p.role.name.substring(0, 1).toUpperCase(),
-                            style: const TextStyle(fontFamily: AppConstants.pixelFont, color: AppConstants.moneyGold, fontSize: 16, fontWeight: FontWeight.bold),
+                            style: const TextStyle(fontFamily: AppConstants.pixelFont, color: AppConstants.moneyGold, fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
-                      const SizedBox(width: 8),
+                      const SizedBox(width: 10),
 
                       Expanded(
                         child: Column(
@@ -225,13 +251,15 @@ class _PlanTabState extends State<PlanTab> {
                           children: [
                             Text(
                               '${p.gamerTag} (${p.condition.name.toUpperCase()})',
-                              style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
+                              style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
                             ),
+                            const SizedBox(height: 2),
                             Text(
                               'Fatigue: ${p.fatigue} -> $predictedFatigue',
                               style: TextStyle(
                                 fontFamily: AppConstants.pixelFont,
-                                fontSize: 9,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
                                 color: predictedFatigue >= 60 ? AppConstants.negativeRed : AppConstants.positiveGreen,
                               ),
                             ),
@@ -241,18 +269,18 @@ class _PlanTabState extends State<PlanTab> {
 
                       // Activity Dropdown
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6),
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                         decoration: BoxDecoration(
-                          color: AppConstants.darkNavy,
-                          borderRadius: BorderRadius.circular(4),
-                          border: Border.all(color: AppConstants.moneyGold, width: 1),
+                          color: const Color(0xFF0F172A),
+                          borderRadius: BorderRadius.circular(5),
+                          border: Border.all(color: AppConstants.moneyGold, width: 1.5),
                         ),
                         child: DropdownButton<PlayerActivity>(
                           value: act,
-                          dropdownColor: AppConstants.darkNavy,
+                          dropdownColor: const Color(0xFF1E293B),
                           isDense: true,
                           underline: const SizedBox.shrink(),
-                          style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.white),
+                          style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
                           items: PlayerActivity.values.map((a) {
                             return DropdownMenuItem(
                               value: a,

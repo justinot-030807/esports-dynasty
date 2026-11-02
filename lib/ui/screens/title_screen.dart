@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import '../../core/constants.dart';
 import '../../core/asset_manager.dart';
 import '../../services/save_service.dart';
-import '../../models/game_state.dart';
 import '../../services/audio_manager.dart';
 import '../widgets/pixel_button.dart';
-import '../dialogs/debug_menu_dialog.dart';
 import '../dialogs/settings_dialog.dart';
 import 'new_game_screen.dart';
 import 'hub_screen.dart';
@@ -19,7 +17,6 @@ class TitleScreen extends StatefulWidget {
 
 class _TitleScreenState extends State<TitleScreen> {
   bool _hasSavedGame = false;
-  int _logoTapCount = 0;
 
   @override
   void initState() {
@@ -32,28 +29,6 @@ class _TitleScreenState extends State<TitleScreen> {
     final hasSave = await SaveService.hasSavedGame();
     if (mounted) {
       setState(() => _hasSavedGame = hasSave);
-    }
-  }
-
-  void _onLogoTap() {
-    _logoTapCount++;
-    if (_logoTapCount >= 7) {
-      _logoTapCount = 0;
-      // Open hidden debug menu
-      showDialog(
-        context: context,
-        builder: (_) => DebugMenuDialog(
-          state: GameState.initial(
-            teamName: 'Debug Team',
-            ownerName: 'Tester',
-            primaryColorHex: '#1B2A49',
-            secondaryColorHex: '#F5B700',
-            emblemSymbol: 'lightning',
-            emblemLetters: 'DT',
-          ),
-          onStateUpdated: () {},
-        ),
-      );
     }
   }
 
@@ -72,6 +47,75 @@ class _TitleScreenState extends State<TitleScreen> {
     );
   }
 
+  void _showUpdatesDialog() {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: const Color(0xFF1E293B),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+          side: const BorderSide(color: AppConstants.moneyGold, width: 2),
+        ),
+        title: const Row(
+          children: [
+            Icon(Icons.new_releases, color: AppConstants.moneyGold, size: 24),
+            SizedBox(width: 8),
+            Text(
+              'ANO ANG BAGO? (v1.2.0)',
+              style: TextStyle(
+                fontFamily: AppConstants.pixelFont,
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        content: const SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _UpdateBullet(
+                title: 'Mas Malalaking Text sa Buong Laro',
+                description: 'Pinalaki ang lahat ng font sa top bar, news ticker, roster, tabs, at buttons para malinaw at madaling basahin sa mobile.',
+              ),
+              _UpdateBullet(
+                title: 'Maliwanag na Esports Theme',
+                description: 'Inalis ang madilim na black void background at pinalitan ng maliwanag at modernong esports gaming house ambiance.',
+              ),
+              _UpdateBullet(
+                title: 'Bagong 3D Pixel Arcade Buttons',
+                description: 'Tunay na procedural pixel-art bevel buttons na may tactile press animation—wala nang blurred o stretched na images!',
+              ),
+              _UpdateBullet(
+                title: 'Inayos ang Gaming House Floor',
+                description: 'Tunay na pixelated parquet floor at maayos na pagkaka-pwesto ng PC desks, beds, at kusina (hindi na lumulutang sa kisame!).',
+              ),
+              _UpdateBullet(
+                title: 'Makinis na Speed Control (1x, 2x, 4x)',
+                description: 'Inalis ang pause button; tuloy-tuloy ang laro at hindi na naiipit sa pause pagkatapos ng match day o events.',
+              ),
+              _UpdateBullet(
+                title: 'Official Production Release',
+                description: 'Inalis ang debug mode para sa tapat at tunay na karanasan sa pagiging esports manager!',
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          PixelButton(
+            label: 'NAKUHA KO!',
+            color: PixelButtonColor.yellow,
+            height: 40,
+            fontSize: 13,
+            onPressed: () => Navigator.pop(ctx),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -79,25 +123,27 @@ class _TitleScreenState extends State<TitleScreen> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Settings gear button
-          Positioned(
-            top: 10,
-            right: 12,
-            child: SafeArea(
-              child: IconButton(
-                icon: const Icon(Icons.settings, color: AppConstants.moneyGold, size: 26),
-                onPressed: () {
-                  showDialog(context: context, builder: (_) => const SettingsDialog());
-                },
-              ),
-            ),
-          ),
+          // Background ambient room
           Opacity(
             opacity: 0.35,
             child: Image.asset(
               AssetManager.roomBg,
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) => Container(color: AppConstants.bgDark),
+            ),
+          ),
+
+          // Settings gear button
+          Positioned(
+            top: 10,
+            right: 12,
+            child: SafeArea(
+              child: IconButton(
+                icon: const Icon(Icons.settings, color: AppConstants.moneyGold, size: 28),
+                onPressed: () {
+                  showDialog(context: context, builder: (_) => const SettingsDialog());
+                },
+              ),
             ),
           ),
 
@@ -110,37 +156,38 @@ class _TitleScreenState extends State<TitleScreen> {
                 children: [
                   const Spacer(flex: 2),
 
-                  // Tappable Logo (Tap 7 times for Debug Menu)
-                  GestureDetector(
-                    onTap: _onLogoTap,
-                    child: Hero(
-                      tag: 'app_logo',
-                      child: Image.asset(
-                        AssetManager.logo,
-                        width: 280,
-                        fit: BoxFit.contain,
-                        errorBuilder: (context, error, stackTrace) => const Text(
-                          'ESPORTS DYNASTY',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontFamily: AppConstants.pixelFont,
-                            fontSize: 32,
-                            fontWeight: FontWeight.bold,
-                            color: AppConstants.moneyGold,
-                          ),
+                  // Logo
+                  Hero(
+                    tag: 'app_logo',
+                    child: Image.asset(
+                      AssetManager.logo,
+                      width: 290,
+                      fit: BoxFit.contain,
+                      errorBuilder: (context, error, stackTrace) => const Text(
+                        'ESPORTS DYNASTY',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontFamily: AppConstants.pixelFont,
+                          fontSize: 34,
+                          fontWeight: FontWeight.bold,
+                          color: AppConstants.moneyGold,
                         ),
                       ),
                     ),
                   ),
 
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 10),
                   const Text(
                     'Mula Rented Room Hanggang World Champion!',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: AppConstants.pixelFont,
-                      fontSize: 13,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
                       color: AppConstants.moneyGold,
+                      shadows: [
+                        Shadow(color: Color(0xFF0F172A), offset: Offset(1, 1)),
+                      ],
                     ),
                   ),
 
@@ -151,38 +198,105 @@ class _TitleScreenState extends State<TitleScreen> {
                     PixelButton(
                       label: 'CONTINUE',
                       color: PixelButtonColor.green,
-                      minWidth: 220,
+                      minWidth: 240,
+                      height: 52,
+                      fontSize: 16,
                       onPressed: _continueGame,
                     ),
-                    const SizedBox(height: 12),
+                    const SizedBox(height: 14),
                   ],
 
                   PixelButton(
                     label: 'NEW GAME',
                     color: PixelButtonColor.yellow,
-                    minWidth: 220,
+                    minWidth: 240,
+                    height: 52,
+                    fontSize: 16,
                     onPressed: _startNewGame,
                   ),
 
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 20),
 
-                  // Hidden debug hint or quick button
+                  // Updates and Version Badge
                   GestureDetector(
-                    onTap: _onLogoTap,
-                    child: Text(
-                      _logoTapCount > 0
-                          ? 'Debug unlock in ${7 - _logoTapCount} taps...'
-                          : 'v1.0.0 - Phase 1 Slice',
-                      style: const TextStyle(
-                        fontFamily: AppConstants.pixelFont,
-                        fontSize: 11,
-                        color: Colors.white38,
+                    onTap: _showUpdatesDialog,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF1E293B),
+                        borderRadius: BorderRadius.circular(6),
+                        border: Border.all(color: const Color(0xFF475569), width: 1.5),
+                      ),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(Icons.tips_and_updates, color: AppConstants.moneyGold, size: 16),
+                          SizedBox(width: 6),
+                          Text(
+                            'v1.2.0 Release Edition • Tingnan ang Update Notes',
+                            style: TextStyle(
+                              fontFamily: AppConstants.pixelFont,
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFFCBD5E1),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
 
                   const Spacer(flex: 1),
                 ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _UpdateBullet extends StatelessWidget {
+  final String title;
+  final String description;
+
+  const _UpdateBullet({required this.title, required this.description});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.check_circle, size: 16, color: AppConstants.positiveGreen),
+              const SizedBox(width: 6),
+              Expanded(
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontFamily: AppConstants.pixelFont,
+                    color: AppConstants.moneyGold,
+                    fontSize: 13,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 3),
+          Padding(
+            padding: const EdgeInsets.only(left: 22.0),
+            child: Text(
+              description,
+              style: const TextStyle(
+                fontFamily: AppConstants.pixelFont,
+                color: Color(0xFFE2E8F0),
+                fontSize: 12,
+                height: 1.3,
               ),
             ),
           ),

@@ -73,30 +73,33 @@ class _CompeteTabState extends State<CompeteTab> {
         children: [
           // Sub-navigation bar
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-            color: const Color(0xFF142036),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            decoration: const BoxDecoration(
+              color: Color(0xFF1E293B),
+              border: Border(bottom: BorderSide(color: Color(0xFF334155), width: 1.5)),
+            ),
             child: Row(
               children: [
                 _buildNavBtn('CALENDAR', 0),
-                const SizedBox(width: 4),
+                const SizedBox(width: 6),
                 _buildNavBtn('RANKINGS', 1),
-                const SizedBox(width: 4),
+                const SizedBox(width: 6),
                 _buildNavBtn('MATCHES', 2),
-                const SizedBox(width: 4),
+                const SizedBox(width: 6),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppConstants.moneyGold,
-                    padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                    minimumSize: const Size(40, 28),
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                   ),
                   onPressed: _openHallOfFame,
                   child: const Text(
                     'HOF',
                     style: TextStyle(
                       fontFamily: AppConstants.pixelFont,
-                      fontSize: 8,
+                      fontSize: 12,
                       fontWeight: FontWeight.bold,
-                      color: AppConstants.bgDark,
+                      color: AppConstants.darkNavy,
                     ),
                   ),
                 ),
@@ -123,17 +126,20 @@ class _CompeteTabState extends State<CompeteTab> {
     return Expanded(
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: isSel ? AppConstants.energyBlue : const Color(0xFF233458),
-          padding: const EdgeInsets.symmetric(vertical: 4),
-          minimumSize: const Size(50, 28),
+          backgroundColor: isSel ? const Color(0xFF0284C7) : const Color(0xFF334155),
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(5),
+            side: BorderSide(color: isSel ? AppConstants.moneyGold : Colors.transparent, width: 1.5),
+          ),
         ),
         onPressed: () => setState(() => _viewMode = mode),
         child: Text(
           title,
           style: TextStyle(
             fontFamily: AppConstants.pixelFont,
-            fontSize: 8,
-            fontWeight: isSel ? FontWeight.bold : FontWeight.normal,
+            fontSize: 12,
+            fontWeight: isSel ? FontWeight.bold : FontWeight.w600,
             color: Colors.white,
           ),
         ),
@@ -175,19 +181,28 @@ class _CompeteTabState extends State<CompeteTab> {
       children: [
         // Tier Filters
         Container(
-          height: 32,
+          height: 38,
           padding: const EdgeInsets.symmetric(horizontal: 8),
+          color: const Color(0xFF162032),
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [0, 1, 2, 3, 4, 5, 6, 7].map((t) {
               final isSel = _tierFilter == t;
               return Padding(
-                padding: const EdgeInsets.only(right: 4, top: 4, bottom: 4),
+                padding: const EdgeInsets.only(right: 6, top: 4, bottom: 4),
                 child: ChoiceChip(
-                  label: Text(t == 0 ? 'ALL' : 'T$t', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white)),
+                  label: Text(
+                    t == 0 ? 'ALL' : 'T$t',
+                    style: TextStyle(
+                      fontFamily: AppConstants.pixelFont,
+                      fontSize: 11,
+                      fontWeight: isSel ? FontWeight.bold : FontWeight.normal,
+                      color: Colors.white,
+                    ),
+                  ),
                   selected: isSel,
-                  selectedColor: AppConstants.energyBlue,
-                  backgroundColor: const Color(0xFF233458),
+                  selectedColor: const Color(0xFF0284C7),
+                  backgroundColor: const Color(0xFF1E293B),
                   onSelected: (_) => setState(() => _tierFilter = t),
                 ),
               );
@@ -198,50 +213,84 @@ class _CompeteTabState extends State<CompeteTab> {
         // Rankings Table
         Expanded(
           child: ListView.builder(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.all(10),
             itemCount: filtered.length,
             itemBuilder: (context, idx) {
               final t = filtered[idx];
               final isUser = t.id == 'user_team';
 
               return Container(
-                margin: const EdgeInsets.only(bottom: 4),
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                margin: const EdgeInsets.only(bottom: 6),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                 decoration: BoxDecoration(
-                  color: isUser ? const Color(0xFF233458) : const Color(0xFF142036),
-                  borderRadius: BorderRadius.circular(4),
-                  border: Border.all(color: isUser ? AppConstants.moneyGold : AppConstants.darkNavy, width: isUser ? 1.5 : 1),
+                  color: isUser ? const Color(0xFF1E3A8A) : const Color(0xFF1E293B),
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(
+                    color: isUser ? AppConstants.moneyGold : const Color(0xFF334155),
+                    width: isUser ? 2.0 : 1.0,
+                  ),
                 ),
                 child: Row(
                   children: [
                     SizedBox(
-                      width: 24,
+                      width: 28,
                       child: Text(
                         '#${idx + 1}',
-                        style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, fontWeight: FontWeight.bold, color: isUser ? AppConstants.moneyGold : Colors.white60),
+                        style: TextStyle(
+                          fontFamily: AppConstants.pixelFont,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: isUser ? AppConstants.moneyGold : const Color(0xFF94A3B8),
+                        ),
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
-                      decoration: BoxDecoration(color: const Color(0xFF1B2A49), borderRadius: BorderRadius.circular(2)),
-                      child: Text('T${t.tier}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 7, color: Colors.white70)),
+                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF0F172A),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        'T${t.tier}',
+                        style: const TextStyle(
+                          fontFamily: AppConstants.pixelFont,
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFFCBD5E1),
+                        ),
+                      ),
                     ),
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 10),
                     Expanded(
                       child: Text(
                         t.name,
                         style: TextStyle(
                           fontFamily: AppConstants.pixelFont,
-                          fontSize: 10,
-                          fontWeight: isUser || t.isFlagship ? FontWeight.bold : FontWeight.normal,
+                          fontSize: 14,
+                          fontWeight: isUser || t.isFlagship ? FontWeight.bold : FontWeight.w500,
                           color: isUser ? AppConstants.moneyGold : (t.isFlagship ? AppConstants.fansPink : Colors.white),
                         ),
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                    Text('Rating: ${t.rating}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white54)),
-                    const SizedBox(width: 10),
-                    Text('${t.circuitPoints} pts', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, fontWeight: FontWeight.bold, color: AppConstants.energyBlue)),
+                    Text(
+                      'Rating: ${t.rating}',
+                      style: const TextStyle(
+                        fontFamily: AppConstants.pixelFont,
+                        fontSize: 12,
+                        color: Color(0xFF94A3B8),
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Text(
+                      '${t.circuitPoints} pts',
+                      style: const TextStyle(
+                        fontFamily: AppConstants.pixelFont,
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                        color: AppConstants.energyBlue,
+                      ),
+                    ),
                   ],
                 ),
               );
@@ -267,25 +316,28 @@ class _CompeteTabState extends State<CompeteTab> {
         child: Text(
           'Walang nakatakdang matches.\nMag-register sa darating na event!',
           textAlign: TextAlign.center,
-          style: TextStyle(fontFamily: AppConstants.pixelFont, color: Colors.white54, fontSize: 10),
+          style: TextStyle(fontFamily: AppConstants.pixelFont, color: Color(0xFF94A3B8), fontSize: 14),
         ),
       );
     }
 
     return ListView.builder(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(10),
       itemCount: myMatches.length,
       itemBuilder: (context, idx) {
         final m = myMatches[idx];
         final isToday = m.week == curWeek && m.day == widget.state.day && !m.isPlayed;
 
         return Container(
-          margin: const EdgeInsets.only(bottom: 6),
-          padding: const EdgeInsets.all(8),
+          margin: const EdgeInsets.only(bottom: 8),
+          padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: isToday ? const Color(0xFF2A1C3C) : const Color(0xFF142036),
-            borderRadius: BorderRadius.circular(4),
-            border: Border.all(color: isToday ? AppConstants.moneyGold : AppConstants.darkNavy),
+            color: isToday ? const Color(0xFF312E81) : const Color(0xFF1E293B),
+            borderRadius: BorderRadius.circular(6),
+            border: Border.all(
+              color: isToday ? AppConstants.moneyGold : const Color(0xFF334155),
+              width: isToday ? 2.0 : 1.0,
+            ),
           ),
           child: Row(
             children: [
@@ -293,27 +345,38 @@ class _CompeteTabState extends State<CompeteTab> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Week ${m.week} Day 5 | ${m.roundName}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white54)),
-                    Text('${m.slotA.teamName} vs ${m.slotB.teamName}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white)),
+                    Text(
+                      'Week ${m.week} Day 5 | ${m.roundName}',
+                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 11, color: Color(0xFF94A3B8)),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      '${m.slotA.teamName} vs ${m.slotB.teamName}',
+                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
+                    ),
                   ],
                 ),
               ),
               if (isToday)
                 ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: AppConstants.positiveGreen, padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4)),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppConstants.positiveGreen,
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+                  ),
                   onPressed: () => _openMatchPrep(m),
-                  child: const Text('PLAY NOW', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white)),
+                  child: const Text('PLAY NOW', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white)),
                 )
               else
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: m.isPlayed ? AppConstants.positiveGreen : const Color(0xFF233458),
-                    borderRadius: BorderRadius.circular(3),
+                    color: m.isPlayed ? AppConstants.positiveGreen : const Color(0xFF334155),
+                    borderRadius: BorderRadius.circular(4),
                   ),
                   child: Text(
                     m.isPlayed ? '${m.slotA.score} - ${m.slotB.score}' : 'UPCOMING',
-                    style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white),
+                    style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white),
                   ),
                 ),
             ],

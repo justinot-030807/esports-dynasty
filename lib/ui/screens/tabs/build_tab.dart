@@ -30,9 +30,8 @@ class _BuildTabState extends State<BuildTab> {
 
     setState(() {
       widget.state.money -= price;
-      // Place at an available tile
-      final nextTileX = (widget.state.furniture.length % 6) + 1;
-      final nextTileY = (widget.state.furniture.length ~/ 6) + 1;
+      final nextTileX = (widget.state.furniture.length % 5) + 1;
+      final nextTileY = ((widget.state.furniture.length ~/ 5) % 4) + 2;
 
       widget.state.furniture.add(PlacedFurniture(
         id: 'f_${DateTime.now().millisecondsSinceEpoch}',
@@ -45,9 +44,8 @@ class _BuildTabState extends State<BuildTab> {
         station: station,
       ));
 
-      widget.state.addNotification('+$name', '#3DBE5A', 0.5, 0.4);
+      widget.state.addNotification('+$name', '#22C55E', 0.5, 0.4);
 
-      // Tutorial progression (Step 2: place desk)
       if (widget.state.tutorial.step == 2 && itemId.contains('desk')) {
         widget.state.tutorial.step = 3;
       }
@@ -73,7 +71,7 @@ class _BuildTabState extends State<BuildTab> {
   void _showMessage(String msg) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(msg, style: const TextStyle(fontFamily: AppConstants.pixelFont)),
+        content: Text(msg, style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 13)),
         duration: const Duration(seconds: 2),
       ),
     );
@@ -92,32 +90,35 @@ class _BuildTabState extends State<BuildTab> {
         children: [
           // House Comfort & Combo Status Bar
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-            color: const Color(0xFF1B2A49),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            decoration: const BoxDecoration(
+              color: Color(0xFF1E293B),
+              border: Border(bottom: BorderSide(color: Color(0xFF334155), width: 1.5)),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
-                    const Text('Comfort: ', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 11, color: Colors.white70)),
+                    const Text('Comfort: ', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 13, color: Color(0xFFCBD5E1), fontWeight: FontWeight.bold)),
                     for (int i = 0; i < widget.state.comfortRating; i++)
-                      const Icon(Icons.star, size: 14, color: AppConstants.moneyGold),
+                      const Icon(Icons.star, size: 16, color: AppConstants.moneyGold),
                   ],
                 ),
                 Row(
                   children: [
                     if (widget.state.hasScrimRoomCombo)
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
-                        decoration: BoxDecoration(color: AppConstants.positiveGreen, borderRadius: BorderRadius.circular(3)),
-                        child: const Text('COMBO: Scrim Room', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white, fontWeight: FontWeight.bold)),
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(color: AppConstants.positiveGreen, borderRadius: BorderRadius.circular(4)),
+                        child: const Text('COMBO: Scrim Room', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.white, fontWeight: FontWeight.bold)),
                       ),
                     if (widget.state.hasKainanCombo) ...[
-                      const SizedBox(width: 4),
+                      const SizedBox(width: 6),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
-                        decoration: BoxDecoration(color: AppConstants.fansPink, borderRadius: BorderRadius.circular(3)),
-                        child: const Text('COMBO: Kainan', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white, fontWeight: FontWeight.bold)),
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(color: AppConstants.fansPink, borderRadius: BorderRadius.circular(4)),
+                        child: const Text('COMBO: Kainan', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.white, fontWeight: FontWeight.bold)),
                       ),
                     ],
                   ],
@@ -128,40 +129,49 @@ class _BuildTabState extends State<BuildTab> {
 
           // Catalog vs Placed Mode Toggle
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-            color: const Color(0xFF142036),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            color: const Color(0xFF162032),
             child: Row(
               children: [
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: _viewMode == 0 ? AppConstants.energyBlue : const Color(0xFF233458),
-                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      backgroundColor: _viewMode == 0 ? const Color(0xFF0284C7) : const Color(0xFF334155),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                        side: BorderSide(color: _viewMode == 0 ? AppConstants.moneyGold : Colors.transparent, width: 1.5),
+                      ),
                     ),
                     onPressed: () => setState(() => _viewMode = 0),
-                    child: const Text('SHOP CATALOG', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.white)),
+                    child: const Text('SHOP CATALOG', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white)),
                   ),
                 ),
                 const SizedBox(width: 8),
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: _viewMode == 1 ? AppConstants.energyBlue : const Color(0xFF233458),
-                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      backgroundColor: _viewMode == 1 ? const Color(0xFF0284C7) : const Color(0xFF334155),
+                      padding: const EdgeInsets.symmetric(vertical: 8),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(5),
+                        side: BorderSide(color: _viewMode == 1 ? AppConstants.moneyGold : Colors.transparent, width: 1.5),
+                      ),
                     ),
                     onPressed: () => setState(() => _viewMode = 1),
-                    child: Text('PLACED (${widget.state.furniture.length})', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.white)),
+                    child: Text('PLACED (${widget.state.furniture.length})', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white)),
                   ),
                 ),
               ],
             ),
           ),
 
-          // Categories Filter (if in Shop mode)
+          // Categories Filter
           if (_viewMode == 0)
             Container(
-              height: 32,
+              height: 38,
               padding: const EdgeInsets.symmetric(horizontal: 8),
+              color: const Color(0xFF162032),
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: ['all', 'pc', 'bed', 'kitchen', 'decor'].map((cat) {
@@ -173,13 +183,14 @@ class _BuildTabState extends State<BuildTab> {
                         cat.toUpperCase(),
                         style: TextStyle(
                           fontFamily: AppConstants.pixelFont,
-                          fontSize: 9,
-                          color: isSelected ? Colors.white : Colors.white70,
+                          fontSize: 11,
+                          fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                          color: isSelected ? Colors.white : const Color(0xFFCBD5E1),
                         ),
                       ),
                       selected: isSelected,
-                      selectedColor: AppConstants.energyBlue,
-                      backgroundColor: const Color(0xFF233458),
+                      selectedColor: const Color(0xFF0284C7),
+                      backgroundColor: const Color(0xFF1E293B),
                       onSelected: (_) => setState(() => _selectedCategory = cat),
                     ),
                   );
@@ -187,7 +198,7 @@ class _BuildTabState extends State<BuildTab> {
               ),
             ),
 
-          // Main List View (Catalog or Placed)
+          // Main List View
           Expanded(
             child: _viewMode == 0
                 ? ListView.builder(
@@ -200,28 +211,32 @@ class _BuildTabState extends State<BuildTab> {
 
                       return Container(
                         margin: const EdgeInsets.only(bottom: 8),
-                        padding: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: isUnlocked ? const Color(0xFF233458) : const Color(0xFF1A2640),
-                          borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: AppConstants.darkNavy, width: 1.5),
+                          color: isUnlocked ? const Color(0xFF1E293B) : const Color(0xFF162032),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: isUnlocked ? const Color(0xFF334155) : const Color(0xFF1E293B),
+                            width: 1.5,
+                          ),
                         ),
                         child: Row(
                           children: [
                             Container(
-                              width: 36,
-                              height: 36,
+                              width: 44,
+                              height: 44,
                               decoration: BoxDecoration(
-                                color: AppConstants.darkNavy,
-                                borderRadius: BorderRadius.circular(4),
+                                color: const Color(0xFF0F172A),
+                                borderRadius: BorderRadius.circular(6),
+                                border: Border.all(color: const Color(0xFF334155), width: 1),
                               ),
                               child: Icon(
                                 isUnlocked ? Icons.inventory_2 : Icons.lock,
                                 color: isUnlocked ? AppConstants.moneyGold : Colors.white38,
-                                size: 18,
+                                size: 22,
                               ),
                             ),
-                            const SizedBox(width: 8),
+                            const SizedBox(width: 12),
 
                             Expanded(
                               child: Column(
@@ -233,26 +248,28 @@ class _BuildTabState extends State<BuildTab> {
                                         item.name,
                                         style: TextStyle(
                                           fontFamily: AppConstants.pixelFont,
-                                          fontSize: 12,
+                                          fontSize: 15,
                                           fontWeight: FontWeight.bold,
                                           color: isUnlocked ? Colors.white : Colors.white38,
                                         ),
                                       ),
                                       if (isNew) ...[
-                                        const SizedBox(width: 4),
+                                        const SizedBox(width: 6),
                                         Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 1),
-                                          decoration: BoxDecoration(color: AppConstants.negativeRed, borderRadius: BorderRadius.circular(2)),
-                                          child: const Text('NEW!', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 7, color: Colors.white, fontWeight: FontWeight.bold)),
+                                          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                                          decoration: BoxDecoration(color: AppConstants.negativeRed, borderRadius: BorderRadius.circular(3)),
+                                          child: const Text('NEW!', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.white, fontWeight: FontWeight.bold)),
                                         ),
                                       ],
                                     ],
                                   ),
+                                  const SizedBox(height: 2),
                                   Text(
                                     isUnlocked ? '${item.desc} | P${item.price}' : 'Kailangan ng ${item.fameReq} Fame',
                                     style: TextStyle(
                                       fontFamily: AppConstants.pixelFont,
-                                      fontSize: 9,
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w500,
                                       color: isUnlocked ? AppConstants.moneyGold : Colors.white38,
                                     ),
                                   ),
@@ -262,16 +279,16 @@ class _BuildTabState extends State<BuildTab> {
 
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: isUnlocked ? AppConstants.positiveGreen : Colors.grey.shade800,
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                minimumSize: const Size(54, 28),
+                                backgroundColor: isUnlocked ? AppConstants.positiveGreen : const Color(0xFF334155),
+                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                               ),
                               onPressed: isUnlocked
                                   ? () => _buyItem(item.id, item.name, item.price, item.station, item.sizeX, item.sizeY)
                                   : null,
                               child: Text(
                                 isUnlocked ? 'BUY' : 'LOCKED',
-                                style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.white),
+                                style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
                               ),
                             ),
                           ],
@@ -283,7 +300,7 @@ class _BuildTabState extends State<BuildTab> {
                     ? const Center(
                         child: Text(
                           'Walang nakalagay na gamit.',
-                          style: TextStyle(fontFamily: AppConstants.pixelFont, color: Colors.white54, fontSize: 11),
+                          style: TextStyle(fontFamily: AppConstants.pixelFont, color: Color(0xFF94A3B8), fontSize: 13),
                         ),
                       )
                     : ListView.builder(
@@ -297,33 +314,33 @@ class _BuildTabState extends State<BuildTab> {
 
                           return Container(
                             margin: const EdgeInsets.only(bottom: 8),
-                            padding: const EdgeInsets.all(8),
+                            padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
-                              color: const Color(0xFF233458),
-                              borderRadius: BorderRadius.circular(6),
-                              border: Border.all(color: AppConstants.darkNavy, width: 1.5),
+                              color: const Color(0xFF1E293B),
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(color: const Color(0xFF334155), width: 1.5),
                             ),
                             child: Row(
                               children: [
-                                const Icon(Icons.chair, color: AppConstants.energyBlue, size: 24),
-                                const SizedBox(width: 8),
+                                const Icon(Icons.chair, color: AppConstants.energyBlue, size: 28),
+                                const SizedBox(width: 10),
                                 Expanded(
                                   child: Column(
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      Text(f.name, style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white)),
-                                      Text('Tile: (${f.tileX}, ${f.tileY}) | Station: ${f.station}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white60)),
+                                      Text(f.name, style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white)),
+                                      Text('Tile: (${f.tileX}, ${f.tileY}) | Station: ${f.station}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 11, color: Color(0xFF94A3B8))),
                                     ],
                                   ),
                                 ),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
                                     backgroundColor: AppConstants.negativeRed,
-                                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                    minimumSize: const Size(54, 28),
+                                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                                   ),
                                   onPressed: () => _sellFurniture(f),
-                                  child: Text('SELL P$refund', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white)),
+                                  child: Text('SELL P$refund', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white)),
                                 ),
                               ],
                             ),

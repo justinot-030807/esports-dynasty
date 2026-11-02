@@ -48,24 +48,31 @@ class _NewsTickerState extends State<NewsTicker> {
         : 'Maligayang pagdating sa Arena Clash!';
 
     return Container(
-      height: 24,
-      color: const Color(0xFF131D33),
+      height: 30,
+      decoration: const BoxDecoration(
+        color: Color(0xFF131D33),
+        border: Border(
+          bottom: BorderSide(color: Color(0xFF1E293B), width: 1),
+        ),
+      ),
       padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Row(
         children: [
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1),
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
             decoration: BoxDecoration(
-              color: AppConstants.negativeRed,
-              borderRadius: BorderRadius.circular(3),
+              color: const Color(0xFFEF4444),
+              borderRadius: BorderRadius.circular(4),
+              border: Border.all(color: const Color(0xFFB91C1C), width: 1),
             ),
             child: const Text(
               'BALITA',
               style: TextStyle(
                 fontFamily: AppConstants.pixelFont,
                 color: Colors.white,
-                fontSize: 10,
+                fontSize: 11,
                 fontWeight: FontWeight.bold,
+                letterSpacing: 0.5,
               ),
             ),
           ),
@@ -89,8 +96,9 @@ class _NewsTickerState extends State<NewsTicker> {
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
                   fontFamily: AppConstants.pixelFont,
-                  color: Color(0xFFE2E8F0),
-                  fontSize: 12,
+                  color: Color(0xFFF1F5F9),
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ),
