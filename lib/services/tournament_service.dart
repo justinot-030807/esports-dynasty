@@ -293,6 +293,33 @@ class TournamentService {
           BracketEngine.recordMatchOutcome(instance: instance, tournament: def, match: match, result: result);
         }
       }
+
+      if (instance.status == 'completed') {
+        _distributeAiTournamentPoints(def, instance);
+      }
+    }
+  }
+
+  static final Set<String> _awardedTournaments = {};
+
+  static void _distributeAiTournamentPoints(TournamentDef def, TournamentInstance instance) {
+    if (_awardedTournaments.contains(instance.tournamentId)) return;
+    _awardedTournaments.add(instance.tournamentId);
+
+    if (instance.championId.isNotEmpty && instance.championId != 'user_team') {
+      final champ = DataService().findTeam(instance.championId);
+      if (champ != null) champ.circuitPoints += def.circuitPoints;
+    }
+    final gf = instance.matches.cast<MatchNode?>().firstWhere(
+      (m) => m?.id.endsWith('gf') == true || m?.roundName.toLowerCase().contains('final') == true,
+      orElse: () => null,
+    );
+    if (gf != null && gf.isPlayed) {
+      final runnerUpId = gf.winnerId == gf.slotA.teamId ? gf.slotB.teamId : gf.slotA.teamId;
+      if (runnerUpId.isNotEmpty && runnerUpId != 'user_team') {
+        final runner = DataService().findTeam(runnerUpId);
+        if (runner != null) runner.circuitPoints += (def.circuitPoints * 0.6).round();
+      }
     }
   }
 

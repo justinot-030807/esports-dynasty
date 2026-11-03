@@ -135,36 +135,36 @@ class _BuildTabState extends State<BuildTab> {
           // Catalog vs Placed Mode Toggle
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-            color: const Color(0xFF162032),
+            color: const Color(0xFFF1F5F9),
             child: Row(
               children: [
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: _viewMode == 0 ? const Color(0xFF0284C7) : const Color(0xFF334155),
+                      backgroundColor: _viewMode == 0 ? const Color(0xFF0284C7) : const Color(0xFFE2E8F0),
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
-                        side: BorderSide(color: _viewMode == 0 ? AppConstants.moneyGold : Colors.transparent, width: 1.5),
+                        side: BorderSide(color: _viewMode == 0 ? AppConstants.moneyGold : const Color(0xFFCBD5E1), width: 1.5),
                       ),
                     ),
                     onPressed: () => setState(() => _viewMode = 0),
-                    child: const Text('SHOP CATALOG', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white)),
+                    child: Text('SHOP CATALOG', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: _viewMode == 0 ? Colors.white : const Color(0xFF334155))),
                   ),
                 ),
                 const SizedBox(width: 8),
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: _viewMode == 1 ? const Color(0xFF0284C7) : const Color(0xFF334155),
+                      backgroundColor: _viewMode == 1 ? const Color(0xFF0284C7) : const Color(0xFFE2E8F0),
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
-                        side: BorderSide(color: _viewMode == 1 ? AppConstants.moneyGold : Colors.transparent, width: 1.5),
+                        side: BorderSide(color: _viewMode == 1 ? AppConstants.moneyGold : const Color(0xFFCBD5E1), width: 1.5),
                       ),
                     ),
                     onPressed: () => setState(() => _viewMode = 1),
-                    child: Text('PLACED (${widget.state.furniture.length})', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white)),
+                    child: Text('PLACED (${widget.state.furniture.length})', style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: _viewMode == 1 ? Colors.white : const Color(0xFF334155))),
                   ),
                 ),
               ],
@@ -176,7 +176,7 @@ class _BuildTabState extends State<BuildTab> {
             Container(
               height: 38,
               padding: const EdgeInsets.symmetric(horizontal: 8),
-              color: const Color(0xFF162032),
+              color: const Color(0xFFF8FAFC),
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: ['all', 'pc', 'chair', 'bed', 'kitchen', 'decor', 'gadget', 'utility'].map((cat) {
@@ -190,12 +190,12 @@ class _BuildTabState extends State<BuildTab> {
                           fontFamily: AppConstants.pixelFont,
                           fontSize: 11,
                           fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                          color: isSelected ? Colors.white : const Color(0xFFCBD5E1),
+                          color: isSelected ? Colors.white : const Color(0xFF334155),
                         ),
                       ),
                       selected: isSelected,
                       selectedColor: const Color(0xFF0284C7),
-                      backgroundColor: const Color(0xFF1E293B),
+                      backgroundColor: const Color(0xFFE2E8F0),
                       onSelected: (_) => setState(() => _selectedCategory = cat),
                     ),
                   );
@@ -218,12 +218,15 @@ class _BuildTabState extends State<BuildTab> {
                         margin: const EdgeInsets.only(bottom: 8),
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: isUnlocked ? const Color(0xFF1E293B) : const Color(0xFF162032),
+                          color: isUnlocked ? Colors.white : const Color(0xFFF1F5F9),
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
-                            color: isUnlocked ? const Color(0xFF334155) : const Color(0xFF1E293B),
+                            color: isUnlocked ? const Color(0xFFCBD5E1) : const Color(0xFFE2E8F0),
                             width: 1.5,
                           ),
+                          boxShadow: const [
+                            BoxShadow(color: Color(0x0A000000), offset: Offset(0, 1), blurRadius: 3),
+                          ],
                         ),
                         child: Row(
                           children: [
@@ -232,9 +235,9 @@ class _BuildTabState extends State<BuildTab> {
                               height: 44,
                               padding: const EdgeInsets.all(3),
                               decoration: BoxDecoration(
-                                color: const Color(0xFF0F172A),
+                                color: const Color(0xFFF8FAFC),
                                 borderRadius: BorderRadius.circular(6),
-                                border: Border.all(color: const Color(0xFF334155), width: 1),
+                                border: Border.all(color: const Color(0xFFCBD5E1), width: 1),
                               ),
                               child: isUnlocked
                                   ? Image.asset(
@@ -247,7 +250,7 @@ class _BuildTabState extends State<BuildTab> {
                                       'assets/images/icons/ui_lock.png',
                                       fit: BoxFit.contain,
                                       filterQuality: FilterQuality.none,
-                                      errorBuilder: (_, _, _) => const Icon(Icons.lock, color: Colors.white38, size: 22),
+                                      errorBuilder: (_, _, _) => const Icon(Icons.lock, color: Color(0xFF94A3B8), size: 22),
                                     ),
                             ),
                             const SizedBox(width: 12),
@@ -264,7 +267,7 @@ class _BuildTabState extends State<BuildTab> {
                                           fontFamily: AppConstants.pixelFont,
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold,
-                                          color: isUnlocked ? Colors.white : Colors.white38,
+                                          color: isUnlocked ? const Color(0xFF0F172A) : const Color(0xFF94A3B8),
                                         ),
                                       ),
                                       if (isNew) ...[
@@ -281,10 +284,10 @@ class _BuildTabState extends State<BuildTab> {
                                   Text(
                                     isUnlocked ? '${item.desc} | P${item.price}' : 'Kailangan ng ${item.fameReq} Fame',
                                     style: TextStyle(
-                                      fontFamily: AppConstants.pixelFont,
+                                      fontFamily: AppConstants.bodyFont,
                                       fontSize: 12,
                                       fontWeight: FontWeight.w500,
-                                      color: isUnlocked ? AppConstants.moneyGold : Colors.white38,
+                                      color: isUnlocked ? const Color(0xFFD97706) : const Color(0xFF94A3B8),
                                     ),
                                   ),
                                 ],

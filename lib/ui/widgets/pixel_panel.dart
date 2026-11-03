@@ -22,8 +22,10 @@ class PixelPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenW = MediaQuery.sizeOf(context).width;
+    final dialogW = width ?? (screenW * 0.92).clamp(320.0, 420.0);
     return Container(
-      width: width,
+      width: dialogW,
       height: height,
       decoration: BoxDecoration(
         color: AppConstants.panelLight,

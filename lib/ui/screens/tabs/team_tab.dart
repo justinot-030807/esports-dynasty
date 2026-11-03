@@ -173,7 +173,7 @@ class _TeamTabState extends State<TeamTab> {
           Container(
             height: 38,
             padding: const EdgeInsets.symmetric(horizontal: 8),
-            color: const Color(0xFF162032),
+            color: const Color(0xFFF1F5F9),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
@@ -201,12 +201,15 @@ class _TeamTabState extends State<TeamTab> {
                     margin: const EdgeInsets.only(bottom: 8),
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF1E293B),
+                      color: Colors.white,
                       borderRadius: BorderRadius.circular(8),
                       border: Border.all(
-                        color: p.isStarter ? AppConstants.moneyGold : const Color(0xFF334155),
+                        color: p.isStarter ? const Color(0xFFD97706) : const Color(0xFFCBD5E1),
                         width: p.isStarter ? 2.0 : 1.5,
                       ),
+                      boxShadow: const [
+                        BoxShadow(color: Color(0x0F000000), offset: Offset(0, 2), blurRadius: 4),
+                      ],
                     ),
                     child: Row(
                       children: [
@@ -215,9 +218,9 @@ class _TeamTabState extends State<TeamTab> {
                           width: 44,
                           height: 44,
                           decoration: BoxDecoration(
-                            color: const Color(0xFF0F172A),
+                            color: const Color(0xFFF1F5F9),
                             borderRadius: BorderRadius.circular(6),
-                            border: Border.all(color: const Color(0xFF334155), width: 1),
+                            border: Border.all(color: const Color(0xFFCBD5E1), width: 1),
                           ),
                           child: Image.asset(
                             p.facePath,
@@ -254,7 +257,7 @@ class _TeamTabState extends State<TeamTab> {
                                     p.gamerTag,
                                     style: const TextStyle(
                                       fontFamily: AppConstants.pixelFont,
-                                      color: Colors.white,
+                                      color: Color(0xFF0F172A),
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
@@ -263,7 +266,7 @@ class _TeamTabState extends State<TeamTab> {
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                     decoration: BoxDecoration(
-                                      color: p.isStarter ? AppConstants.positiveGreen : const Color(0xFF475569),
+                                      color: p.isStarter ? AppConstants.positiveGreen : const Color(0xFF64748B),
                                       borderRadius: BorderRadius.circular(4),
                                     ),
                                     child: Text(
@@ -282,9 +285,10 @@ class _TeamTabState extends State<TeamTab> {
                               Text(
                                 '${p.realName} | [${p.divisionId.split('_').map((w) => w[0]).join().toUpperCase()}] ${p.roleDisplayName.toUpperCase()} | OVR ${p.ovr} (${p.rankTitle})',
                                 style: const TextStyle(
-                                  fontFamily: AppConstants.pixelFont,
-                                  color: Color(0xFFCBD5E1),
-                                  fontSize: 12,
+                                  fontFamily: AppConstants.bodyFont,
+                                  color: Color(0xFF475569),
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w500,
                                 ),
                               ),
                             ],
@@ -316,7 +320,7 @@ class _TeamTabState extends State<TeamTab> {
                               'P${p.weeklySalary}/wk',
                               style: const TextStyle(
                                 fontFamily: AppConstants.pixelFont,
-                                color: AppConstants.moneyGold,
+                                color: Color(0xFFD97706),
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
                               ),

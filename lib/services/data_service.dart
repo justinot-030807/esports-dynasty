@@ -80,6 +80,12 @@ class DataService {
 
       final list = teamMap['ai_teams'] as List<dynamic>? ?? [];
       aiTeams = list.map((e) => AiTeam.fromJson(e as Map<String, dynamic>)).toList();
+
+      for (final t in allTeams) {
+        if (t.circuitPoints == 0) {
+          t.circuitPoints = _computeInitialTierPoints(t.tier, t.rating);
+        }
+      }
     } catch (_) {}
 
     // 5. events.json
@@ -147,6 +153,18 @@ class DataService {
       return allTeams.firstWhere((t) => t.id == id);
     } catch (_) {
       return null;
+    }
+  }
+
+  int _computeInitialTierPoints(int tier, int rating) {
+    switch (tier) {
+      case 7: return 1600 + ((rating - 80).clamp(0, 30) * 20);
+      case 6: return 1000 + ((rating - 70).clamp(0, 30) * 15);
+      case 5: return 600 + ((rating - 60).clamp(0, 30) * 12);
+      case 4: return 320 + ((rating - 50).clamp(0, 30) * 10);
+      case 3: return 140 + ((rating - 42).clamp(0, 30) * 8);
+      case 2: return 50 + ((rating - 36).clamp(0, 30) * 5);
+      default: return (rating - 30).clamp(0, 40);
     }
   }
 }

@@ -23,6 +23,7 @@ flutter:
 
   assets:
     - assets/assets_manifest.json
+    - assets/audio/
     - assets/data/
     - assets/images/
     - assets/images/backgrounds/

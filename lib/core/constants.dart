@@ -8,27 +8,29 @@ class AppConstants {
   static const double tileSize = 32.0;
 
   // Style Bible Colors
-  static const Color darkNavy = Color(0xFF1B2A49);
-  static const Color textNavy = Color(0xFF1B2A49);
-  static const Color positiveGreen = Color(0xFF22C55E);
-  static const Color negativeRed = Color(0xFFEF4444);
-  static const Color moneyGold = Color(0xFFF5B700);
-  static const Color famePurple = Color(0xFFC084FC);
-  static const Color fansPink = Color(0xFFF472B6);
-  static const Color energyBlue = Color(0xFF38BDF8);
+  static const Color darkNavy = Color(0xFF0F172A);
+  static const Color textDark = Color(0xFF0F172A);
+  static const Color textNavy = Color(0xFF0F172A);
+  static const Color textMuted = Color(0xFF475569);
+  static const Color positiveGreen = Color(0xFF16A34A);
+  static const Color negativeRed = Color(0xFFDC2626);
+  static const Color moneyGold = Color(0xFFD97706);
+  static const Color famePurple = Color(0xFF9333EA);
+  static const Color fansPink = Color(0xFFDB2777);
+  static const Color energyBlue = Color(0xFF0284C7);
 
-  // Background and panels
-  static const Color bgDark = Color(0xFF162032);
-  static const Color panelLight = Color(0xFFF8FAFC);
-  static const Color panelBorder = Color(0xFF2A3B5C);
-  static const Color panelHeader = Color(0xFF1E293B);
+  // Background and panels (Light Mode)
+  static const Color bgDark = Color(0xFFF1F5F9);
+  static const Color panelLight = Color(0xFFFFFFFF);
+  static const Color panelBorder = Color(0xFFCBD5E1);
+  static const Color panelHeader = Color(0xFFE2E8F0);
 
-  // Scaled Mobile Typography Standards (PixelifySans)
-  static const double fontMicro = 11.0;
-  static const double fontSmall = 13.0;
-  static const double fontBody = 15.0;
-  static const double fontTitle = 17.0;
-  static const double fontHeader = 20.0;
+  // Scaled Mobile Typography Standards
+  static const double fontMicro = 12.0;
+  static const double fontSmall = 14.0;
+  static const double fontBody = 16.0;
+  static const double fontTitle = 18.0;
+  static const double fontHeader = 22.0;
 
   // Time rules
   static const int daysPerWeek = 7;
@@ -40,4 +42,5 @@ class AppConstants {
 
   // Font family
   static const String pixelFont = 'PixelifySans';
+  static const String? bodyFont = null;
 }

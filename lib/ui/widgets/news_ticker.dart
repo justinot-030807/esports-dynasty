@@ -50,9 +50,9 @@ class _NewsTickerState extends State<NewsTicker> {
     return Container(
       height: 30,
       decoration: const BoxDecoration(
-        color: Color(0xFF131D33),
+        color: Color(0xFFF1F5F9),
         border: Border(
-          bottom: BorderSide(color: Color(0xFF1E293B), width: 1),
+          bottom: BorderSide(color: Color(0xFFCBD5E1), width: 1),
         ),
       ),
       padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -95,10 +95,10 @@ class _NewsTickerState extends State<NewsTicker> {
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(
-                  fontFamily: AppConstants.pixelFont,
-                  color: Color(0xFFF1F5F9),
+                  fontFamily: AppConstants.bodyFont,
+                  color: Color(0xFF1E293B),
                   fontSize: 13,
-                  fontWeight: FontWeight.w500,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ),

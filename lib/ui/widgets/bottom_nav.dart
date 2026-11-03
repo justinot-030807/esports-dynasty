@@ -18,9 +18,9 @@ class BottomNav extends StatelessWidget {
     return Container(
       height: 60,
       decoration: const BoxDecoration(
-        color: Color(0xFF162032),
+        color: Colors.white,
         border: Border(
-          top: BorderSide(color: Color(0xFF2A3B5C), width: 2),
+          top: BorderSide(color: Color(0xFFCBD5E1), width: 1.5),
         ),
       ),
       child: Row(
@@ -54,7 +54,7 @@ class BottomNav extends StatelessWidget {
         onTap: () => onTabSelected(tab),
         behavior: HitTestBehavior.opaque,
         child: Container(
-          color: isSelected ? const Color(0x22F5B700) : Colors.transparent,
+          color: isSelected ? const Color(0xFFFEF3C7) : Colors.transparent,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -67,7 +67,7 @@ class BottomNav extends StatelessWidget {
                 errorBuilder: (_, _, _) => Icon(
                   icon,
                   size: 24,
-                  color: isSelected ? AppConstants.moneyGold : const Color(0xFF94A3B8),
+                  color: isSelected ? const Color(0xFFD97706) : const Color(0xFF64748B),
                 ),
               ),
               const SizedBox(height: 3),
@@ -75,9 +75,9 @@ class BottomNav extends StatelessWidget {
                 label,
                 style: TextStyle(
                   fontFamily: AppConstants.pixelFont,
-                  fontSize: 12,
-                  fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-                  color: isSelected ? AppConstants.moneyGold : const Color(0xFF94A3B8),
+                  fontSize: 13,
+                  fontWeight: isSelected ? FontWeight.bold : FontWeight.w600,
+                  color: isSelected ? const Color(0xFFD97706) : const Color(0xFF64748B),
                 ),
               ),
             ],

@@ -93,8 +93,8 @@ class _PlanTabState extends State<PlanTab> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
             decoration: const BoxDecoration(
-              color: Color(0xFF1E293B),
-              border: Border(bottom: BorderSide(color: Color(0xFF334155), width: 1.5)),
+              color: Colors.white,
+              border: Border(bottom: BorderSide(color: Color(0xFFCBD5E1), width: 1.5)),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,26 +108,26 @@ class _PlanTabState extends State<PlanTab> {
                         fontFamily: AppConstants.pixelFont,
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: AppConstants.moneyGold,
+                        color: Color(0xFFD97706),
                       ),
                     ),
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF0F172A),
+                        color: const Color(0xFFF8FAFC),
                         borderRadius: BorderRadius.circular(5),
-                        border: Border.all(color: AppConstants.moneyGold, width: 1),
+                        border: Border.all(color: const Color(0xFFCBD5E1), width: 1),
                       ),
                       child: DropdownButton<TeamFocus>(
                         value: widget.state.currentPlan.focus,
-                        dropdownColor: const Color(0xFF1E293B),
+                        dropdownColor: Colors.white,
                         isDense: true,
                         underline: const SizedBox.shrink(),
                         style: const TextStyle(
                           fontFamily: AppConstants.pixelFont,
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                          color: Color(0xFF0F172A),
                         ),
                         items: TeamFocus.values.map((f) {
                           return DropdownMenuItem(
@@ -146,9 +146,9 @@ class _PlanTabState extends State<PlanTab> {
                 Text(
                   widget.state.currentPlan.focusDescription,
                   style: const TextStyle(
-                    fontFamily: AppConstants.pixelFont,
-                    fontSize: 12,
-                    color: Color(0xFFCBD5E1),
+                    fontFamily: AppConstants.bodyFont,
+                    fontSize: 13,
+                    color: Color(0xFF475569),
                   ),
                 ),
               ],
@@ -177,7 +177,7 @@ class _PlanTabState extends State<PlanTab> {
           // Quick Action Buttons
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-            color: const Color(0xFF162032),
+            color: const Color(0xFFF1F5F9),
             child: Row(
               children: [
                 Expanded(
@@ -195,7 +195,7 @@ class _PlanTabState extends State<PlanTab> {
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AppConstants.energyBlue,
+                      backgroundColor: const Color(0xFF0284C7),
                       padding: const EdgeInsets.symmetric(vertical: 8),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                     ),
@@ -222,9 +222,12 @@ class _PlanTabState extends State<PlanTab> {
                   margin: const EdgeInsets.only(bottom: 8),
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF1E293B),
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: const Color(0xFF334155), width: 1.5),
+                    border: Border.all(color: const Color(0xFFCBD5E1), width: 1.5),
+                    boxShadow: const [
+                      BoxShadow(color: Color(0x0A000000), offset: Offset(0, 1), blurRadius: 3),
+                    ],
                   ),
                   child: Row(
                     children: [
@@ -232,14 +235,14 @@ class _PlanTabState extends State<PlanTab> {
                         width: 38,
                         height: 38,
                         decoration: BoxDecoration(
-                          color: const Color(0xFF0F172A),
+                          color: const Color(0xFFF1F5F9),
                           borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: const Color(0xFF334155), width: 1),
+                          border: Border.all(color: const Color(0xFFCBD5E1), width: 1),
                         ),
                         child: Center(
                           child: Text(
                             p.role.name.substring(0, 1).toUpperCase(),
-                            style: const TextStyle(fontFamily: AppConstants.pixelFont, color: AppConstants.moneyGold, fontSize: 18, fontWeight: FontWeight.bold),
+                            style: const TextStyle(fontFamily: AppConstants.pixelFont, color: Color(0xFFD97706), fontSize: 18, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
@@ -251,13 +254,13 @@ class _PlanTabState extends State<PlanTab> {
                           children: [
                             Text(
                               '${p.gamerTag} (${p.condition.name.toUpperCase()})',
-                              style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 15, fontWeight: FontWeight.bold, color: Colors.white),
+                              style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
                             ),
                             const SizedBox(height: 2),
                             Text(
                               'Fatigue: ${p.fatigue} -> $predictedFatigue',
                               style: TextStyle(
-                                fontFamily: AppConstants.pixelFont,
+                                fontFamily: AppConstants.bodyFont,
                                 fontSize: 12,
                                 fontWeight: FontWeight.bold,
                                 color: predictedFatigue >= 60 ? AppConstants.negativeRed : AppConstants.positiveGreen,
@@ -271,16 +274,16 @@ class _PlanTabState extends State<PlanTab> {
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                         decoration: BoxDecoration(
-                          color: const Color(0xFF0F172A),
+                          color: const Color(0xFFF8FAFC),
                           borderRadius: BorderRadius.circular(5),
-                          border: Border.all(color: AppConstants.moneyGold, width: 1.5),
+                          border: Border.all(color: const Color(0xFFCBD5E1), width: 1.5),
                         ),
                         child: DropdownButton<PlayerActivity>(
                           value: act,
-                          dropdownColor: const Color(0xFF1E293B),
+                          dropdownColor: Colors.white,
                           isDense: true,
                           underline: const SizedBox.shrink(),
-                          style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
+                          style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
                           items: PlayerActivity.values.map((a) {
                             return DropdownMenuItem(
                               value: a,

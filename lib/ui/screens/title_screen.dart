@@ -5,8 +5,8 @@ import '../../services/save_service.dart';
 import '../../services/audio_manager.dart';
 import '../widgets/pixel_button.dart';
 import '../dialogs/settings_dialog.dart';
+import '../dialogs/save_slots_dialog.dart';
 import 'new_game_screen.dart';
-import 'hub_screen.dart';
 
 class TitleScreen extends StatefulWidget {
   const TitleScreen({super.key});
@@ -33,17 +33,24 @@ class _TitleScreenState extends State<TitleScreen> {
   }
 
   Future<void> _continueGame() async {
-    final state = await SaveService.loadGame();
-    if (state != null && mounted) {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => HubScreen(state: state)),
-      );
-    }
+    showDialog(
+      context: context,
+      builder: (_) => const SaveSlotsDialog(mode: SaveSlotMode.load),
+    );
   }
 
   void _startNewGame() {
-    Navigator.of(context).push(
-      MaterialPageRoute(builder: (_) => const NewGameScreen()),
+    showDialog(
+      context: context,
+      builder: (_) => SaveSlotsDialog(
+        mode: SaveSlotMode.selectForNewGame,
+        onSlotSelected: (slot) {
+          SaveService.currentSlot = slot;
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (_) => const NewGameScreen()),
+          );
+        },
+      ),
     );
   }
 

@@ -104,7 +104,8 @@ class _HubScreenState extends State<HubScreen> {
 
   void _onGameTick(double dt) {
     if (widget.state.speedMultiplier == 0) return;
-    final secondsPerDay = (8.0 / widget.state.speedMultiplier) / 7.0;
+    // Calibrated pacing: ~3.5s per day at 1x (24.5s/wk), 1.75s at 2x, 0.87s at 4x
+    final secondsPerDay = (24.5 / widget.state.speedMultiplier) / 7.0;
 
     _dayAccumulator += dt;
     if (_dayAccumulator >= secondsPerDay) {
@@ -329,7 +330,10 @@ class _HubScreenState extends State<HubScreen> {
                           children: [
                             Container(
                               height: 42,
-                              color: const Color(0xFF1E293B),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                                border: Border(bottom: BorderSide(color: Color(0xFFCBD5E1), width: 1.5)),
+                              ),
                               padding: const EdgeInsets.symmetric(horizontal: 12),
                               child: Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -339,8 +343,8 @@ class _HubScreenState extends State<HubScreen> {
                                     style: const TextStyle(
                                       fontFamily: AppConstants.pixelFont,
                                       fontWeight: FontWeight.bold,
-                                      color: AppConstants.moneyGold,
-                                      fontSize: 15,
+                                      color: Color(0xFF0F172A),
+                                      fontSize: 16,
                                     ),
                                   ),
                                   GestureDetector(

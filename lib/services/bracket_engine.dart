@@ -50,6 +50,7 @@ class BracketEngine {
     int stageIndex = 0,
   }) {
     final count = participants.length;
+    if (count < 2) return [];
     final bracketSize = nextPowerOfTwo(count);
     final numRounds = (log(bracketSize) / log(2)).round();
     final seedOrder = generateSeedOrder(bracketSize);

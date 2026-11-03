@@ -19,9 +19,9 @@ class DivisionSwitcherBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: Color(0xFF1E293B),
+        color: Color(0xFFF8FAFC),
         border: Border(
-          bottom: BorderSide(color: Color(0xFF334155), width: 1.5),
+          bottom: BorderSide(color: Color(0xFFE2E8F0), width: 1.5),
         ),
       ),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -54,10 +54,10 @@ class DivisionSwitcherBar extends StatelessWidget {
                         decoration: BoxDecoration(
                           color: isSelected
                               ? const Color(0xFF0284C7)
-                              : (isUnlocked ? const Color(0xFF334155) : const Color(0xFF1E293B)),
+                              : (isUnlocked ? const Color(0xFFE2E8F0) : const Color(0xFFF1F5F9)),
                           borderRadius: BorderRadius.circular(5),
                           border: Border.all(
-                            color: isSelected ? AppConstants.moneyGold : const Color(0xFF475569),
+                            color: isSelected ? AppConstants.moneyGold : const Color(0xFFCBD5E1),
                             width: 1.5,
                           ),
                         ),
@@ -74,7 +74,7 @@ class DivisionSwitcherBar extends StatelessWidget {
                                 fontFamily: AppConstants.pixelFont,
                                 fontSize: 12,
                                 fontWeight: isSelected ? FontWeight.bold : FontWeight.w600,
-                                color: isUnlocked ? Colors.white : const Color(0xFF94A3B8),
+                                color: isSelected ? Colors.white : (isUnlocked ? const Color(0xFF1E293B) : const Color(0xFF94A3B8)),
                               ),
                             ),
                             if (isUnlocked) ...[

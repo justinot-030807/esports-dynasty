@@ -45,9 +45,9 @@ class TopBar extends StatelessWidget {
 
     return Container(
       decoration: const BoxDecoration(
-        color: Color(0xFF162032),
+        color: Colors.white,
         border: Border(
-          bottom: BorderSide(color: Color(0xFF2A3B5C), width: 2),
+          bottom: BorderSide(color: Color(0xFFCBD5E1), width: 2),
         ),
       ),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -84,7 +84,7 @@ class TopBar extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
                         fontFamily: AppConstants.pixelFont,
-                        color: Colors.white,
+                        color: Color(0xFF0F172A),
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
                         letterSpacing: 0.5,
@@ -95,7 +95,7 @@ class TopBar extends StatelessWidget {
                       '${state.dateString} D${state.day}',
                       style: const TextStyle(
                         fontFamily: AppConstants.pixelFont,
-                        color: AppConstants.moneyGold,
+                        color: Color(0xFFD97706),
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
                       ),
@@ -104,12 +104,12 @@ class TopBar extends StatelessWidget {
                 ),
               ),
 
-              // Speed selector pills (1x, 2x, 4x) - PAUSE removed per user requirement
+              // Speed selector pills (1x, 2x, 4x)
               Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFF0F172A),
+                  color: const Color(0xFFF1F5F9),
                   borderRadius: BorderRadius.circular(6),
-                  border: Border.all(color: const Color(0xFF334155), width: 1.5),
+                  border: Border.all(color: const Color(0xFFCBD5E1), width: 1.5),
                 ),
                 padding: const EdgeInsets.all(2),
                 child: Row(
@@ -128,13 +128,13 @@ class TopBar extends StatelessWidget {
 
           const SizedBox(height: 6),
 
-          // Row 2: Money, Fame, Fans counters with larger fonts and icons
+          // Row 2: Money, Fame, Fans counters with light cards
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
             decoration: BoxDecoration(
-              color: const Color(0xFF1E293B),
+              color: const Color(0xFFF8FAFC),
               borderRadius: BorderRadius.circular(6),
-              border: Border.all(color: const Color(0xFF334155), width: 1.5),
+              border: Border.all(color: const Color(0xFFE2E8F0), width: 1.5),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -142,17 +142,17 @@ class TopBar extends StatelessWidget {
                 _buildResourceChip(
                   AssetManager.iconMoney,
                   'P${_formatNumber(state.money)}',
-                  AppConstants.moneyGold,
+                  const Color(0xFFD97706),
                 ),
                 _buildResourceChip(
                   AssetManager.iconFame,
                   _formatNumber(state.fame),
-                  const Color(0xFFC084FC),
+                  const Color(0xFF9333EA),
                 ),
                 _buildResourceChip(
                   AssetManager.iconFans,
                   _formatNumber(state.fans),
-                  const Color(0xFFF472B6),
+                  const Color(0xFFDB2777),
                 ),
               ],
             ),
@@ -217,13 +217,6 @@ class TopBar extends StatelessWidget {
             fontSize: 14,
             fontWeight: FontWeight.bold,
             color: color,
-            shadows: const [
-              Shadow(
-                color: Color(0xFF0F172A),
-                offset: Offset(1, 1),
-                blurRadius: 0,
-              ),
-            ],
           ),
         ),
       ],

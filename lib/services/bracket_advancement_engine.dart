@@ -172,7 +172,7 @@ class BracketAdvancementEngine {
 
   /// Check and trigger stage advancement (e.g. from Groups/Swiss into Single Elim Playoffs)
   static void checkAndAdvanceStages(GameState state, TournamentDef def, TournamentInstance instance) {
-    if (instance.currentStageIndex >= def.stages.length - 1) return;
+    if (instance.status == 'completed') return;
 
     final curStage = def.stages[instance.currentStageIndex];
     final curMatches = instance.matches.where((m) => m.stageIndex == instance.currentStageIndex).toList();
@@ -180,7 +180,45 @@ class BracketAdvancementEngine {
     // Check if stage is fully played
     if (curMatches.isEmpty || curMatches.any((m) => !m.isPlayed)) return;
 
-    // Stage 0 is complete! Advance to Stage 1 (Playoffs)
+    // Handle Swiss stage progression
+    if (curStage.type == 'swiss') {
+      final wins = <String, int>{};
+      final losses = <String, int>{};
+      for (final m in curMatches) {
+        if (m.winnerId.isNotEmpty) {
+          wins[m.winnerId] = (wins[m.winnerId] ?? 0) + 1;
+          final loserId = m.winnerId == m.slotA.teamId ? m.slotB.teamId : m.slotA.teamId;
+          if (loserId.isNotEmpty) {
+            losses[loserId] = (losses[loserId] ?? 0) + 1;
+          }
+        }
+      }
+      final curMaxRound = curMatches.map((m) => m.round).fold(0, (a, b) => a > b ? a : b);
+      final qualifiedCount = wins.values.where((w) => w >= 3).length;
+      final targetAdvance = curStage.advanceCount > 0 ? curStage.advanceCount : 8;
+
+      if (qualifiedCount < targetAdvance && curMaxRound < 5) {
+        generateNextSwissRound(instance, def, state.weekOfYear + 1);
+        return;
+      }
+
+      if (instance.currentStageIndex >= def.stages.length - 1) {
+        final sortedIds = wins.keys.toList()..sort((a, b) => (wins[b] ?? 0).compareTo(wins[a] ?? 0));
+        if (sortedIds.isNotEmpty) {
+          instance.championId = sortedIds.first;
+          final champTeam = sortedIds.first == 'user_team'
+              ? null
+              : DataService().findTeam(sortedIds.first);
+          instance.championName = champTeam?.name ?? state.teamName;
+        }
+        instance.status = 'completed';
+        return;
+      }
+    }
+
+    if (instance.currentStageIndex >= def.stages.length - 1) return;
+
+    // Stage complete! Advance to next stage (Playoffs)
     final nextStageIndex = instance.currentStageIndex + 1;
     final nextStageDef = def.stages[nextStageIndex];
     instance.currentStageIndex = nextStageIndex;
@@ -188,15 +226,14 @@ class BracketAdvancementEngine {
     // Collect advancing teams
     final qualifiedTeams = <AiTeam>[];
     if (curStage.type == 'swiss') {
-      // Top 8 teams with 3 wins
       final wins = <String, int>{};
       for (final m in curMatches) {
         if (m.winnerId.isNotEmpty) {
           wins[m.winnerId] = (wins[m.winnerId] ?? 0) + 1;
         }
       }
-      final sortedIds = wins.keys.where((id) => (wins[id] ?? 0) >= 3).toList();
-      for (final id in sortedIds) {
+      final sortedIds = wins.keys.toList()..sort((a, b) => (wins[b] ?? 0).compareTo(wins[a] ?? 0));
+      for (final id in sortedIds.take(nextStageDef.teams)) {
         final t = id == 'user_team'
             ? AiTeam(id: 'user_team', name: state.teamName, tier: def.tier, region: 'NCR', colors: [], rating: 50)
             : DataService().findTeam(id) ?? AiTeam(id: id, name: 'Team $id', tier: def.tier, region: 'PH', colors: [], rating: 50);
@@ -227,17 +264,19 @@ class BracketAdvancementEngine {
       }
     }
 
-    // Generate single elimination playoff matches
-    final playoffMatches = BracketEngine.generateSingleElimMatches(
-      tournamentId: def.id,
-      participants: qualifiedTeams,
-      startWeek: state.weekOfYear + 1,
-      bo: nextStageDef.bo,
-      grandFinalBo: nextStageDef.grandFinalBo,
-      stageIndex: nextStageIndex,
-    );
+    if (qualifiedTeams.length >= 2) {
+      // Generate single elimination playoff matches
+      final playoffMatches = BracketEngine.generateSingleElimMatches(
+        tournamentId: def.id,
+        participants: qualifiedTeams,
+        startWeek: state.weekOfYear + 1,
+        bo: nextStageDef.bo,
+        grandFinalBo: nextStageDef.grandFinalBo,
+        stageIndex: nextStageIndex,
+      );
 
-    instance.matches.addAll(playoffMatches);
-    state.addNotification('${def.name}: Playoffs Started!', '#9B5DE5', 0.5, 0.4);
+      instance.matches.addAll(playoffMatches);
+      state.addNotification('${def.name}: Playoffs Started!', '#9B5DE5', 0.5, 0.4);
+    }
   }
 }

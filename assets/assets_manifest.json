@@ -3281,5 +3281,75 @@
     "height": 512,
     "category": "system",
     "notes": ""
+  },
+  "audio/sfx_tap": {
+    "file": "assets/audio/sfx_tap.wav",
+    "category": "sfx",
+    "notes": "UI tap sound"
+  },
+  "audio/sfx_confirm": {
+    "file": "assets/audio/sfx_confirm.wav",
+    "category": "sfx",
+    "notes": "Confirm sound"
+  },
+  "audio/sfx_cancel": {
+    "file": "assets/audio/sfx_cancel.wav",
+    "category": "sfx",
+    "notes": "Cancel sound"
+  },
+  "audio/sfx_coin": {
+    "file": "assets/audio/sfx_coin.wav",
+    "category": "sfx",
+    "notes": "Coin gain sound"
+  },
+  "audio/sfx_promotion": {
+    "file": "assets/audio/sfx_promotion.wav",
+    "category": "sfx",
+    "notes": "Promotion sound"
+  },
+  "audio/sfx_win": {
+    "file": "assets/audio/sfx_win.wav",
+    "category": "sfx",
+    "notes": "Victory fanfare"
+  },
+  "audio/sfx_lose": {
+    "file": "assets/audio/sfx_lose.wav",
+    "category": "sfx",
+    "notes": "Defeat sound"
+  },
+  "audio/sfx_popup": {
+    "file": "assets/audio/sfx_popup.wav",
+    "category": "sfx",
+    "notes": "Dialog popup sound"
+  },
+  "audio/sfx_hit": {
+    "file": "assets/audio/sfx_hit.wav",
+    "category": "sfx",
+    "notes": "Hit sound"
+  },
+  "audio/sfx_week_tick": {
+    "file": "assets/audio/sfx_week_tick.wav",
+    "category": "sfx",
+    "notes": "Week tick sound"
+  },
+  "audio/bgm_title": {
+    "file": "assets/audio/bgm_title.wav",
+    "category": "bgm",
+    "notes": "Title screen music"
+  },
+  "audio/bgm_house": {
+    "file": "assets/audio/bgm_house.wav",
+    "category": "bgm",
+    "notes": "House scene music"
+  },
+  "audio/bgm_match": {
+    "file": "assets/audio/bgm_match.wav",
+    "category": "bgm",
+    "notes": "Match broadcast music"
+  },
+  "audio/bgm_finals": {
+    "file": "assets/audio/bgm_finals.wav",
+    "category": "bgm",
+    "notes": "Grand finals music"
   }
 }

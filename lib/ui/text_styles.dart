@@ -118,4 +118,39 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: darkNavy,
   );
+
+  /// Clean, readable UI typography standards (System Sans-Serif)
+  static const TextStyle body = TextStyle(
+    fontFamily: AppConstants.bodyFont,
+    fontSize: 15,
+    fontWeight: FontWeight.normal,
+    color: AppConstants.textDark,
+  );
+
+  static const TextStyle bodyBold = TextStyle(
+    fontFamily: AppConstants.bodyFont,
+    fontSize: 15,
+    fontWeight: FontWeight.bold,
+    color: AppConstants.textDark,
+  );
+
+  static const TextStyle bodyMuted = TextStyle(
+    fontFamily: AppConstants.bodyFont,
+    fontSize: 13,
+    color: AppConstants.textMuted,
+  );
+
+  static const TextStyle cardTitle = TextStyle(
+    fontFamily: AppConstants.bodyFont,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: AppConstants.textDark,
+  );
+
+  static const TextStyle dialogTitle = TextStyle(
+    fontFamily: AppConstants.bodyFont,
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    color: AppConstants.textDark,
+  );
 }

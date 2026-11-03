@@ -65,8 +65,8 @@ class _CompeteTabState extends State<CompeteTab> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
             decoration: const BoxDecoration(
-              color: Color(0xFF1E293B),
-              border: Border(bottom: BorderSide(color: Color(0xFF334155), width: 1.5)),
+              color: Color(0xFFF8FAFC),
+              border: Border(bottom: BorderSide(color: Color(0xFFCBD5E1), width: 1.5)),
             ),
             child: Row(
               children: [
@@ -116,11 +116,11 @@ class _CompeteTabState extends State<CompeteTab> {
     return Expanded(
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: isSel ? const Color(0xFF0284C7) : const Color(0xFF334155),
+          backgroundColor: isSel ? const Color(0xFF0284C7) : const Color(0xFFE2E8F0),
           padding: const EdgeInsets.symmetric(vertical: 8),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5),
-            side: BorderSide(color: isSel ? AppConstants.moneyGold : Colors.transparent, width: 1.5),
+            side: BorderSide(color: isSel ? AppConstants.moneyGold : const Color(0xFFCBD5E1), width: 1.5),
           ),
         ),
         onPressed: () => setState(() => _viewMode = mode),
@@ -130,7 +130,7 @@ class _CompeteTabState extends State<CompeteTab> {
             fontFamily: AppConstants.pixelFont,
             fontSize: 12,
             fontWeight: isSel ? FontWeight.bold : FontWeight.w600,
-            color: Colors.white,
+            color: isSel ? Colors.white : const Color(0xFF334155),
           ),
         ),
       ),
@@ -173,7 +173,7 @@ class _CompeteTabState extends State<CompeteTab> {
         Container(
           height: 38,
           padding: const EdgeInsets.symmetric(horizontal: 8),
-          color: const Color(0xFF162032),
+          color: const Color(0xFFF1F5F9),
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [0, 1, 2, 3, 4, 5, 6, 7].map((t) {
@@ -187,12 +187,12 @@ class _CompeteTabState extends State<CompeteTab> {
                       fontFamily: AppConstants.pixelFont,
                       fontSize: 11,
                       fontWeight: isSel ? FontWeight.bold : FontWeight.normal,
-                      color: Colors.white,
+                      color: isSel ? Colors.white : const Color(0xFF334155),
                     ),
                   ),
                   selected: isSel,
                   selectedColor: const Color(0xFF0284C7),
-                  backgroundColor: const Color(0xFF1E293B),
+                  backgroundColor: const Color(0xFFE2E8F0),
                   onSelected: (_) => setState(() => _tierFilter = t),
                 ),
               );
@@ -213,12 +213,15 @@ class _CompeteTabState extends State<CompeteTab> {
                 margin: const EdgeInsets.only(bottom: 6),
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                 decoration: BoxDecoration(
-                  color: isUser ? const Color(0xFF1E3A8A) : const Color(0xFF1E293B),
+                  color: isUser ? const Color(0xFFEFF6FF) : Colors.white,
                   borderRadius: BorderRadius.circular(6),
                   border: Border.all(
-                    color: isUser ? AppConstants.moneyGold : const Color(0xFF334155),
+                    color: isUser ? const Color(0xFFD97706) : const Color(0xFFCBD5E1),
                     width: isUser ? 2.0 : 1.0,
                   ),
+                  boxShadow: const [
+                    BoxShadow(color: Color(0x0A000000), offset: Offset(0, 1), blurRadius: 3),
+                  ],
                 ),
                 child: Row(
                   children: [
@@ -230,19 +233,20 @@ class _CompeteTabState extends State<CompeteTab> {
                           fontFamily: AppConstants.pixelFont,
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
-                          color: isUser ? AppConstants.moneyGold : const Color(0xFF94A3B8),
+                          color: isUser ? const Color(0xFFD97706) : const Color(0xFF64748B),
                         ),
                       ),
                     ),
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF0F172A),
+                        color: const Color(0xFFF1F5F9),
                         borderRadius: BorderRadius.circular(4),
+                        border: Border.all(color: const Color(0xFFCBD5E1)),
                       ),
                       child: Text(
                         'T${t.tier}',
-                        style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFFCBD5E1)),
+                        style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFF334155)),
                       ),
                     ),
                     const SizedBox(width: 8),
@@ -259,7 +263,7 @@ class _CompeteTabState extends State<CompeteTab> {
                           fontFamily: AppConstants.pixelFont,
                           fontSize: 14,
                           fontWeight: isUser || t.isFlagship ? FontWeight.bold : FontWeight.w500,
-                          color: isUser ? AppConstants.moneyGold : (t.isFlagship ? AppConstants.fansPink : Colors.white),
+                          color: isUser ? const Color(0xFFD97706) : (t.isFlagship ? const Color(0xFFDB2777) : const Color(0xFF0F172A)),
                         ),
                         overflow: TextOverflow.ellipsis,
                       ),
@@ -267,9 +271,10 @@ class _CompeteTabState extends State<CompeteTab> {
                     Text(
                       'Rating: ${t.rating}',
                       style: const TextStyle(
-                        fontFamily: AppConstants.pixelFont,
+                        fontFamily: AppConstants.bodyFont,
                         fontSize: 12,
-                        color: Color(0xFF94A3B8),
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xFF64748B),
                       ),
                     ),
                     const SizedBox(width: 12),
@@ -279,7 +284,7 @@ class _CompeteTabState extends State<CompeteTab> {
                         fontFamily: AppConstants.pixelFont,
                         fontSize: 13,
                         fontWeight: FontWeight.bold,
-                        color: AppConstants.energyBlue,
+                        color: Color(0xFF0284C7),
                       ),
                     ),
                   ],
@@ -307,7 +312,7 @@ class _CompeteTabState extends State<CompeteTab> {
         child: Text(
           'Walang nakatakdang matches.\nMag-register sa darating na event!',
           textAlign: TextAlign.center,
-          style: TextStyle(fontFamily: AppConstants.pixelFont, color: Color(0xFF94A3B8), fontSize: 14),
+          style: TextStyle(fontFamily: AppConstants.pixelFont, color: Color(0xFF64748B), fontSize: 14),
         ),
       );
     }
@@ -323,12 +328,15 @@ class _CompeteTabState extends State<CompeteTab> {
           margin: const EdgeInsets.only(bottom: 8),
           padding: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: isToday ? const Color(0xFF312E81) : const Color(0xFF1E293B),
+            color: isToday ? const Color(0xFFEFF6FF) : Colors.white,
             borderRadius: BorderRadius.circular(6),
             border: Border.all(
-              color: isToday ? AppConstants.moneyGold : const Color(0xFF334155),
+              color: isToday ? const Color(0xFFD97706) : const Color(0xFFCBD5E1),
               width: isToday ? 2.0 : 1.0,
             ),
+            boxShadow: const [
+              BoxShadow(color: Color(0x0A000000), offset: Offset(0, 1), blurRadius: 3),
+            ],
           ),
           child: Row(
             children: [
@@ -338,12 +346,12 @@ class _CompeteTabState extends State<CompeteTab> {
                   children: [
                     Text(
                       'Week ${m.week} Day 5 | ${m.roundName}',
-                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 11, color: Color(0xFF94A3B8)),
+                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 11, color: Color(0xFF64748B)),
                     ),
                     const SizedBox(height: 2),
                     Text(
                       '${m.slotA.teamName} vs ${m.slotB.teamName}',
-                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white),
+                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 14, fontWeight: FontWeight.bold, color: Color(0xFF0F172A)),
                     ),
                   ],
                 ),
@@ -362,7 +370,7 @@ class _CompeteTabState extends State<CompeteTab> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: m.isPlayed ? AppConstants.positiveGreen : const Color(0xFF334155),
+                    color: m.isPlayed ? AppConstants.positiveGreen : const Color(0xFF64748B),
                     borderRadius: BorderRadius.circular(4),
                   ),
                   child: Text(
