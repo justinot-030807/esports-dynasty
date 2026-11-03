@@ -66,14 +66,24 @@ class PlayerDetailDialog extends StatelessWidget {
                       borderRadius: BorderRadius.circular(6),
                       border: Border.all(color: AppConstants.moneyGold, width: 2),
                     ),
-                    child: Center(
-                      child: Text(
-                        player.role.name.substring(0, player.role.name.length >= 2 ? 2 : 1).toUpperCase(),
-                        style: const TextStyle(
-                          fontFamily: AppConstants.pixelFont,
-                          color: AppConstants.moneyGold,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
+                    child: Image.asset(
+                      player.facePath,
+                      fit: BoxFit.contain,
+                      filterQuality: FilterQuality.none,
+                      errorBuilder: (_, _, _) => Image.asset(
+                        player.avatarPath,
+                        fit: BoxFit.contain,
+                        filterQuality: FilterQuality.none,
+                        errorBuilder: (_, _, _) => Center(
+                          child: Text(
+                            player.role.name.substring(0, player.role.name.length >= 2 ? 2 : 1).toUpperCase(),
+                            style: const TextStyle(
+                              fontFamily: AppConstants.pixelFont,
+                              color: AppConstants.moneyGold,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -100,14 +110,27 @@ class PlayerDetailDialog extends StatelessWidget {
                             color: Colors.black54,
                           ),
                         ),
-                        Text(
-                          'Rank: ${player.rankTitle} | Salary: P${player.weeklySalary}/wk',
-                          style: const TextStyle(
-                            fontFamily: AppConstants.pixelFont,
-                            fontSize: 10,
-                            color: AppConstants.famePurple,
-                            fontWeight: FontWeight.bold,
-                          ),
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/images/icons/rank_${player.rankTitle.toLowerCase().replaceAll('-', '')}.png',
+                              width: 12,
+                              height: 12,
+                              fit: BoxFit.contain,
+                              filterQuality: FilterQuality.none,
+                              errorBuilder: (_, _, _) => const SizedBox(),
+                            ),
+                            const SizedBox(width: 4),
+                            Text(
+                              'Rank: ${player.rankTitle} | Salary: P${player.weeklySalary}/wk',
+                              style: const TextStyle(
+                                fontFamily: AppConstants.pixelFont,
+                                fontSize: 10,
+                                color: AppConstants.famePurple,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
                         ),
                         Text(
                           'Contract: ${player.contractWeeksLeft} wks left',
@@ -137,6 +160,15 @@ class PlayerDetailDialog extends StatelessWidget {
                         'Condition: ',
                         style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: FontWeight.bold, color: AppConstants.darkNavy),
                       ),
+                      Image.asset(
+                        'assets/images/icons/face_${player.condition.name}.png',
+                        width: 14,
+                        height: 14,
+                        fit: BoxFit.contain,
+                        filterQuality: FilterQuality.none,
+                        errorBuilder: (_, _, _) => const SizedBox(),
+                      ),
+                      const SizedBox(width: 4),
                       Text(
                         _conditionText(player.condition),
                         style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: FontWeight.bold, color: _conditionColor(player.condition)),

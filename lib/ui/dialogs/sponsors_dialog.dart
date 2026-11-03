@@ -93,6 +93,23 @@ class _SponsorsDialogState extends State<SponsorsDialog> {
     );
   }
 
+  String _getSponsorLogo(String id) {
+    final lower = id.toLowerCase();
+    if (lower.contains('silog') || lower.contains('bertos')) return 'assets/images/emblems/sponsor_silog.png';
+    if (lower.contains('tindanet')) return 'assets/images/emblems/sponsor_tindanet.png';
+    if (lower.contains('voltedge')) return 'assets/images/emblems/sponsor_voltedge.png';
+    if (lower.contains('kapeko')) return 'assets/images/emblems/sponsor_kapeko.png';
+    if (lower.contains('byteburger')) return 'assets/images/emblems/sponsor_byteburger.png';
+    if (lower.contains('lakas')) return 'assets/images/emblems/sponsor_lakas.png';
+    if (lower.contains('gising')) return 'assets/images/emblems/sponsor_gising.png';
+    if (lower.contains('sulit')) return 'assets/images/emblems/sponsor_sulit.png';
+    if (lower.contains('kuryente')) return 'assets/images/emblems/sponsor_kuryente.png';
+    if (lower.contains('pixelpinoy')) return 'assets/images/emblems/sponsor_pixelpinoy.png';
+    if (lower.contains('bayanihan')) return 'assets/images/emblems/sponsor_bayanihan.png';
+    if (lower.contains('skylink')) return 'assets/images/emblems/sponsor_skylink.png';
+    return 'assets/images/branding/app_icon.png';
+  }
+
   Widget _buildTabButton(int index, String title) {
     final isSelected = _tabIndex == index;
     return InkWell(
@@ -159,15 +176,26 @@ class _SponsorsDialogState extends State<SponsorsDialog> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    sp.name,
-                    style: const TextStyle(
-                      fontFamily: AppConstants.pixelFont,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: AppConstants.textNavy,
+                  Image.asset(
+                    _getSponsorLogo(sp.id),
+                    width: 32,
+                    height: 32,
+                    fit: BoxFit.contain,
+                    filterQuality: FilterQuality.none,
+                    errorBuilder: (_, _, _) => const Icon(Icons.business, size: 24, color: AppConstants.textNavy),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      sp.name,
+                      style: const TextStyle(
+                        fontFamily: AppConstants.pixelFont,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: AppConstants.textNavy,
+                      ),
                     ),
                   ),
                   Text(
@@ -254,15 +282,26 @@ class _SponsorsDialogState extends State<SponsorsDialog> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    def.name,
-                    style: const TextStyle(
-                      fontFamily: AppConstants.pixelFont,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      color: AppConstants.textNavy,
+                  Image.asset(
+                    _getSponsorLogo(def.id),
+                    width: 32,
+                    height: 32,
+                    fit: BoxFit.contain,
+                    filterQuality: FilterQuality.none,
+                    errorBuilder: (_, _, _) => const Icon(Icons.business, size: 24, color: AppConstants.textNavy),
+                  ),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      def.name,
+                      style: const TextStyle(
+                        fontFamily: AppConstants.pixelFont,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: AppConstants.textNavy,
+                      ),
                     ),
                   ),
                   Container(

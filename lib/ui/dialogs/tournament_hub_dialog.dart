@@ -49,42 +49,35 @@ class _TournamentHubDialogState extends State<TournamentHubDialog> with SingleTi
   void _handleRegister() {
     final error = TournamentService.checkRegistrationEligibility(widget.state, widget.def);
     if (error != null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(error, style: const TextStyle(fontFamily: AppConstants.pixelFont)),
-          backgroundColor: AppConstants.negativeRed,
-        ),
-      );
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(error, style: const TextStyle(fontFamily: AppConstants.pixelFont)), backgroundColor: AppConstants.negativeRed));
       return;
     }
-
-    setState(() {
-      TournamentService.registerUser(widget.state, widget.def);
-    });
+    setState(() => TournamentService.registerUser(widget.state, widget.def));
     widget.onStateUpdated();
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('Matagumpay na nagparehistro sa ${widget.def.name}!', style: const TextStyle(fontFamily: AppConstants.pixelFont)),
-        backgroundColor: AppConstants.positiveGreen,
-      ),
-    );
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Matagumpay na nagparehistro sa ${widget.def.name}!', style: const TextStyle(fontFamily: AppConstants.pixelFont)), backgroundColor: AppConstants.positiveGreen));
   }
 
   void _handleWithdraw() {
-    setState(() {
-      TournamentService.withdrawUser(widget.state, widget.def);
-    });
+    setState(() => TournamentService.withdrawUser(widget.state, widget.def));
     widget.onStateUpdated();
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Nag-withdraw sa event. Na-refund ang 50%!', style: TextStyle(fontFamily: AppConstants.pixelFont)),
-      ),
-    );
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Nag-withdraw sa event. Na-refund ang 50%!', style: TextStyle(fontFamily: AppConstants.pixelFont))));
+  }
+
+  String _getVenueArt(int tier, String id) {
+    final l = id.toLowerCase();
+    if (tier == 1) {
+      if (l.contains('icc') || l.contains('cafe')) return 'assets/images/venues/venue_internet_cafe.png';
+      if (l.contains('campus') || l.contains('school') || l.contains('gym')) return 'assets/images/venues/venue_school_gym.png';
+      return 'assets/images/venues/venue_barangay_court.png';
+    }
+    const map = {2: 'town_arena', 3: 'provincial_hall', 4: 'regional_arena', 5: 'national_stadium', 6: 'apac_arena'};
+    return 'assets/images/venues/venue_${map[tier] ?? 'world_stadium'}.png';
   }
 
   @override
   Widget build(BuildContext context) {
     final inst = _instance;
+    final venuePath = _getVenueArt(widget.def.tier, widget.def.id);
 
     return Dialog(
       backgroundColor: AppConstants.bgDark,
@@ -96,34 +89,70 @@ class _TournamentHubDialogState extends State<TournamentHubDialog> with SingleTi
         ),
         child: Column(
           children: [
-            // Header with Tier Banner
-            Container(
-              padding: const EdgeInsets.all(10),
-              color: const Color(0xFF1B2A49),
-              child: Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                    decoration: BoxDecoration(
-                      color: widget.def.tier == 1 ? const Color(0xFF4A5568) : AppConstants.energyBlue,
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                    child: Text('T${widget.def.tier}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.white, fontWeight: FontWeight.bold)),
+            // Header with Venue Art
+            Stack(
+              children: [
+                Container(
+                  height: 72,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF101B2E),
+                    borderRadius: BorderRadius.vertical(top: Radius.circular(6)),
                   ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      widget.def.name,
-                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white),
-                      overflow: TextOverflow.ellipsis,
+                  child: Center(
+                    child: Image.asset(
+                      venuePath,
+                      height: 68,
+                      fit: BoxFit.contain,
+                      filterQuality: FilterQuality.none,
+                      errorBuilder: (_, _, _) => const SizedBox(),
                     ),
                   ),
-                  IconButton(
-                    icon: const Icon(Icons.close, color: Colors.white70, size: 18),
+                ),
+                Container(
+                  height: 72,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.black87, Colors.transparent, Colors.black87],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 10,
+                  bottom: 8,
+                  right: 40,
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: widget.def.tier == 1 ? const Color(0xFF4A5568) : AppConstants.energyBlue,
+                          borderRadius: BorderRadius.circular(3),
+                        ),
+                        child: Text('T${widget.def.tier}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.white, fontWeight: FontWeight.bold)),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          widget.def.name,
+                          style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 13, fontWeight: FontWeight.bold, color: Colors.white),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Positioned(
+                  top: 4,
+                  right: 4,
+                  child: IconButton(
+                    icon: const Icon(Icons.close, color: Colors.white, size: 20),
                     onPressed: () => Navigator.of(context).pop(),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
 
             // Tab Navigation
@@ -280,42 +309,33 @@ class _TournamentHubDialogState extends State<TournamentHubDialog> with SingleTi
     if (inst.matches.isEmpty) {
       return const Center(child: Text('Walang schedule.', style: TextStyle(fontFamily: AppConstants.pixelFont, color: Colors.white54, fontSize: 10)));
     }
-
     return ListView.builder(
       padding: const EdgeInsets.all(8),
       itemCount: inst.matches.length,
       itemBuilder: (context, idx) {
         final m = inst.matches[idx];
-        final isUser = m.hasUser;
-
         return Container(
           margin: const EdgeInsets.only(bottom: 6),
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: isUser ? const Color(0xFF233458) : const Color(0xFF142036),
+            color: m.hasUser ? const Color(0xFF233458) : const Color(0xFF142036),
             borderRadius: BorderRadius.circular(4),
-            border: Border.all(color: isUser ? AppConstants.moneyGold : AppConstants.darkNavy),
+            border: Border.all(color: m.hasUser ? AppConstants.moneyGold : AppConstants.darkNavy),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text('Week ${m.week} Day 5 | ${m.roundName}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white54)),
-                  Text('${m.slotA.teamName} vs ${m.slotB.teamName}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white)),
-                ],
-              ),
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Text('W${m.week} D5 | ${m.roundName}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, color: Colors.white54)),
+                Text('${m.slotA.teamName} vs ${m.slotB.teamName}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white)),
+              ]),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                 decoration: BoxDecoration(
                   color: m.isPlayed ? AppConstants.positiveGreen : (m.week == curWeek ? AppConstants.negativeRed : AppConstants.energyBlue),
                   borderRadius: BorderRadius.circular(3),
                 ),
-                child: Text(
-                  m.isPlayed ? '${m.slotA.score} - ${m.slotB.score}' : (m.week == curWeek ? 'TODAY' : 'UPCOMING'),
-                  style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, fontWeight: FontWeight.bold, color: Colors.white),
-                ),
+                child: Text(m.isPlayed ? '${m.slotA.score}-${m.slotB.score}' : (m.week == curWeek ? 'TODAY' : 'UPCOMING'), style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 8, fontWeight: FontWeight.bold, color: Colors.white)),
               ),
             ],
           ),
@@ -326,15 +346,10 @@ class _TournamentHubDialogState extends State<TournamentHubDialog> with SingleTi
 
   Widget _buildStandingsTab(TournamentInstance inst) {
     if (inst.standings.isEmpty) {
-      return const Center(child: Text('Walang standings para sa format na ito.', style: TextStyle(fontFamily: AppConstants.pixelFont, color: Colors.white54, fontSize: 10)));
+      return const Center(child: Text('Walang standings.', style: TextStyle(fontFamily: AppConstants.pixelFont, color: Colors.white54, fontSize: 10)));
     }
-
-    final sorted = List<RoundRobinTeamStat>.from(inst.standings);
-    sorted.sort((a, b) {
-      final pDiff = b.points.compareTo(a.points);
-      if (pDiff != 0) return pDiff;
-      return b.gameDiff.compareTo(a.gameDiff);
-    });
+    final sorted = List<RoundRobinTeamStat>.from(inst.standings)
+      ..sort((a, b) => b.points != a.points ? b.points.compareTo(a.points) : b.gameDiff.compareTo(a.gameDiff));
 
     return ListView.builder(
       padding: const EdgeInsets.all(8),
@@ -342,7 +357,6 @@ class _TournamentHubDialogState extends State<TournamentHubDialog> with SingleTi
       itemBuilder: (context, idx) {
         final s = sorted[idx];
         final isUser = s.teamId == 'user_team';
-
         return Container(
           margin: const EdgeInsets.only(bottom: 4),
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
@@ -351,15 +365,13 @@ class _TournamentHubDialogState extends State<TournamentHubDialog> with SingleTi
             borderRadius: BorderRadius.circular(4),
             border: Border.all(color: isUser ? AppConstants.moneyGold : AppConstants.darkNavy),
           ),
-          child: Row(
-            children: [
-              SizedBox(width: 20, child: Text('${idx + 1}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.white70))),
-              Expanded(child: Text(s.teamName, style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: isUser ? FontWeight.bold : FontWeight.normal, color: isUser ? AppConstants.moneyGold : Colors.white))),
-              Text('${s.wins}W - ${s.losses}L', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.white70)),
-              const SizedBox(width: 10),
-              Text('${s.points} pts', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, fontWeight: FontWeight.bold, color: AppConstants.moneyGold)),
-            ],
-          ),
+          child: Row(children: [
+            SizedBox(width: 20, child: Text('${idx + 1}', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.white70))),
+            Expanded(child: Text(s.teamName, style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: isUser ? FontWeight.bold : FontWeight.normal, color: isUser ? AppConstants.moneyGold : Colors.white))),
+            Text('${s.wins}W - ${s.losses}L', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.white70)),
+            const SizedBox(width: 10),
+            Text('${s.points} pts', style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, fontWeight: FontWeight.bold, color: AppConstants.moneyGold)),
+          ]),
         );
       },
     );

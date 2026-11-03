@@ -54,6 +54,9 @@ class DivisionService {
           : (i < liNames.length ? liNames[i] : 'Pedro Penduko');
 
       final baseStat = 32 + _rng.nextInt(12);
+      final isF = _rng.nextBool();
+      final numId = isF ? (1 + _rng.nextInt(9)) : (1 + _rng.nextInt(10));
+      final avId = isF ? 'gamer_f${numId.toString().padLeft(2, '0')}' : 'gamer_m${numId.toString().padLeft(2, '0')}';
 
       starters.add(Player(
         id: 'p_${divisionId}_${DateTime.now().microsecondsSinceEpoch}_$i',
@@ -61,6 +64,7 @@ class DivisionService {
         gamerTag: tag,
         role: role,
         divisionId: divisionId,
+        avatarId: avId,
         age: 17 + _rng.nextInt(4),
         aim: (baseStat + _rng.nextInt(8) - 4).clamp(25, 60),
         reaction: (baseStat + _rng.nextInt(8) - 4).clamp(25, 60),

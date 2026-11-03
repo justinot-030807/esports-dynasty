@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-/// Sound effect event identifiers per Style Bible Section 3
+/// Sound effect event identifiers per Style Bible Section 3 & MATCH_SCREEN_SPEC B4
 enum AudioSfx {
   tap,
   confirm,
@@ -12,6 +12,19 @@ enum AudioSfx {
   popup,
   hit,
   weekTick,
+  // Match Broadcast SFX (Spec B4)
+  kill,
+  multiKill,
+  clash,
+  focusPerfect,
+  focusGood,
+  focusMiss,
+  victory,
+  defeat,
+  crowdCheer,
+  crowdGroan,
+  countdown,
+  whistle,
 }
 
 /// Background music loop channels per Style Bible Section 3

@@ -368,22 +368,11 @@ class _TimeoutDialogState extends State<TimeoutDialog> {
           const SizedBox(height: 12),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: canUse && _starterToSwap != null && _subToSwap != null
-                  ? AppConstants.positiveGreen
-                  : Colors.grey[800],
+              backgroundColor: canUse && _starterToSwap != null && _subToSwap != null ? AppConstants.positiveGreen : Colors.grey[800],
             ),
-            onPressed: canUse && _starterToSwap != null && _subToSwap != null
-                ? _applySubstitute
-                : null,
-            child: const Text(
-              'CALL TIMEOUT: MAKE SUBSTITUTION',
-              style: TextStyle(
-                fontFamily: AppConstants.pixelFont,
-                fontSize: 10,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
+            onPressed: canUse && _starterToSwap != null && _subToSwap != null ? _applySubstitute : null,
+            child: const Text('CALL TIMEOUT: MAKE SUBSTITUTION',
+              style: TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: FontWeight.bold, color: Colors.white)),
           ),
         ],
       ),

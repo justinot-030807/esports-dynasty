@@ -115,6 +115,19 @@ class _AchievementsDialogState extends State<AchievementsDialog> {
     );
   }
 
+  String _getAchievementIcon(String id, String cat) {
+    if (id.contains('t7') || cat == 'dynasty') return 'assets/images/trophies/trophy_t7.png';
+    if (id.contains('t6')) return 'assets/images/trophies/trophy_t6.png';
+    if (id.contains('t5')) return 'assets/images/trophies/trophy_t5.png';
+    if (id.contains('t4')) return 'assets/images/trophies/trophy_t4.png';
+    if (id.contains('t3')) return 'assets/images/trophies/trophy_t3.png';
+    if (id.contains('t2')) return 'assets/images/trophies/trophy_t2.png';
+    if (id.contains('t1')) return 'assets/images/trophies/trophy_t1.png';
+    if (cat == 'fans') return 'assets/images/trophies/award_streamer.png';
+    if (cat == 'roster') return 'assets/images/trophies/award_rookie.png';
+    return 'assets/images/trophies/award_play.png';
+  }
+
   Widget _buildAchievementCard(AchievementDef ach) {
     final isUnlocked = widget.state.unlockedAchievements.contains(ach.id);
     final isClaimed = widget.state.claimedAchievements.contains(ach.id);
@@ -140,10 +153,15 @@ class _AchievementsDialogState extends State<AchievementsDialog> {
               color: isUnlocked ? AppConstants.moneyGold.withValues(alpha: 0.2) : Colors.grey.shade300,
               borderRadius: BorderRadius.circular(6),
             ),
-            child: Icon(
-              Icons.emoji_events,
-              size: 20,
-              color: isUnlocked ? AppConstants.moneyGold : Colors.grey.shade600,
+            child: Image.asset(
+              _getAchievementIcon(ach.id, ach.category),
+              fit: BoxFit.contain,
+              filterQuality: FilterQuality.none,
+              errorBuilder: (_, _, _) => Icon(
+                Icons.emoji_events,
+                size: 20,
+                color: isUnlocked ? AppConstants.moneyGold : Colors.grey.shade600,
+              ),
             ),
           ),
           const SizedBox(width: 10),

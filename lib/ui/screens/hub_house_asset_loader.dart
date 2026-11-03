@@ -11,6 +11,8 @@ class HubHouseAssets {
   final ui.Image kitchenImage;
   final ui.Image shelfImage;
   final ui.Image roomBg;
+  final ui.Image? foodImage;
+  final Map<String, ui.Image> stationImages;
 
   HubHouseAssets({
     required this.charIdle,
@@ -21,6 +23,8 @@ class HubHouseAssets {
     required this.kitchenImage,
     required this.shelfImage,
     required this.roomBg,
+    this.foodImage,
+    this.stationImages = const {},
   });
 
   static Future<HubHouseAssets> load() async {
@@ -32,6 +36,22 @@ class HubHouseAssets {
     final kitchen = await _loadImage(AssetManager.kitchen);
     final shelf = await _loadImage(AssetManager.trophyShelf);
     final bg = await _loadImage(AssetManager.roomBg);
+    ui.Image? food;
+    try {
+      food = await _loadImage('assets/images/food/meal_adobo.png');
+    } catch (_) {}
+
+    final stationKeys = [
+      'streaming_booth', 'streaming_booth_on1', 'streaming_booth_on2',
+      'gym_corner', 'gym_corner_on1', 'gym_corner_on2',
+      'merch_corner', 'merch_corner_on1', 'merch_corner_on2',
+    ];
+    final Map<String, ui.Image> stationMap = {};
+    for (final k in stationKeys) {
+      try {
+        stationMap[k] = await _loadImage('assets/images/furniture/$k.png');
+      } catch (_) {}
+    }
 
     return HubHouseAssets(
       charIdle: idle,
@@ -42,6 +62,8 @@ class HubHouseAssets {
       kitchenImage: kitchen,
       shelfImage: shelf,
       roomBg: bg,
+      foodImage: food,
+      stationImages: stationMap,
     );
   }
 

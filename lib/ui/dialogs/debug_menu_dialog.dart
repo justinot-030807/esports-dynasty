@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import '../../core/constants.dart';
 import '../../models/game_state.dart';
+import '../../models/tournament.dart';
+import '../../models/ai_team.dart';
+import '../../models/division.dart';
 import '../../services/sim_service.dart';
 import '../../services/data_service.dart';
 import '../../services/tournament_service.dart';
 import '../../services/legacy_service.dart';
 import '../../services/audio_manager.dart';
 import '../../services/division_service.dart';
-import '../../models/division.dart';
 import '../widgets/pixel_panel.dart';
 import '../widgets/pixel_button.dart';
+import '../screens/broadcast_match_screen.dart';
 import 'event_dialog.dart';
 import 'final_evaluation_dialog.dart';
 
@@ -65,7 +68,7 @@ class _DebugMenuDialogState extends State<DebugMenuDialog> {
   void _unlockAllTiers() {
     setState(() {
       widget.state.fame = max(widget.state.fame, 12000);
-      widget.state.houseTier = 4; // Esports Arena HQ
+      widget.state.houseTier = 4;
       widget.state.addNotification('All Tiers Unlocked!', '#F5B700', 0.5, 0.4);
       _statusMessage = 'All 7 tiers & House Tier 5 unlocked!';
     });
@@ -204,6 +207,42 @@ class _DebugMenuDialogState extends State<DebugMenuDialog> {
     widget.onStateUpdated();
   }
 
+  void _launchMatchScreen({bool isTest = false}) {
+    Navigator.of(context).pop();
+    final opp = DataService().flagshipRivals.firstOrNull ??
+        DataService().allTeams.firstOrNull ??
+        AiTeam(id: 'kidlat', name: 'Kidlat Esports', tier: 1, region: 'NCR', colors: ['#1B2A49', '#F5B700'], rating: 40, captain: 'Thunder');
+
+    final tourney = DataService().tournaments.firstOrNull ??
+        TournamentDef.fromJson({
+          'id': 'T1-ICC1', 'name': 'Internet Cafe Cup', 'tier': 1, 'division': widget.state.activeDivisionId,
+          'weeks': [5, 7], 'registration': {'opens': -4, 'closes': -1}, 'fame': {'min': 0, 'max': 999},
+          'entry_fee': 0, 'travel_cost': 0, 'slots': 8,
+          'stages': [{'type': 'single_elim', 'teams': 8, 'bo': 3, 'grand_final_bo': 3}],
+          'rewards': {'champion_prize': 10000, 'fame': 50, 'fans': 500, 'circuit_points': 100, 'trophy': 'trophy_t1'},
+          'banner': 'banner_t1',
+        });
+
+    final dummyMatch = MatchNode(
+      id: isTest ? 'presentation_showcase' : 'quick_match_test', tournamentId: tourney.id,
+      stageIndex: 0, round: 1, roundName: isTest ? 'Match Presentation Test' : 'Exhibition Quick Match',
+      week: widget.state.weekOfYear, bestOf: 3,
+      slotA: MatchSlot(teamId: 'user_team', teamName: widget.state.teamName, seed: 1),
+      slotB: MatchSlot(teamId: opp.id, teamName: opp.name, seed: 2));
+
+    if (!widget.state.tournamentInstances.any((t) => t.tournamentId == tourney.id)) {
+      widget.state.tournamentInstances.add(TournamentInstance(
+        tournamentId: tourney.id, name: tourney.name, tier: tourney.tier,
+        banner: tourney.banner, division: tourney.division));
+    }
+
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (_) => BroadcastMatchScreen(
+        state: widget.state, opponent: opp, match: dummyMatch, tournament: tourney,
+        initialStrategy: 'Rush', isCoachMode: true, isScriptedPresentationTest: isTest,
+        onMatchCompleted: widget.onStateUpdated)));
+  }
+
   int max(int a, int b) => a > b ? a : b;
 
   @override
@@ -268,33 +307,28 @@ class _DebugMenuDialogState extends State<DebugMenuDialog> {
               const SizedBox(height: 10),
 
               // Action buttons
-              _buildDebugButton('Skip 1 Week', _skipWeek, PixelButtonColor.yellow),
-              const SizedBox(height: 8),
-              _buildDebugButton('Add P50,000 Cash', _addMoney, PixelButtonColor.green),
-              const SizedBox(height: 8),
-              _buildDebugButton('Add 500 Fame & 1K Fans', _addFame, PixelButtonColor.yellow),
-              const SizedBox(height: 8),
-              _buildDebugButton('Unlock All Tiers & HQ', _unlockAllTiers, PixelButtonColor.green),
-              const SizedBox(height: 8),
-              _buildDebugButton('Unlock All Furniture', _unlockAllFurniture, PixelButtonColor.neutral),
-              const SizedBox(height: 8),
-              _buildDebugButton('Force Random Event Dialog', _forceEvent, PixelButtonColor.yellow),
-              const SizedBox(height: 8),
-              _buildDebugButton('Jump to Match Day (D5)', _jumpToNextMatchDay, PixelButtonColor.red),
-              const SizedBox(height: 8),
-              _buildDebugButton('Jump to Awards Night (W48)', _jumpToAwardsNight, PixelButtonColor.yellow),
-              const SizedBox(height: 8),
-              _buildDebugButton('Jump to Year 10 Evaluation', _triggerYear10Evaluation, PixelButtonColor.yellow),
-              const SizedBox(height: 8),
-              _buildDebugButton('Add +10 Legacy Points', _addLegacyPoints, PixelButtonColor.green),
-              const SizedBox(height: 8),
-              _buildDebugButton('Test Audio SFX (Coin, Promo)', _testAudioSfx, PixelButtonColor.neutral),
-              const SizedBox(height: 8),
-              _buildDebugButton('Unlock All Divisions (SZ + LI)', _unlockAllDivisions, PixelButtonColor.green),
-              const SizedBox(height: 8),
-              _buildDebugButton('Cycle Active Division', _cycleDivision, PixelButtonColor.yellow),
-              const SizedBox(height: 8),
-              _buildDebugButton('Run 10-Year Headless Sim', _runHeadlessSimulation, PixelButtonColor.green),
+              for (final btn in [
+                ('⚡ Quick Match (Current Roster)', () => _launchMatchScreen(isTest: false), PixelButtonColor.red),
+                ('🎬 Match Presentation Test', () => _launchMatchScreen(isTest: true), PixelButtonColor.yellow),
+                ('Skip 1 Week', _skipWeek, PixelButtonColor.yellow),
+                ('Add P50,000 Cash', _addMoney, PixelButtonColor.green),
+                ('Add 500 Fame & 1K Fans', _addFame, PixelButtonColor.yellow),
+                ('Unlock All Tiers & HQ', _unlockAllTiers, PixelButtonColor.green),
+                ('Unlock All Furniture', _unlockAllFurniture, PixelButtonColor.neutral),
+                ('Force Random Event Dialog', _forceEvent, PixelButtonColor.yellow),
+                ('Jump to Match Day (D5)', _jumpToNextMatchDay, PixelButtonColor.red),
+                ('Jump to Awards Night (W48)', _jumpToAwardsNight, PixelButtonColor.yellow),
+                ('Jump to Year 10 Evaluation', _triggerYear10Evaluation, PixelButtonColor.yellow),
+                ('Add +10 Legacy Points', _addLegacyPoints, PixelButtonColor.green),
+                ('Test Audio SFX (Coin, Promo)', _testAudioSfx, PixelButtonColor.neutral),
+                ('Unlock All Divisions (SZ + LI)', _unlockAllDivisions, PixelButtonColor.green),
+                ('Cycle Active Division', _cycleDivision, PixelButtonColor.yellow),
+                ('Run 10-Year Headless Sim', _runHeadlessSimulation, PixelButtonColor.green),
+              ])
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8.0),
+                  child: _buildDebugButton(btn.$1, btn.$2, btn.$3),
+                ),
 
               // Simulation report
               if (_simResult != null) ...[

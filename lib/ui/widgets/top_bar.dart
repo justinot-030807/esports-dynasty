@@ -163,11 +163,12 @@ class TopBar extends StatelessWidget {
   }
 
   Widget _buildSpeedPill(int speed, String text, bool active) {
+    final iconName = 'speed_${speed}x.png';
     return GestureDetector(
       onTap: () => onSpeedChanged(speed),
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 100),
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 3),
         decoration: BoxDecoration(
           color: active ? AppConstants.moneyGold : Colors.transparent,
           borderRadius: BorderRadius.circular(4),
@@ -176,13 +177,20 @@ class TopBar extends StatelessWidget {
             width: 1,
           ),
         ),
-        child: Text(
-          text,
-          style: TextStyle(
-            fontFamily: AppConstants.pixelFont,
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-            color: active ? AppConstants.darkNavy : const Color(0xFF94A3B8),
+        child: Image.asset(
+          'assets/images/icons/$iconName',
+          width: 22,
+          height: 22,
+          fit: BoxFit.contain,
+          filterQuality: FilterQuality.none,
+          errorBuilder: (_, _, _) => Text(
+            text,
+            style: TextStyle(
+              fontFamily: AppConstants.pixelFont,
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+              color: active ? AppConstants.darkNavy : const Color(0xFF94A3B8),
+            ),
           ),
         ),
       ),

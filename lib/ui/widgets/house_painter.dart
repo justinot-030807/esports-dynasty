@@ -12,7 +12,8 @@ class HousePainter extends CustomPainter {
   final double zoomLevel;
   final Offset panOffset;
   final ui.Image? charIdle, charStep1, charStep2;
-  final ui.Image? deskImage, bedImage, kitchenImage, shelfImage, roomBg;
+  final ui.Image? deskImage, bedImage, kitchenImage, shelfImage, roomBg, foodImage;
+  final Map<String, ui.Image> stationImages;
 
   static const double halfTileW = 24.0;
   static const double halfTileH = 12.0;
@@ -32,6 +33,8 @@ class HousePainter extends CustomPainter {
     this.kitchenImage,
     this.shelfImage,
     this.roomBg,
+    this.foodImage,
+    this.stationImages = const {},
   });
 
   @override
@@ -203,11 +206,27 @@ class HousePainter extends CustomPainter {
 
   void _drawFurniture(Canvas canvas, PlacedFurniture f, double cx, double baseY) {
     ui.Image? img;
-    switch (f.station) {
-      case 'pc': img = deskImage; break;
-      case 'bed': img = bedImage; break;
-      case 'kitchen': img = kitchenImage; break;
-      case 'shelf': img = shelfImage; break;
+    final isStreaming = f.itemId == 'streaming_booth' || f.station == 'stream';
+    final isGym = f.itemId == 'gym_corner' || f.station == 'gym';
+    final isMerch = f.itemId == 'merch_corner' || f.station == 'merch';
+
+    if (isStreaming || isGym || isMerch) {
+      final base = isStreaming ? 'streaming_booth' : (isGym ? 'gym_corner' : 'merch_corner');
+      final targetStation = isStreaming ? 'stream' : (isGym ? 'gym' : 'merch');
+      final inUse = state.players.any((p) => p.currentStation == targetStation || p.currentStation == base);
+      if (inUse) {
+        final frameNum = ((elapsedSeconds * 2).floor() % 2) + 1;
+        img = stationImages['${base}_on$frameNum'] ?? stationImages[base];
+      } else {
+        img = stationImages[base];
+      }
+    } else {
+      switch (f.station) {
+        case 'pc': img = deskImage; break;
+        case 'bed': img = bedImage; break;
+        case 'kitchen': img = kitchenImage; break;
+        case 'shelf': img = shelfImage; break;
+      }
     }
 
     final fw = f.sizeX * 38.0;
@@ -253,7 +272,13 @@ class HousePainter extends CustomPainter {
     if (!p.isWalking) {
       if (p.currentStation == 'bed') _drawEmote(canvas, 'Zzz', 0, -ch - 8, AppConstants.energyBlue);
       if (p.currentStation == 'pc') _drawEmote(canvas, 'PLAY', 0, -ch - 8, AppConstants.positiveGreen);
-      if (p.currentStation == 'kitchen') _drawEmote(canvas, 'EAT', 0, -ch - 8, AppConstants.moneyGold);
+      if (p.currentStation == 'kitchen') {
+        _drawEmote(canvas, 'EAT', 0, -ch - 8, AppConstants.moneyGold);
+        if (foodImage != null) {
+          final src = Rect.fromLTWH(0, 0, foodImage!.width.toDouble(), foodImage!.height.toDouble());
+          canvas.drawImageRect(foodImage!, src, const Rect.fromLTWH(20, -ch - 8, 16, 16), Paint()..filterQuality = FilterQuality.none);
+        }
+      }
     }
 
     final nameSpan = TextSpan(

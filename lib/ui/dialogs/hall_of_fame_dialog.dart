@@ -17,6 +17,19 @@ class HallOfFameDialog extends StatefulWidget {
 class _HallOfFameDialogState extends State<HallOfFameDialog> {
   String _categoryFilter = 'ALL'; // 'ALL', 'CHAMPIONS', 'MVPS', 'AWARDS'
 
+  String _getHofIcon(String cat, String title) {
+    final lower = '$cat $title'.toLowerCase();
+    if (lower.contains('mvp')) return 'assets/images/trophies/award_mvp.png';
+    if (lower.contains('rookie')) return 'assets/images/trophies/award_rookie.png';
+    if (lower.contains('stream')) return 'assets/images/trophies/award_streamer.png';
+    if (lower.contains('toty') || lower.contains('team')) return 'assets/images/trophies/award_team.png';
+    if (lower.contains('play')) return 'assets/images/trophies/award_play.png';
+    if (lower.contains('world') || lower.contains('t7')) return 'assets/images/trophies/trophy_t7.png';
+    if (lower.contains('t6')) return 'assets/images/trophies/trophy_t6.png';
+    if (lower.contains('t5')) return 'assets/images/trophies/trophy_t5.png';
+    return 'assets/images/trophies/trophy_t3.png';
+  }
+
   @override
   Widget build(BuildContext context) {
     List<HallOfFameRecord> records = widget.state.hallOfFame;
@@ -127,6 +140,15 @@ class _HallOfFameDialogState extends State<HallOfFameDialog> {
                                       color: AppConstants.bgDark,
                                     ),
                                   ),
+                                ),
+                                const SizedBox(width: 6),
+                                Image.asset(
+                                  _getHofIcon(r.category, r.title),
+                                  width: 24,
+                                  height: 24,
+                                  fit: BoxFit.contain,
+                                  filterQuality: FilterQuality.none,
+                                  errorBuilder: (_, _, _) => const SizedBox(),
                                 ),
                                 const SizedBox(width: 8),
                                 Expanded(

@@ -350,13 +350,6 @@ class TournamentInstance {
   bool get isUserRegistered => registeredTeamIds.contains('user_team');
 
   factory TournamentInstance.fromJson(Map<String, dynamic> json) {
-    final matchesList = (json['matches'] as List<dynamic>? ?? [])
-        .map((e) => MatchNode.fromJson(e as Map<String, dynamic>))
-        .toList();
-    final stdList = (json['standings'] as List<dynamic>? ?? [])
-        .map((e) => RoundRobinTeamStat.fromJson(e as Map<String, dynamic>))
-        .toList();
-
     return TournamentInstance(
       tournamentId: json['tournamentId'] as String? ?? '',
       name: json['name'] as String? ?? '',
@@ -364,12 +357,10 @@ class TournamentInstance {
       banner: json['banner'] as String? ?? 'banner_t1',
       division: json['division'] as String? ?? 'arena_clash',
       status: json['status'] as String? ?? 'upcoming',
-      registeredTeamIds: (json['registeredTeamIds'] as List<dynamic>? ?? [])
-          .map((e) => e.toString())
-          .toList(),
+      registeredTeamIds: (json['registeredTeamIds'] as List<dynamic>? ?? []).map((e) => e.toString()).toList(),
       currentStageIndex: (json['currentStageIndex'] as num?)?.toInt() ?? 0,
-      matches: matchesList,
-      standings: stdList,
+      matches: (json['matches'] as List<dynamic>? ?? []).map((e) => MatchNode.fromJson(e as Map<String, dynamic>)).toList(),
+      standings: (json['standings'] as List<dynamic>? ?? []).map((e) => RoundRobinTeamStat.fromJson(e as Map<String, dynamic>)).toList(),
       championId: json['championId'] as String? ?? '',
       championName: json['championName'] as String? ?? '',
       userPlacement: json['userPlacement'] as String? ?? '',

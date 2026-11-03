@@ -21,6 +21,18 @@ class _AwardsNightDialogState extends State<AwardsNightDialog> {
   int _currentAwardIndex = 0;
   bool _claimed = false;
 
+  static void _ignoreError(Object e, StackTrace? s) {}
+
+  String _getAwardSprite(String title) {
+    final lower = title.toLowerCase();
+    if (lower.contains('mvp')) return 'assets/images/trophies/award_mvp.png';
+    if (lower.contains('rookie')) return 'assets/images/trophies/award_rookie.png';
+    if (lower.contains('stream')) return 'assets/images/trophies/award_streamer.png';
+    if (lower.contains('team')) return 'assets/images/trophies/award_team.png';
+    if (lower.contains('play')) return 'assets/images/trophies/award_play.png';
+    return 'assets/images/trophies/trophy_t3.png';
+  }
+
   @override
   void initState() {
     super.initState();
@@ -97,9 +109,25 @@ class _AwardsNightDialogState extends State<AwardsNightDialog> {
                     color: award.isUserWinner ? AppConstants.positiveGreen : const Color(0xFF2E4068),
                     width: award.isUserWinner ? 2 : 1,
                   ),
+                  image: const DecorationImage(
+                    image: AssetImage('assets/images/backgrounds/awards_stage.png'),
+                    fit: BoxFit.cover,
+                    filterQuality: FilterQuality.medium,
+                    colorFilter: ColorFilter.mode(Color(0xBB0F172A), BlendMode.darken),
+                    onError: _ignoreError,
+                  ),
                 ),
                 child: Column(
                   children: [
+                    Image.asset(
+                      _getAwardSprite(award.title),
+                      width: 54,
+                      height: 54,
+                      fit: BoxFit.contain,
+                      filterQuality: FilterQuality.none,
+                      errorBuilder: (_, _, _) => const Icon(Icons.emoji_events, color: AppConstants.moneyGold, size: 40),
+                    ),
+                    const SizedBox(height: 6),
                     Text(
                       award.title.toUpperCase(),
                       style: const TextStyle(
@@ -109,7 +137,7 @@ class _AwardsNightDialogState extends State<AwardsNightDialog> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 6),
+                    const SizedBox(height: 4),
                     Text(
                       award.winnerName,
                       textAlign: TextAlign.center,

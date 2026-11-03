@@ -25,6 +25,23 @@ class EventDialog extends StatefulWidget {
 class _EventDialogState extends State<EventDialog> {
   String? _outcomeText;
 
+  String _getEventIconPath(String id, String cat, String title) {
+    final lower = '$id $cat $title'.toLowerCase();
+    if (lower.contains('brownout') || lower.contains('kuryente') || lower.contains('power')) return 'assets/images/icons/event_brownout.png';
+    if (lower.contains('typhoon') || lower.contains('bagyo') || lower.contains('storm')) return 'assets/images/icons/event_typhoon.png';
+    if (lower.contains('viral') || lower.contains('clip') || lower.contains('tiktok')) return 'assets/images/icons/event_viral_clip.png';
+    if (lower.contains('drama') || lower.contains('controversy') || lower.contains('away')) return 'assets/images/icons/event_controversy.png';
+    if (lower.contains('poach') || lower.contains('pirate')) return 'assets/images/icons/event_poaching.png';
+    if (lower.contains('scam') || lower.contains('budol')) return 'assets/images/icons/event_scam.png';
+    if (lower.contains('bribe') || lower.contains('suhol')) return 'assets/images/icons/event_bribe.png';
+    if (lower.contains('burnout') || lower.contains('pagod') || lower.contains('fatigue')) return 'assets/images/icons/event_burnout.png';
+    if (lower.contains('pc') || lower.contains('sira') || lower.contains('breakdown')) return 'assets/images/icons/event_pc_breakdown.png';
+    if (lower.contains('patch') || lower.contains('update')) return 'assets/images/icons/event_patch_notes.png';
+    if (lower.contains('fan') || lower.contains('meetup') || lower.contains('meet')) return 'assets/images/icons/event_fan_meetup.png';
+    if (lower.contains('charity') || lower.contains('tulong') || lower.contains('donat')) return 'assets/images/icons/event_charity.png';
+    return 'assets/images/icons/ui_warning.png';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -40,32 +57,46 @@ class _EventDialogState extends State<EventDialog> {
               // Category & Title
               Row(
                 children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                    decoration: BoxDecoration(
-                      color: _getCategoryColor(widget.event.category),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Text(
-                      widget.event.category.toUpperCase().replaceAll('_', ' '),
-                      style: const TextStyle(
-                        fontFamily: AppConstants.pixelFont,
-                        fontSize: 9,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                  Image.asset(
+                    _getEventIconPath(widget.event.id, widget.event.category, widget.event.title),
+                    width: 36,
+                    height: 36,
+                    fit: BoxFit.contain,
+                    filterQuality: FilterQuality.none,
+                    errorBuilder: (_, _, _) => const Icon(Icons.event_note, color: AppConstants.textNavy, size: 28),
                   ),
                   const SizedBox(width: 8),
                   Expanded(
-                    child: Text(
-                      widget.event.title,
-                      style: const TextStyle(
-                        fontFamily: AppConstants.pixelFont,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                        color: AppConstants.textNavy,
-                      ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: _getCategoryColor(widget.event.category),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(
+                            widget.event.category.toUpperCase().replaceAll('_', ' '),
+                            style: const TextStyle(
+                              fontFamily: AppConstants.pixelFont,
+                              fontSize: 8,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          widget.event.title,
+                          style: const TextStyle(
+                            fontFamily: AppConstants.pixelFont,
+                            fontSize: 13,
+                            fontWeight: FontWeight.bold,
+                            color: AppConstants.textNavy,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -83,21 +114,28 @@ class _EventDialogState extends State<EventDialog> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
+                    Image.asset(
+                      'assets/images/characters/staff_mika/staff_mika_front_idle.png',
                       width: 36,
                       height: 36,
-                      decoration: BoxDecoration(
-                        color: AppConstants.famePurple.withValues(alpha: 0.15),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          'MIKA',
-                          style: TextStyle(
-                            fontFamily: AppConstants.pixelFont,
-                            fontSize: 9,
-                            fontWeight: FontWeight.bold,
-                            color: AppConstants.famePurple,
+                      fit: BoxFit.contain,
+                      filterQuality: FilterQuality.none,
+                      errorBuilder: (_, _, _) => Container(
+                        width: 36,
+                        height: 36,
+                        decoration: BoxDecoration(
+                          color: AppConstants.famePurple.withValues(alpha: 0.15),
+                          borderRadius: BorderRadius.circular(6),
+                        ),
+                        child: const Center(
+                          child: Text(
+                            'MIKA',
+                            style: TextStyle(
+                              fontFamily: AppConstants.pixelFont,
+                              fontSize: 9,
+                              fontWeight: FontWeight.bold,
+                              color: AppConstants.famePurple,
+                            ),
                           ),
                         ),
                       ),
@@ -117,6 +155,25 @@ class _EventDialogState extends State<EventDialog> {
                   ],
                 ),
               ),
+              if (widget.event.id.contains('fan') || widget.event.title.toLowerCase().contains('fan')) ...[
+                const SizedBox(height: 8),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: ['fan_kid', 'fan_teen', 'fan_student', 'fan_cosplayer'].map((f) {
+                    return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 4),
+                      child: Image.asset(
+                        'assets/images/characters/$f/${f}_front_idle.png',
+                        width: 28,
+                        height: 28,
+                        fit: BoxFit.contain,
+                        filterQuality: FilterQuality.none,
+                        errorBuilder: (_, _, _) => const SizedBox(),
+                      ),
+                    );
+                  }).toList(),
+                ),
+              ],
               const SizedBox(height: 14),
 
               if (_outcomeText != null) ...[

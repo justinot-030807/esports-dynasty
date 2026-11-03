@@ -15,8 +15,15 @@ class EventService {
     // Only check once per week (e.g. Day 2)
     if (state.day != 2) return null;
 
-    // 25% chance of an event per week
-    if (_rng.nextDouble() > 0.28) return null;
+    // Grace period: No disruptive random events during Month 1 (Weeks 1 to 4) onboarding
+    if (state.weekOfYear <= 4) return null;
+
+    // Global cooldown: Ensure at least 4 weeks breathing room between narrative events
+    final lastWeek = state.storyFlags['last_event_week'] as int? ?? -99;
+    if (state.weekOfYear - lastWeek < 4) return null;
+
+    // 20% chance of an event per eligible week (~once every 5-8 weeks)
+    if (_rng.nextDouble() > 0.20) return null;
 
     final events = DataService().narrativeEvents;
     if (events.isEmpty) return null;
@@ -77,6 +84,9 @@ class EventService {
   }
 
   String applyEventChoice(NarrativeEvent event, EventChoice choice, GameState state) {
+    // Record event occurrence week for global cooldown pacing
+    state.storyFlags['last_event_week'] = state.weekOfYear;
+
     // Set 12-week cooldown on event
     state.eventCooldowns[event.id] = 12;
 

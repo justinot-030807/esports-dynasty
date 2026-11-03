@@ -36,6 +36,11 @@ class ScoutingService {
     final div = EsportsDivision.getById(divisionId);
     final role = div.roles[_rng.nextInt(div.roles.length)];
     final baseStat = minOvr + _rng.nextInt(max(1, maxOvr - minOvr + 1));
+    final isFemale = _rng.nextBool();
+    final numId = isFemale ? (1 + _rng.nextInt(9)) : (1 + _rng.nextInt(10));
+    final avatarId = isFemale
+        ? 'gamer_f${numId.toString().padLeft(2, '0')}'
+        : 'gamer_m${numId.toString().padLeft(2, '0')}';
 
     return Player(
       id: 'fa_${DateTime.now().microsecondsSinceEpoch}_${_rng.nextInt(9999)}',
@@ -43,6 +48,7 @@ class ScoutingService {
       gamerTag: _gamerTags[_rng.nextInt(_gamerTags.length)],
       role: role,
       divisionId: divisionId,
+      avatarId: avatarId,
       age: 16 + _rng.nextInt(6),
       aim: (baseStat + _rng.nextInt(7) - 3).clamp(20, 95),
       reaction: (baseStat + _rng.nextInt(7) - 3).clamp(20, 95),

@@ -24,14 +24,70 @@ flutter:
   assets:
     - assets/assets_manifest.json
     - assets/data/
-    - assets/images/branding/
-    - assets/images/characters/gamer_m01/
-    - assets/images/ui/
-    - assets/images/icons/
+    - assets/images/
+    - assets/images/backgrounds/
     - assets/images/banners/
+    - assets/images/branding/
+    - assets/images/characters/
+    - assets/images/characters/match/
+    - assets/images/characters/fan_auntie/
+    - assets/images/characters/fan_cosplayer/
+    - assets/images/characters/fan_kagawad/
+    - assets/images/characters/fan_kid/
+    - assets/images/characters/fan_lolo/
+    - assets/images/characters/fan_mascot/
+    - assets/images/characters/fan_student/
+    - assets/images/characters/fan_teen/
+    - assets/images/characters/fan_vlogger/
+    - assets/images/characters/gamer_f01/
+    - assets/images/characters/gamer_f02/
+    - assets/images/characters/gamer_f03/
+    - assets/images/characters/gamer_f04/
+    - assets/images/characters/gamer_f05/
+    - assets/images/characters/gamer_f06/
+    - assets/images/characters/gamer_f07/
+    - assets/images/characters/gamer_f08/
+    - assets/images/characters/gamer_f09/
+    - assets/images/characters/gamer_m01/
+    - assets/images/characters/gamer_m02/
+    - assets/images/characters/gamer_m03/
+    - assets/images/characters/gamer_m04/
+    - assets/images/characters/gamer_m05/
+    - assets/images/characters/gamer_m06/
+    - assets/images/characters/gamer_m07/
+    - assets/images/characters/gamer_m08/
+    - assets/images/characters/gamer_m09/
+    - assets/images/characters/gamer_m10/
+    - assets/images/characters/rival_agila/
+    - assets/images/characters/rival_bakal/
+    - assets/images/characters/rival_banaue/
+    - assets/images/characters/rival_dagat/
+    - assets/images/characters/rival_kidlat/
+    - assets/images/characters/rival_mayon/
+    - assets/images/characters/rival_pawikan/
+    - assets/images/characters/rival_siargao/
+    - assets/images/characters/rival_tarsier/
+    - assets/images/characters/staff_analyst/
+    - assets/images/characters/staff_coach/
+    - assets/images/characters/staff_cook/
+    - assets/images/characters/staff_guard/
+    - assets/images/characters/staff_manager/
+    - assets/images/characters/staff_mika/
+    - assets/images/characters/staff_producer/
+    - assets/images/characters/staff_psychologist/
+    - assets/images/characters/staff_scout/
+    - assets/images/contact_sheets/
+    - assets/images/effects/
+    - assets/images/emblems/
+    - assets/images/food/
     - assets/images/furniture/
     - assets/images/house/
-    - assets/images/
+    - assets/images/icons/
+    - assets/images/items/
+    - assets/images/places/
+    - assets/images/trophies/
+    - assets/images/ui/
+    - assets/images/venues/
 
   fonts:
     - family: PixelifySans

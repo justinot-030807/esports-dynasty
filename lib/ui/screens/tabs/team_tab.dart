@@ -210,7 +210,7 @@ class _TeamTabState extends State<TeamTab> {
                     ),
                     child: Row(
                       children: [
-                        // Role Icon Box
+                        // Avatar Sprite Box
                         Container(
                           width: 44,
                           height: 44,
@@ -219,14 +219,24 @@ class _TeamTabState extends State<TeamTab> {
                             borderRadius: BorderRadius.circular(6),
                             border: Border.all(color: const Color(0xFF334155), width: 1),
                           ),
-                          child: Center(
-                            child: Text(
-                              p.role.name.substring(0, min(2, p.role.name.length)).toUpperCase(),
-                              style: const TextStyle(
-                                fontFamily: AppConstants.pixelFont,
-                                color: AppConstants.moneyGold,
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
+                          child: Image.asset(
+                            p.facePath,
+                            fit: BoxFit.contain,
+                            filterQuality: FilterQuality.none,
+                            errorBuilder: (_, _, _) => Image.asset(
+                              p.avatarPath,
+                              fit: BoxFit.contain,
+                              filterQuality: FilterQuality.none,
+                              errorBuilder: (_, _, _) => Center(
+                                child: Text(
+                                  p.role.name.substring(0, min(2, p.role.name.length)).toUpperCase(),
+                                  style: const TextStyle(
+                                    fontFamily: AppConstants.pixelFont,
+                                    color: AppConstants.moneyGold,
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
                             ),
                           ),

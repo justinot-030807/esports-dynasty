@@ -355,3 +355,91 @@
   - `flutter analyze`: 0 issues found (100% clean).
   - `flutter test`: 58/58 unit, widget, and simulation tests passing (100% test success across all 8 phases).
   - Source file limit: all files in `lib/` are strictly $\le 374$ lines (100% adherence to $\le 400$ lines rule).
+
+---
+
+## Match Screen Polish: PART A (COMPLETED)
+- [x] **A1: Centralized Typography System (`lib/ui/text_styles.dart`)**:
+  - Enforced exact font sizes in whole-number dp:
+    - Scoreboard numbers: `32 dp`
+    - Team names: `16 dp bold`
+    - Kill banners: `24 dp bold`
+    - Current commentary: `16 dp`
+    - History commentary lines: `14 dp`
+    - Nameplates: `13 dp bold`
+    - Clock & labels: `14 dp`
+    - Minimum font size: `12 dp` (no text below 12 dp anywhere on match screen).
+  - High-contrast styling with dark navy outline/shadow over background art (contrast ratio >= 4.5:1).
+  - Touch targets strictly $\ge 48\times 48$ dp.
+  - Surveyed and reported existing screens utilizing $<12$ dp text for future polish.
+- [x] **A2: Clean Blue-and-White Pixel Aesthetic**:
+  - Replaced dark neon dashboard with the game's retro blue-and-white pixel windows, navy borders, and official color palette (`#1B2A49` navy, `#F5B700` gold, `#3FA7FF` blue, `#3DBE5A` green, `#E5484D` red).
+- [x] **A3: Top-to-Bottom Portrait Layout**:
+  - **Scoreboard (12%)** (`MatchScoreboardView`):
+    - Tournament & round title on 1 line (12 dp, ellipsis).
+    - Team emblems and team names left & right (16 dp bold).
+    - Center big kill score (32 dp) with "KILLS" label and game timer (14 dp).
+    - Gold star Bo3/Bo5 series pips.
+    - Small tappable chips for active Patch and Tactic.
+  - **Arena (50%)** (`MatchArenaView`):
+    - Stage background scaled by tier (`venue_internet_cafe` for T1-T2, `venue_regional_arena` for T3-T6, `venue_world_stadium` for T7/finals).
+    - Seated rival team row at top (facing down) & user team at bottom (facing up) at pixel desks ($\ge 48$ dp wide).
+    - Clash lane (~20% of arena) with dynamic 14 dp tug-of-war momentum bar, glowing marker, and win chance percentage.
+    - "MOMENTUM SHIFT" banner triggers on $\ge 25\%$ swings.
+  - **Casters Strip (14%)** (`MatchCastersStrip`):
+    - Two chibi casters (Kuya Chito [Hype] & Prof. Dan [Analyst]) with 6 fps mouth-talking animation while speaking.
+    - Blue-and-white speech bubble typing at 30 ms/char with tap-to-finish gesture.
+    - Displays last 3 history lines at 14 dp.
+  - **Control Bar (10%)** (`MatchControlBar`):
+    - Speed toggles (1x, 2x, pause, skip) with $\ge 48\times 48$ dp touch targets.
+    - 56 dp tall TIMEOUT button with count badge.
+  - **Ambient Life**:
+    - Animated crowd swaying in stands, spotlights, and visible changes every 2 seconds.
+- [x] **A4: Player Cards (10) & Visual States (`MatchPlayerCard`)**:
+  - Real authentic names: rivals generated via `RivalRosterService` with Pinoy gamer tags (never "Player 2"), user from roster starters.
+  - Standardized roles: `Carry`, `Mid`, `Roamer`, `Tank`, `Support` with icons and condition faces.
+  - Dual 8 dp bars: FOCUS (blue) and TILT (orange to red) with small iconography.
+  - Visual states: idle breathing/typing bob, attacking lean forward, hit flash/shake, dead slump/skull/respawn timer, hot streak star, and tilted emote.
+  - Emote bubbles capped at 3 active simultaneously.
+- [x] **A5: Authentic Taglish Commentary Engine (`assets/data/commentary.json`, `CommentaryEngine`)**:
+  - Over 140 Taglish commentary templates across 11 event categories (kill, multi_kill, clutch, comeback, throw, teamfight, momentum, start, end, tilt, perfect_focus).
+  - Real name placeholders (`{killer}`, `{victim}`, `{name}`, `{team}`, `{oppTeam}`, `{n}`).
+  - Prevents template repeats within the last 8 lines.
+- [x] **A6: Debug Menu Quick Match**:
+  - Added "⚡ Quick Match (Current Roster)" in `DebugMenuDialog` for 1-tap instant match testing.
+- [x] **Specification Data Config (`assets/data/match_presentation.json`)**:
+  - Centralized all layout heights, timings, and thresholds.
+- [x] **MATCH_SCREEN_SPEC PART B: Juice, Focus Meter, Intro/Outro & Audio**:
+  - **B1: Events Juice & Motion**:
+    - Projectile beam streak from killer desk to victim desk (0.25 s flight time).
+    - Hit sparks and floating "+1" score particles rising and fading.
+    - Score pop on scoreboard (scale 1.0 to 1.4 with team color flash).
+    - Sliding kill banner ("KIDLAT eliminated ACE", 22-28 dp, 1.2 s duration).
+    - Top-right kill feed overlay (max 3 items with killer, victim, team color, and flash icon).
+    - Multi-kill detection within 5-second window: Double Kill (2px shake), Triple Kill (3px shake), and Ace (6px shake, 60ms hit-stop, confetti burst).
+    - 5v5 Teamfight clash at 10m & 20m: crossed swords, shockwaves in clash lane, both rows shake, camera zoom pulse 1.05, and clash SFX.
+    - Game Won: 0.4x slow motion for 1s with 1.1x zoom on winning kill, victory SFX, and confetti.
+    - Game Lost: Screen desaturates with grayscale filter, defeat SFX.
+    - Series Won: Confetti celebration, cheer frames, and champion trophy unlock.
+    - Late-game timer: Red pulsating timer during last 2 minutes ($\ge 22$m) and crowd reactions (cheers for user kills, groans for opponent kills).
+    - Particle System (`MatchParticlePool`): Pooled and capped at exactly 150 particles with zero per-frame allocations.
+  - **B2: Inline Focus Meter (Coach Mode)**:
+    - 28 dp tall horizontal bar at the bottom of the clash lane (full width minus 24 dp).
+    - Continuous sweeping marker back and forth.
+    - Dynamic Gold Perfect zone: 14% base + captain's Mental bonus (up to 8%, reaching 22% total).
+    - Green Good zone (30%), Red Miss zone.
+    - Full-width pulsing 64 dp tall TAP button.
+    - Results: PERFECT (gold, confetti, shake, haptic feedback, SFX), GOOD (green, SFX), MISS (grey, SFX).
+    - Auto mode skips meter with "AUTO +1" tag. Clock runs at 0.25x speed while active to maintain fair timing at 2x match speed.
+  - **B3: Intro & Outro Overlays**:
+    - Interactive 2-second Intro (`MatchIntroOverlay`): Game N banner, sliding team emblems, 3-2-1-FIGHT countdown with audio cues, and tap-to-skip gesture.
+    - Interactive Outro (`MatchOutroOverlay`): VICTORY or DEFEAT stamp, gold ring highlighted game MVP, and tap-to-continue directly to match results.
+  - **B4: Audio Hooks**:
+    - Wired all 12 Part B SFX enums in `AudioManager`: `sfx_kill`, `sfx_multikill`, `sfx_clash`, `sfx_focus_perfect`, `sfx_focus_good`, `sfx_focus_miss`, `sfx_victory`, `sfx_defeat`, `sfx_crowd_cheer`, `sfx_crowd_groan`, `sfx_countdown`, `sfx_whistle`.
+    - Wired `bgm_match` for regular games and `bgm_finals` for semifinals/finals. Missing sound files silently no-op.
+  - **B5: Performance & Presentation Testing**:
+    - Added "🎬 Match Presentation Test" in Debug Menu (`DebugMenuDialog`), replaying a complete scripted sequence (kill, double kill, ace, team fight with Focus Meter, momentum shift, game win) without requiring a full 24-minute match.
+- [x] **Verification**:
+  - `flutter analyze`: 0 issues found (100% clean).
+  - `flutter test`: 69/69 tests passing (including `match_screen_part_a_test.dart` and `match_screen_part_b_test.dart`).
+  - Architecture: Every `.dart` file across all of `lib/` strictly $\le 387$ lines (100% compliance with $\le 390$ line limit).

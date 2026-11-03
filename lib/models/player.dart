@@ -52,6 +52,7 @@ class Player {
   String jerseyColorHex;
   String hairColorHex;
   String skinColorHex;
+  String avatarId; // e.g. gamer_m01..m10, gamer_f01..f09
 
   // Station & positioning state in Living House
   String currentStation; // 'pc', 'bed', 'kitchen', 'idle'
@@ -88,6 +89,7 @@ class Player {
     this.jerseyColorHex = '#3FA7FF',
     this.hairColorHex = '#1B2A49',
     this.skinColorHex = '#E0AC69',
+    this.avatarId = 'gamer_m01',
     this.currentStation = 'idle',
     this.posX = 0.5,
     this.posY = 0.5,
@@ -222,6 +224,9 @@ class Player {
     }
   }
 
+  String get avatarPath => 'assets/images/characters/$avatarId/${avatarId}_front_idle.png';
+  String get facePath => 'assets/images/characters/$avatarId/${avatarId}_face.png';
+
   Map<String, dynamic> toJson() => {
     'id': id,
     'realName': realName,
@@ -247,6 +252,7 @@ class Player {
     'jerseyColorHex': jerseyColorHex,
     'hairColorHex': hairColorHex,
     'skinColorHex': skinColorHex,
+    'avatarId': avatarId,
     'currentStation': currentStation,
     'posX': posX,
     'posY': posY,
@@ -281,6 +287,7 @@ class Player {
       jerseyColorHex: json['jerseyColorHex'] as String? ?? '#3FA7FF',
       hairColorHex: json['hairColorHex'] as String? ?? '#1B2A49',
       skinColorHex: json['skinColorHex'] as String? ?? '#E0AC69',
+      avatarId: json['avatarId'] as String? ?? 'gamer_m01',
       currentStation: json['currentStation'] as String? ?? 'idle',
       posX: (json['posX'] as num?)?.toDouble() ?? 0.5,
       posY: (json['posY'] as num?)?.toDouble() ?? 0.5,

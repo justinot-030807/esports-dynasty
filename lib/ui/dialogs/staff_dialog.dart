@@ -21,6 +21,16 @@ class StaffDialog extends StatefulWidget {
 }
 
 class _StaffDialogState extends State<StaffDialog> {
+  String _getStaffSprite(StaffRole role) {
+    switch (role) {
+      case StaffRole.coach: return 'assets/images/characters/staff_coach/staff_coach_front_idle.png';
+      case StaffRole.analyst: return 'assets/images/characters/staff_analyst/staff_analyst_front_idle.png';
+      case StaffRole.manager: return 'assets/images/characters/staff_manager/staff_manager_front_idle.png';
+      case StaffRole.psychologist: return 'assets/images/characters/staff_psychologist/staff_psychologist_front_idle.png';
+      case StaffRole.cook: return 'assets/images/characters/staff_cook/staff_cook_front_idle.png';
+      case StaffRole.streamProducer: return 'assets/images/characters/staff_producer/staff_producer_front_idle.png';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     final staff = widget.state.staff;
@@ -115,31 +125,52 @@ class _StaffDialogState extends State<StaffDialog> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(
-                s.roleTitle,
-                style: const TextStyle(
-                  fontFamily: AppConstants.pixelFont,
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
-                  color: AppConstants.textNavy,
+              Image.asset(
+                _getStaffSprite(s.role),
+                width: 38,
+                height: 38,
+                fit: BoxFit.contain,
+                filterQuality: FilterQuality.none,
+                errorBuilder: (_, _, _) => const Icon(Icons.person, size: 28),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          s.roleTitle,
+                          style: const TextStyle(
+                            fontFamily: AppConstants.pixelFont,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: AppConstants.textNavy,
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            for (int i = 0; i < s.level; i++)
+                              const Icon(Icons.star, size: 14, color: AppConstants.moneyGold),
+                            for (int i = s.level; i < 5; i++)
+                              Icon(Icons.star_border, size: 14, color: Colors.grey.shade400),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      '${s.name} | Sahod: P${s.salary}/wk',
+                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.black54),
+                    ),
+                  ],
                 ),
               ),
-              Row(
-                children: [
-                  for (int i = 0; i < s.level; i++)
-                    const Icon(Icons.star, size: 14, color: AppConstants.moneyGold),
-                  for (int i = s.level; i < 5; i++)
-                    Icon(Icons.star_border, size: 14, color: Colors.grey.shade400),
-                ],
-              ),
             ],
-          ),
-          const SizedBox(height: 2),
-          Text(
-            '${s.name} | Sahod: P${s.salary}/wk',
-            style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, color: Colors.black54),
           ),
           const SizedBox(height: 4),
           Text(
@@ -201,19 +232,40 @@ class _StaffDialogState extends State<StaffDialog> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: const TextStyle(
-              fontFamily: AppConstants.pixelFont,
-              fontSize: 12,
-              fontWeight: FontWeight.bold,
-              color: AppConstants.textNavy,
-            ),
-          ),
-          const SizedBox(height: 2),
-          Text(
-            desc,
-            style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.black54),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                _getStaffSprite(role),
+                width: 36,
+                height: 36,
+                fit: BoxFit.contain,
+                filterQuality: FilterQuality.none,
+                errorBuilder: (_, _, _) => const Icon(Icons.person_add, size: 28),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: const TextStyle(
+                        fontFamily: AppConstants.pixelFont,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: AppConstants.textNavy,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      desc,
+                      style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, color: Colors.black54),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 6),
           PixelButton(

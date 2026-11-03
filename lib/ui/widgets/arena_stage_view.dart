@@ -26,6 +26,34 @@ class ArenaStageView extends StatelessWidget {
     return AppConstants.positiveGreen;
   }
 
+  String _getRivalSprite(String oppId, int index) {
+    final clean = oppId.toLowerCase().replaceAll('team_', '').replaceAll('rival_', '');
+    final flagshipRivals = ['kidlat', 'bakal', 'dagat', 'mayon', 'tarsier', 'pawikan', 'agila', 'banaue', 'siargao'];
+    if (index == 0 && flagshipRivals.contains(clean)) {
+      return 'assets/images/characters/rival_$clean/rival_${clean}_front_idle.png';
+    }
+    final num = ((index + 2) % 9) + 2;
+    final padded = num.toString().padLeft(2, '0');
+    return 'assets/images/characters/gamer_m$padded/gamer_m${padded}_front_idle.png';
+  }
+
+  Widget _buildCrowdStrip() {
+    const crowd = ['fan_kid', 'fan_teen', 'fan_student', 'fan_cosplayer', 'fan_mascot', 'fan_vlogger', 'fan_kagawad'];
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: crowd.map((f) {
+        return Image.asset(
+          'assets/images/characters/$f/${f}_front_idle.png',
+          width: 22,
+          height: 22,
+          fit: BoxFit.contain,
+          filterQuality: FilterQuality.none,
+          errorBuilder: (_, _, _) => const SizedBox(),
+        );
+      }).toList(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // Calculated dynamic in-game pressure based on game duration and player mental
@@ -51,9 +79,13 @@ class ArenaStageView extends StatelessWidget {
                 tag: i == 0 ? (opponent.captain ?? 'Ace') : 'Player ${i + 1}',
                 role: roles[i],
                 mental: 45 + (i * 3),
+                avatarPath: _getRivalSprite(opponent.id, i),
               );
             }),
           ),
+
+          // Cheering fan crowd in arena stands
+          _buildCrowdStrip(),
 
           // Center Highlight Arena Banner / Popup
           Container(
@@ -122,6 +154,7 @@ class ArenaStageView extends StatelessWidget {
                 tag: p.gamerTag,
                 role: p.role.name.toUpperCase(),
                 mental: p.mental,
+                avatarPath: p.avatarPath,
               );
             }).toList(),
           ),
@@ -183,10 +216,17 @@ class ArenaStageView extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Icon(
-                        isUser ? Icons.person : Icons.person_outline,
-                        color: teamColor,
-                        size: 16,
+                      Image.asset(
+                        p.avatarPath,
+                        width: 28,
+                        height: 28,
+                        fit: BoxFit.contain,
+                        filterQuality: FilterQuality.none,
+                        errorBuilder: (_, _, _) => Icon(
+                          isUser ? Icons.person : Icons.person_outline,
+                          color: teamColor,
+                          size: 16,
+                        ),
                       ),
                       const SizedBox(height: 2),
                       Text(
@@ -244,10 +284,12 @@ class _ArenaPlayerDisplay {
   final String tag;
   final String role;
   final int mental;
+  final String avatarPath;
 
   _ArenaPlayerDisplay({
     required this.tag,
     required this.role,
     required this.mental,
+    required this.avatarPath,
   });
 }

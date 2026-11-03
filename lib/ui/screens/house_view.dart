@@ -16,6 +16,8 @@ class HouseView extends StatefulWidget {
   final ui.Image? kitchenImage;
   final ui.Image? shelfImage;
   final ui.Image? roomBg;
+  final ui.Image? foodImage;
+  final Map<String, ui.Image> stationImages;
 
   const HouseView({
     super.key,
@@ -28,6 +30,8 @@ class HouseView extends StatefulWidget {
     this.kitchenImage,
     this.shelfImage,
     this.roomBg,
+    this.foodImage,
+    this.stationImages = const {},
   });
 
   @override
@@ -173,6 +177,8 @@ class _HouseViewState extends State<HouseView> with SingleTickerProviderStateMix
               kitchenImage: widget.kitchenImage,
               shelfImage: widget.shelfImage,
               roomBg: widget.roomBg,
+              foodImage: widget.foodImage,
+              stationImages: widget.stationImages,
             ),
           ),
         ),

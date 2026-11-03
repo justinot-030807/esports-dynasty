@@ -55,6 +55,7 @@ class GameStateDefaults {
         aim: 38, reaction: 36, gameSense: 32, teamwork: 30, mental: 34, stamina: 35,
         traits: ['Clutch'],
         jerseyColorHex: primaryColorHex, hairColorHex: '#1B2A49', skinColorHex: '#E0AC69',
+        avatarId: 'gamer_m01',
         posX: 2.5, posY: 2.0, currentStation: 'pc',
       ),
       Player(
@@ -63,6 +64,7 @@ class GameStateDefaults {
         aim: 34, reaction: 35, gameSense: 39, teamwork: 33, mental: 35, stamina: 32,
         traits: ['Team Player'],
         jerseyColorHex: secondaryColorHex, hairColorHex: '#4A3728', skinColorHex: '#C68642',
+        avatarId: 'gamer_m02',
         posX: 3.5, posY: 2.0, currentStation: 'pc',
       ),
       Player(
@@ -71,6 +73,7 @@ class GameStateDefaults {
         aim: 30, reaction: 32, gameSense: 34, teamwork: 38, mental: 36, stamina: 38,
         traits: ['Workaholic'],
         jerseyColorHex: '#3FA7FF', hairColorHex: '#0F172A', skinColorHex: '#8D5524',
+        avatarId: 'gamer_m03',
         posX: 3.0, posY: 3.5, currentStation: 'kitchen',
       ),
     ];

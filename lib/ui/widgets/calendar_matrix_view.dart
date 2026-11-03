@@ -75,6 +75,21 @@ class CalendarMatrixView extends StatelessWidget {
     );
   }
 
+  String _getVenueIcon(int tier, String id) {
+    switch (tier) {
+      case 1:
+        if (id.contains('cafe')) return 'assets/images/venues/venue_internet_cafe.png';
+        if (id.contains('school') || id.contains('gym')) return 'assets/images/venues/venue_school_gym.png';
+        return 'assets/images/venues/venue_barangay_court.png';
+      case 2: return 'assets/images/venues/venue_town_arena.png';
+      case 3: return 'assets/images/venues/venue_provincial_hall.png';
+      case 4: return 'assets/images/venues/venue_regional_arena.png';
+      case 5: return 'assets/images/venues/venue_national_stadium.png';
+      case 6: return 'assets/images/venues/venue_apac_arena.png';
+      default: return 'assets/images/venues/venue_world_stadium.png';
+    }
+  }
+
   Widget _buildTournamentCard(TournamentDef def, int curWeek) {
     final inst = state.tournamentInstances.firstWhere(
       (t) => t.tournamentId == def.id,
@@ -113,6 +128,18 @@ class CalendarMatrixView extends StatelessWidget {
         ),
         child: Row(
           children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(3),
+              child: Image.asset(
+                _getVenueIcon(def.tier, def.id),
+                width: 32,
+                height: 24,
+                fit: BoxFit.cover,
+                filterQuality: FilterQuality.none,
+                errorBuilder: (_, _, _) => const SizedBox(),
+              ),
+            ),
+            const SizedBox(width: 6),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
               decoration: BoxDecoration(color: badgeColor, borderRadius: BorderRadius.circular(4)),

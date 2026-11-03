@@ -7,7 +7,7 @@ import '../dialogs/legacy_shop_dialog.dart';
 import '../widgets/pixel_panel.dart';
 import '../widgets/pixel_button.dart';
 import '../widgets/emblem_widget.dart';
-import 'hub_screen.dart';
+import 'prologue_screen.dart';
 
 class NewGameScreen extends StatefulWidget {
   const NewGameScreen({super.key});
@@ -23,7 +23,7 @@ class _NewGameScreenState extends State<NewGameScreen> {
 
   Color _primaryColor = const Color(0xFF1B2A49);
   Color _secondaryColor = const Color(0xFFF5B700);
-  final String _symbol = 'lightning';
+  String _symbol = 'my_01';
   String _difficulty = 'normal';
 
   final List<Color> _colorPalette = [
@@ -65,7 +65,7 @@ class _NewGameScreenState extends State<NewGameScreen> {
 
     if (mounted) {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (_) => HubScreen(state: state)),
+        MaterialPageRoute(builder: (_) => PrologueScreen(state: state)),
       );
     }
   }
@@ -115,6 +115,42 @@ class _NewGameScreenState extends State<NewGameScreen> {
 
                   _buildLabel('EMBLEM LETTERS:'),
                   _buildTextField(_lettersController, 'AE', maxLength: 3, onChanged: (_) => setState(() {})),
+                  const SizedBox(height: 8),
+
+                  _buildLabel('TEAM EMBLEM CREST:'),
+                  SizedBox(
+                    height: 50,
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 12,
+                      itemBuilder: (context, i) {
+                        final emblemId = 'my_${(i + 1).toString().padLeft(2, '0')}';
+                        final isSelected = _symbol == emblemId;
+                        return GestureDetector(
+                          onTap: () => setState(() => _symbol = emblemId),
+                          child: Container(
+                            margin: const EdgeInsets.only(right: 6),
+                            padding: const EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                              color: isSelected ? const Color(0xFF1E293B) : Colors.transparent,
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(
+                                color: isSelected ? AppConstants.moneyGold : const Color(0xFF334155),
+                                width: isSelected ? 2 : 1,
+                              ),
+                            ),
+                            child: Image.asset(
+                              'assets/images/emblems/$emblemId.png',
+                              width: 38,
+                              height: 38,
+                              fit: BoxFit.contain,
+                              filterQuality: FilterQuality.none,
+                            ),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
                   const SizedBox(height: 8),
 
                   _buildLabel('DIFFICULTY MODE:'),

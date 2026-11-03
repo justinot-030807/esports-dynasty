@@ -9,6 +9,7 @@ import '../../dialogs/tournament_hub_dialog.dart';
 import '../../dialogs/match_prep_dialog.dart';
 import '../../dialogs/hall_of_fame_dialog.dart';
 import '../../widgets/calendar_matrix_view.dart';
+import '../../widgets/emblem_widget.dart';
 
 class CompeteTab extends StatefulWidget {
   final GameState state;
@@ -32,12 +33,8 @@ class _CompeteTabState extends State<CompeteTab> {
     showDialog(
       context: context,
       builder: (ctx) => TournamentHubDialog(
-        state: widget.state,
-        def: def,
-        onStateUpdated: () {
-          setState(() {});
-          widget.onStateUpdated();
-        },
+        state: widget.state, def: def,
+        onStateUpdated: () { setState(() {}); widget.onStateUpdated(); },
       ),
     );
   }
@@ -46,21 +43,14 @@ class _CompeteTabState extends State<CompeteTab> {
     showDialog(
       context: context,
       builder: (ctx) => MatchPrepDialog(
-        state: widget.state,
-        match: match,
-        onMatchCompleted: () {
-          setState(() {});
-          widget.onStateUpdated();
-        },
+        state: widget.state, match: match,
+        onMatchCompleted: () { setState(() {}); widget.onStateUpdated(); },
       ),
     );
   }
 
   void _openHallOfFame() {
-    showDialog(
-      context: context,
-      builder: (_) => HallOfFameDialog(state: widget.state),
-    );
+    showDialog(context: context, builder: (_) => HallOfFameDialog(state: widget.state));
   }
 
   @override
@@ -252,15 +242,16 @@ class _CompeteTabState extends State<CompeteTab> {
                       ),
                       child: Text(
                         'T${t.tier}',
-                        style: const TextStyle(
-                          fontFamily: AppConstants.pixelFont,
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFFCBD5E1),
-                        ),
+                        style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFFCBD5E1)),
                       ),
                     ),
-                    const SizedBox(width: 10),
+                    const SizedBox(width: 8),
+                    EmblemWidget(
+                      size: 20,
+                      teamId: isUser ? null : t.id,
+                      symbol: isUser ? widget.state.emblemSymbol : 'lightning',
+                    ),
+                    const SizedBox(width: 8),
                     Expanded(
                       child: Text(
                         t.name,

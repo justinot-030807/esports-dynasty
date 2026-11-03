@@ -5,21 +5,50 @@ class EmblemWidget extends StatelessWidget {
   final double size;
   final Color primaryColor;
   final Color secondaryColor;
-  final String symbol; // 'lightning', 'dragon', 'shield', 'star', 'crown'
+  final String symbol; // 'lightning', 'dragon', etc., or 'my_01'..'my_12', or 'rival_*'
   final String letters;
+  final String? teamId;
 
   const EmblemWidget({
     super.key,
     this.size = 40.0,
-    required this.primaryColor,
-    required this.secondaryColor,
+    this.primaryColor = AppConstants.energyBlue,
+    this.secondaryColor = AppConstants.moneyGold,
     this.symbol = 'lightning',
     this.letters = '',
+    this.teamId,
   });
+
+  static const Set<String> _rivalKeys = {
+    'kidlat', 'bakal', 'dagat', 'mayon', 'tarsier',
+    'pawikan', 'agila', 'banaue', 'siargao',
+  };
+
+  String? _resolveAssetPath() {
+    final tid = teamId?.toLowerCase() ?? '';
+    final sym = symbol.toLowerCase();
+    final cleanTid = tid.replaceFirst('team_', '').replaceFirst('rival_', '');
+
+    if (_rivalKeys.contains(cleanTid)) {
+      return 'assets/images/emblems/rival_$cleanTid.png';
+    }
+    if (_rivalKeys.contains(sym.replaceFirst('rival_', ''))) {
+      final r = sym.replaceFirst('rival_', '');
+      return 'assets/images/emblems/rival_$r.png';
+    }
+    if (sym.startsWith('my_')) {
+      return 'assets/images/emblems/$sym.png';
+    }
+    if (sym.startsWith('sponsor_')) {
+      return 'assets/images/emblems/$sym.png';
+    }
+    return null;
+  }
 
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
+    final assetPath = _resolveAssetPath();
+    final fallbackPainter = CustomPaint(
       size: Size(size, size),
       painter: _EmblemPainter(
         primaryColor: primaryColor,
@@ -28,6 +57,21 @@ class EmblemWidget extends StatelessWidget {
         letters: letters,
       ),
     );
+
+    if (assetPath != null) {
+      return SizedBox(
+        width: size,
+        height: size,
+        child: Image.asset(
+          assetPath,
+          fit: BoxFit.contain,
+          filterQuality: FilterQuality.none,
+          errorBuilder: (_, _, _) => fallbackPainter,
+        ),
+      );
+    }
+
+    return fallbackPainter;
   }
 }
 

@@ -250,5 +250,3036 @@
     "height": 646,
     "category": "house",
     "notes": "Isometric floor tile base"
+  },
+  "characters/gamer_m02/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m02/gamer_m02_front_idle_hd.png",
+    "width": 318,
+    "height": 595,
+    "category": "character",
+    "notes": "gamer_m02 HD trimmed"
+  },
+  "characters/gamer_m02/front_idle": {
+    "file": "assets/images/characters/gamer_m02/gamer_m02_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m02 front idle"
+  },
+  "characters/gamer_m02": {
+    "file": "assets/images/characters/gamer_m02.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m02 sprite"
+  },
+  "characters/gamer_m03/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m03/gamer_m03_front_idle_hd.png",
+    "width": 328,
+    "height": 635,
+    "category": "character",
+    "notes": "gamer_m03 HD trimmed"
+  },
+  "characters/gamer_m03/front_idle": {
+    "file": "assets/images/characters/gamer_m03/gamer_m03_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m03 front idle"
+  },
+  "characters/gamer_m03": {
+    "file": "assets/images/characters/gamer_m03.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m03 sprite"
+  },
+  "characters/gamer_m04/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m04/gamer_m04_front_idle_hd.png",
+    "width": 318,
+    "height": 615,
+    "category": "character",
+    "notes": "gamer_m04 HD trimmed"
+  },
+  "characters/gamer_m04/front_idle": {
+    "file": "assets/images/characters/gamer_m04/gamer_m04_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m04 front idle"
+  },
+  "characters/gamer_m04": {
+    "file": "assets/images/characters/gamer_m04.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m04 sprite"
+  },
+  "characters/gamer_m05/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m05/gamer_m05_front_idle_hd.png",
+    "width": 338,
+    "height": 625,
+    "category": "character",
+    "notes": "gamer_m05 HD trimmed"
+  },
+  "characters/gamer_m05/front_idle": {
+    "file": "assets/images/characters/gamer_m05/gamer_m05_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m05 front idle"
+  },
+  "characters/gamer_m05": {
+    "file": "assets/images/characters/gamer_m05.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m05 sprite"
+  },
+  "characters/gamer_m06/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m06/gamer_m06_front_idle_hd.png",
+    "width": 328,
+    "height": 625,
+    "category": "character",
+    "notes": "gamer_m06 HD trimmed"
+  },
+  "characters/gamer_m06/front_idle": {
+    "file": "assets/images/characters/gamer_m06/gamer_m06_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m06 front idle"
+  },
+  "characters/gamer_m06": {
+    "file": "assets/images/characters/gamer_m06.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m06 sprite"
+  },
+  "characters/gamer_m07/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m07/gamer_m07_front_idle_hd.png",
+    "width": 328,
+    "height": 574,
+    "category": "character",
+    "notes": "gamer_m07 HD trimmed"
+  },
+  "characters/gamer_m07/front_idle": {
+    "file": "assets/images/characters/gamer_m07/gamer_m07_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m07 front idle"
+  },
+  "characters/gamer_m07": {
+    "file": "assets/images/characters/gamer_m07.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m07 sprite"
+  },
+  "characters/gamer_m08/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m08/gamer_m08_front_idle_hd.png",
+    "width": 338,
+    "height": 584,
+    "category": "character",
+    "notes": "gamer_m08 HD trimmed"
+  },
+  "characters/gamer_m08/front_idle": {
+    "file": "assets/images/characters/gamer_m08/gamer_m08_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m08 front idle"
+  },
+  "characters/gamer_m08": {
+    "file": "assets/images/characters/gamer_m08.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m08 sprite"
+  },
+  "characters/gamer_m09/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m09/gamer_m09_front_idle_hd.png",
+    "width": 328,
+    "height": 614,
+    "category": "character",
+    "notes": "gamer_m09 HD trimmed"
+  },
+  "characters/gamer_m09/front_idle": {
+    "file": "assets/images/characters/gamer_m09/gamer_m09_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m09 front idle"
+  },
+  "characters/gamer_m09": {
+    "file": "assets/images/characters/gamer_m09.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m09 sprite"
+  },
+  "characters/gamer_m10/front_idle_hd": {
+    "file": "assets/images/characters/gamer_m10/gamer_m10_front_idle_hd.png",
+    "width": 338,
+    "height": 594,
+    "category": "character",
+    "notes": "gamer_m10 HD trimmed"
+  },
+  "characters/gamer_m10/front_idle": {
+    "file": "assets/images/characters/gamer_m10/gamer_m10_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m10 front idle"
+  },
+  "characters/gamer_m10": {
+    "file": "assets/images/characters/gamer_m10.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_m10 sprite"
+  },
+  "characters/gamer_f01/front_idle_hd": {
+    "file": "assets/images/characters/gamer_f01/gamer_f01_front_idle_hd.png",
+    "width": 398,
+    "height": 635,
+    "category": "character",
+    "notes": "gamer_f01 HD trimmed"
+  },
+  "characters/gamer_f01/front_idle": {
+    "file": "assets/images/characters/gamer_f01/gamer_f01_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f01 front idle"
+  },
+  "characters/gamer_f01": {
+    "file": "assets/images/characters/gamer_f01.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f01 sprite"
+  },
+  "characters/gamer_f02/front_idle_hd": {
+    "file": "assets/images/characters/gamer_f02/gamer_f02_front_idle_hd.png",
+    "width": 492,
+    "height": 584,
+    "category": "character",
+    "notes": "gamer_f02 HD trimmed"
+  },
+  "characters/gamer_f02/front_idle": {
+    "file": "assets/images/characters/gamer_f02/gamer_f02_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f02 front idle"
+  },
+  "characters/gamer_f02": {
+    "file": "assets/images/characters/gamer_f02.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f02 sprite"
+  },
+  "characters/gamer_f03/front_idle_hd": {
+    "file": "assets/images/characters/gamer_f03/gamer_f03_front_idle_hd.png",
+    "width": 358,
+    "height": 594,
+    "category": "character",
+    "notes": "gamer_f03 HD trimmed"
+  },
+  "characters/gamer_f03/front_idle": {
+    "file": "assets/images/characters/gamer_f03/gamer_f03_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f03 front idle"
+  },
+  "characters/gamer_f03": {
+    "file": "assets/images/characters/gamer_f03.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f03 sprite"
+  },
+  "characters/gamer_f04/front_idle_hd": {
+    "file": "assets/images/characters/gamer_f04/gamer_f04_front_idle_hd.png",
+    "width": 338,
+    "height": 604,
+    "category": "character",
+    "notes": "gamer_f04 HD trimmed"
+  },
+  "characters/gamer_f04/front_idle": {
+    "file": "assets/images/characters/gamer_f04/gamer_f04_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f04 front idle"
+  },
+  "characters/gamer_f04": {
+    "file": "assets/images/characters/gamer_f04.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f04 sprite"
+  },
+  "characters/gamer_f05/front_idle_hd": {
+    "file": "assets/images/characters/gamer_f05/gamer_f05_front_idle_hd.png",
+    "width": 328,
+    "height": 646,
+    "category": "character",
+    "notes": "gamer_f05 HD trimmed"
+  },
+  "characters/gamer_f05/front_idle": {
+    "file": "assets/images/characters/gamer_f05/gamer_f05_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f05 front idle"
+  },
+  "characters/gamer_f05": {
+    "file": "assets/images/characters/gamer_f05.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f05 sprite"
+  },
+  "characters/gamer_f06/front_idle_hd": {
+    "file": "assets/images/characters/gamer_f06/gamer_f06_front_idle_hd.png",
+    "width": 318,
+    "height": 594,
+    "category": "character",
+    "notes": "gamer_f06 HD trimmed"
+  },
+  "characters/gamer_f06/front_idle": {
+    "file": "assets/images/characters/gamer_f06/gamer_f06_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f06 front idle"
+  },
+  "characters/gamer_f06": {
+    "file": "assets/images/characters/gamer_f06.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f06 sprite"
+  },
+  "characters/gamer_f07/front_idle_hd": {
+    "file": "assets/images/characters/gamer_f07/gamer_f07_front_idle_hd.png",
+    "width": 379,
+    "height": 583,
+    "category": "character",
+    "notes": "gamer_f07 HD trimmed"
+  },
+  "characters/gamer_f07/front_idle": {
+    "file": "assets/images/characters/gamer_f07/gamer_f07_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f07 front idle"
+  },
+  "characters/gamer_f07": {
+    "file": "assets/images/characters/gamer_f07.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f07 sprite"
+  },
+  "characters/gamer_f08/front_idle_hd": {
+    "file": "assets/images/characters/gamer_f08/gamer_f08_front_idle_hd.png",
+    "width": 328,
+    "height": 583,
+    "category": "character",
+    "notes": "gamer_f08 HD trimmed"
+  },
+  "characters/gamer_f08/front_idle": {
+    "file": "assets/images/characters/gamer_f08/gamer_f08_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f08 front idle"
+  },
+  "characters/gamer_f08": {
+    "file": "assets/images/characters/gamer_f08.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f08 sprite"
+  },
+  "characters/gamer_f09/front_idle_hd": {
+    "file": "assets/images/characters/gamer_f09/gamer_f09_front_idle_hd.png",
+    "width": 430,
+    "height": 614,
+    "category": "character",
+    "notes": "gamer_f09 HD trimmed"
+  },
+  "characters/gamer_f09/front_idle": {
+    "file": "assets/images/characters/gamer_f09/gamer_f09_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f09 front idle"
+  },
+  "characters/gamer_f09": {
+    "file": "assets/images/characters/gamer_f09.png",
+    "width": 48,
+    "height": 48,
+    "category": "character",
+    "notes": "gamer_f09 sprite"
+  },
+  "characters/staff_coach/front_idle_hd": {
+    "file": "assets/images/characters/staff_coach/staff_coach_front_idle_hd.png",
+    "width": 338,
+    "height": 603,
+    "category": "staff",
+    "notes": "staff_coach HD trimmed"
+  },
+  "characters/staff_coach/front_idle": {
+    "file": "assets/images/characters/staff_coach/staff_coach_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_coach front idle"
+  },
+  "characters/staff_coach": {
+    "file": "assets/images/characters/staff_coach.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_coach sprite"
+  },
+  "characters/staff_analyst/front_idle_hd": {
+    "file": "assets/images/characters/staff_analyst/staff_analyst_front_idle_hd.png",
+    "width": 338,
+    "height": 593,
+    "category": "staff",
+    "notes": "staff_analyst HD trimmed"
+  },
+  "characters/staff_analyst/front_idle": {
+    "file": "assets/images/characters/staff_analyst/staff_analyst_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_analyst front idle"
+  },
+  "characters/staff_analyst": {
+    "file": "assets/images/characters/staff_analyst.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_analyst sprite"
+  },
+  "characters/staff_manager/front_idle_hd": {
+    "file": "assets/images/characters/staff_manager/staff_manager_front_idle_hd.png",
+    "width": 358,
+    "height": 593,
+    "category": "staff",
+    "notes": "staff_manager HD trimmed"
+  },
+  "characters/staff_manager/front_idle": {
+    "file": "assets/images/characters/staff_manager/staff_manager_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_manager front idle"
+  },
+  "characters/staff_manager": {
+    "file": "assets/images/characters/staff_manager.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_manager sprite"
+  },
+  "characters/staff_psychologist/front_idle_hd": {
+    "file": "assets/images/characters/staff_psychologist/staff_psychologist_front_idle_hd.png",
+    "width": 318,
+    "height": 603,
+    "category": "staff",
+    "notes": "staff_psychologist HD trimmed"
+  },
+  "characters/staff_psychologist/front_idle": {
+    "file": "assets/images/characters/staff_psychologist/staff_psychologist_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_psychologist front idle"
+  },
+  "characters/staff_psychologist": {
+    "file": "assets/images/characters/staff_psychologist.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_psychologist sprite"
+  },
+  "characters/staff_cook/front_idle_hd": {
+    "file": "assets/images/characters/staff_cook/staff_cook_front_idle_hd.png",
+    "width": 420,
+    "height": 645,
+    "category": "staff",
+    "notes": "staff_cook HD trimmed"
+  },
+  "characters/staff_cook/front_idle": {
+    "file": "assets/images/characters/staff_cook/staff_cook_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_cook front idle"
+  },
+  "characters/staff_cook": {
+    "file": "assets/images/characters/staff_cook.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_cook sprite"
+  },
+  "characters/staff_producer/front_idle_hd": {
+    "file": "assets/images/characters/staff_producer/staff_producer_front_idle_hd.png",
+    "width": 378,
+    "height": 604,
+    "category": "staff",
+    "notes": "staff_producer HD trimmed"
+  },
+  "characters/staff_producer/front_idle": {
+    "file": "assets/images/characters/staff_producer/staff_producer_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_producer front idle"
+  },
+  "characters/staff_producer": {
+    "file": "assets/images/characters/staff_producer.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_producer sprite"
+  },
+  "characters/staff_mika/front_idle_hd": {
+    "file": "assets/images/characters/staff_mika/staff_mika_front_idle_hd.png",
+    "width": 378,
+    "height": 594,
+    "category": "staff",
+    "notes": "staff_mika HD trimmed"
+  },
+  "characters/staff_mika/front_idle": {
+    "file": "assets/images/characters/staff_mika/staff_mika_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_mika front idle"
+  },
+  "characters/staff_mika": {
+    "file": "assets/images/characters/staff_mika.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_mika sprite"
+  },
+  "characters/staff_scout/front_idle_hd": {
+    "file": "assets/images/characters/staff_scout/staff_scout_front_idle_hd.png",
+    "width": 328,
+    "height": 583,
+    "category": "staff",
+    "notes": "staff_scout HD trimmed"
+  },
+  "characters/staff_scout/front_idle": {
+    "file": "assets/images/characters/staff_scout/staff_scout_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_scout front idle"
+  },
+  "characters/staff_scout": {
+    "file": "assets/images/characters/staff_scout.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_scout sprite"
+  },
+  "characters/staff_guard/front_idle_hd": {
+    "file": "assets/images/characters/staff_guard/staff_guard_front_idle_hd.png",
+    "width": 368,
+    "height": 604,
+    "category": "staff",
+    "notes": "staff_guard HD trimmed"
+  },
+  "characters/staff_guard/front_idle": {
+    "file": "assets/images/characters/staff_guard/staff_guard_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_guard front idle"
+  },
+  "characters/staff_guard": {
+    "file": "assets/images/characters/staff_guard.png",
+    "width": 48,
+    "height": 48,
+    "category": "staff",
+    "notes": "staff_guard sprite"
+  },
+  "characters/rival_kidlat/front_idle_hd": {
+    "file": "assets/images/characters/rival_kidlat/rival_kidlat_front_idle_hd.png",
+    "width": 102,
+    "height": 200,
+    "category": "rival",
+    "notes": "rival_kidlat HD trimmed"
+  },
+  "characters/rival_kidlat/front_idle": {
+    "file": "assets/images/characters/rival_kidlat/rival_kidlat_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_kidlat front idle"
+  },
+  "characters/rival_kidlat": {
+    "file": "assets/images/characters/rival_kidlat.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_kidlat sprite"
+  },
+  "characters/rival_bakal/front_idle_hd": {
+    "file": "assets/images/characters/rival_bakal/rival_bakal_front_idle_hd.png",
+    "width": 125,
+    "height": 197,
+    "category": "rival",
+    "notes": "rival_bakal HD trimmed"
+  },
+  "characters/rival_bakal/front_idle": {
+    "file": "assets/images/characters/rival_bakal/rival_bakal_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_bakal front idle"
+  },
+  "characters/rival_bakal": {
+    "file": "assets/images/characters/rival_bakal.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_bakal sprite"
+  },
+  "characters/rival_dagat/front_idle_hd": {
+    "file": "assets/images/characters/rival_dagat/rival_dagat_front_idle_hd.png",
+    "width": 108,
+    "height": 197,
+    "category": "rival",
+    "notes": "rival_dagat HD trimmed"
+  },
+  "characters/rival_dagat/front_idle": {
+    "file": "assets/images/characters/rival_dagat/rival_dagat_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_dagat front idle"
+  },
+  "characters/rival_dagat": {
+    "file": "assets/images/characters/rival_dagat.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_dagat sprite"
+  },
+  "characters/rival_mayon/front_idle_hd": {
+    "file": "assets/images/characters/rival_mayon/rival_mayon_front_idle_hd.png",
+    "width": 134,
+    "height": 201,
+    "category": "rival",
+    "notes": "rival_mayon HD trimmed"
+  },
+  "characters/rival_mayon/front_idle": {
+    "file": "assets/images/characters/rival_mayon/rival_mayon_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_mayon front idle"
+  },
+  "characters/rival_mayon": {
+    "file": "assets/images/characters/rival_mayon.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_mayon sprite"
+  },
+  "characters/rival_tarsier/front_idle_hd": {
+    "file": "assets/images/characters/rival_tarsier/rival_tarsier_front_idle_hd.png",
+    "width": 112,
+    "height": 194,
+    "category": "rival",
+    "notes": "rival_tarsier HD trimmed"
+  },
+  "characters/rival_tarsier/front_idle": {
+    "file": "assets/images/characters/rival_tarsier/rival_tarsier_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_tarsier front idle"
+  },
+  "characters/rival_tarsier": {
+    "file": "assets/images/characters/rival_tarsier.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_tarsier sprite"
+  },
+  "characters/rival_pawikan/front_idle_hd": {
+    "file": "assets/images/characters/rival_pawikan/rival_pawikan_front_idle_hd.png",
+    "width": 128,
+    "height": 187,
+    "category": "rival",
+    "notes": "rival_pawikan HD trimmed"
+  },
+  "characters/rival_pawikan/front_idle": {
+    "file": "assets/images/characters/rival_pawikan/rival_pawikan_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_pawikan front idle"
+  },
+  "characters/rival_pawikan": {
+    "file": "assets/images/characters/rival_pawikan.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_pawikan sprite"
+  },
+  "characters/rival_agila/front_idle_hd": {
+    "file": "assets/images/characters/rival_agila/rival_agila_front_idle_hd.png",
+    "width": 102,
+    "height": 196,
+    "category": "rival",
+    "notes": "rival_agila HD trimmed"
+  },
+  "characters/rival_agila/front_idle": {
+    "file": "assets/images/characters/rival_agila/rival_agila_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_agila front idle"
+  },
+  "characters/rival_agila": {
+    "file": "assets/images/characters/rival_agila.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_agila sprite"
+  },
+  "characters/rival_banaue/front_idle_hd": {
+    "file": "assets/images/characters/rival_banaue/rival_banaue_front_idle_hd.png",
+    "width": 144,
+    "height": 196,
+    "category": "rival",
+    "notes": "rival_banaue HD trimmed"
+  },
+  "characters/rival_banaue/front_idle": {
+    "file": "assets/images/characters/rival_banaue/rival_banaue_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_banaue front idle"
+  },
+  "characters/rival_banaue": {
+    "file": "assets/images/characters/rival_banaue.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_banaue sprite"
+  },
+  "characters/rival_siargao/front_idle_hd": {
+    "file": "assets/images/characters/rival_siargao/rival_siargao_front_idle_hd.png",
+    "width": 102,
+    "height": 196,
+    "category": "rival",
+    "notes": "rival_siargao HD trimmed"
+  },
+  "characters/rival_siargao/front_idle": {
+    "file": "assets/images/characters/rival_siargao/rival_siargao_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_siargao front idle"
+  },
+  "characters/rival_siargao": {
+    "file": "assets/images/characters/rival_siargao.png",
+    "width": 48,
+    "height": 48,
+    "category": "rival",
+    "notes": "rival_siargao sprite"
+  },
+  "characters/fan_kid/front_idle_hd": {
+    "file": "assets/images/characters/fan_kid/fan_kid_front_idle_hd.png",
+    "width": 146,
+    "height": 184,
+    "category": "fan",
+    "notes": "fan_kid HD trimmed"
+  },
+  "characters/fan_kid/front_idle": {
+    "file": "assets/images/characters/fan_kid/fan_kid_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_kid front idle"
+  },
+  "characters/fan_kid": {
+    "file": "assets/images/characters/fan_kid.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_kid sprite"
+  },
+  "characters/fan_teen/front_idle_hd": {
+    "file": "assets/images/characters/fan_teen/fan_teen_front_idle_hd.png",
+    "width": 132,
+    "height": 192,
+    "category": "fan",
+    "notes": "fan_teen HD trimmed"
+  },
+  "characters/fan_teen/front_idle": {
+    "file": "assets/images/characters/fan_teen/fan_teen_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_teen front idle"
+  },
+  "characters/fan_teen": {
+    "file": "assets/images/characters/fan_teen.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_teen sprite"
+  },
+  "characters/fan_auntie/front_idle_hd": {
+    "file": "assets/images/characters/fan_auntie/fan_auntie_front_idle_hd.png",
+    "width": 175,
+    "height": 182,
+    "category": "fan",
+    "notes": "fan_auntie HD trimmed"
+  },
+  "characters/fan_auntie/front_idle": {
+    "file": "assets/images/characters/fan_auntie/fan_auntie_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_auntie front idle"
+  },
+  "characters/fan_auntie": {
+    "file": "assets/images/characters/fan_auntie.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_auntie sprite"
+  },
+  "characters/fan_lolo/front_idle_hd": {
+    "file": "assets/images/characters/fan_lolo/fan_lolo_front_idle_hd.png",
+    "width": 141,
+    "height": 198,
+    "category": "fan",
+    "notes": "fan_lolo HD trimmed"
+  },
+  "characters/fan_lolo/front_idle": {
+    "file": "assets/images/characters/fan_lolo/fan_lolo_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_lolo front idle"
+  },
+  "characters/fan_lolo": {
+    "file": "assets/images/characters/fan_lolo.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_lolo sprite"
+  },
+  "characters/fan_student/front_idle_hd": {
+    "file": "assets/images/characters/fan_student/fan_student_front_idle_hd.png",
+    "width": 152,
+    "height": 191,
+    "category": "fan",
+    "notes": "fan_student HD trimmed"
+  },
+  "characters/fan_student/front_idle": {
+    "file": "assets/images/characters/fan_student/fan_student_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_student front idle"
+  },
+  "characters/fan_student": {
+    "file": "assets/images/characters/fan_student.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_student sprite"
+  },
+  "characters/fan_cosplayer/front_idle_hd": {
+    "file": "assets/images/characters/fan_cosplayer/fan_cosplayer_front_idle_hd.png",
+    "width": 152,
+    "height": 191,
+    "category": "fan",
+    "notes": "fan_cosplayer HD trimmed"
+  },
+  "characters/fan_cosplayer/front_idle": {
+    "file": "assets/images/characters/fan_cosplayer/fan_cosplayer_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_cosplayer front idle"
+  },
+  "characters/fan_cosplayer": {
+    "file": "assets/images/characters/fan_cosplayer.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_cosplayer sprite"
+  },
+  "characters/fan_mascot/front_idle_hd": {
+    "file": "assets/images/characters/fan_mascot/fan_mascot_front_idle_hd.png",
+    "width": 169,
+    "height": 188,
+    "category": "fan",
+    "notes": "fan_mascot HD trimmed"
+  },
+  "characters/fan_mascot/front_idle": {
+    "file": "assets/images/characters/fan_mascot/fan_mascot_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_mascot front idle"
+  },
+  "characters/fan_mascot": {
+    "file": "assets/images/characters/fan_mascot.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_mascot sprite"
+  },
+  "characters/fan_vlogger/front_idle_hd": {
+    "file": "assets/images/characters/fan_vlogger/fan_vlogger_front_idle_hd.png",
+    "width": 165,
+    "height": 188,
+    "category": "fan",
+    "notes": "fan_vlogger HD trimmed"
+  },
+  "characters/fan_vlogger/front_idle": {
+    "file": "assets/images/characters/fan_vlogger/fan_vlogger_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_vlogger front idle"
+  },
+  "characters/fan_vlogger": {
+    "file": "assets/images/characters/fan_vlogger.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_vlogger sprite"
+  },
+  "characters/fan_kagawad/front_idle_hd": {
+    "file": "assets/images/characters/fan_kagawad/fan_kagawad_front_idle_hd.png",
+    "width": 96,
+    "height": 191,
+    "category": "fan",
+    "notes": "fan_kagawad HD trimmed"
+  },
+  "characters/fan_kagawad/front_idle": {
+    "file": "assets/images/characters/fan_kagawad/fan_kagawad_front_idle.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_kagawad front idle"
+  },
+  "characters/fan_kagawad": {
+    "file": "assets/images/characters/fan_kagawad.png",
+    "width": 48,
+    "height": 48,
+    "category": "fan",
+    "notes": "fan_kagawad sprite"
+  },
+  "furniture/gaming_chair": {
+    "file": "assets/images/furniture/gaming_chair.png",
+    "width": 83,
+    "height": 124,
+    "category": "furniture",
+    "notes": "gaming_chair sprite"
+  },
+  "furniture/ergo_chair": {
+    "file": "assets/images/furniture/ergo_chair.png",
+    "width": 82,
+    "height": 121,
+    "category": "furniture",
+    "notes": "ergo_chair sprite"
+  },
+  "furniture/comfy_bed": {
+    "file": "assets/images/furniture/comfy_bed.png",
+    "width": 144,
+    "height": 114,
+    "category": "furniture",
+    "notes": "comfy_bed sprite"
+  },
+  "furniture/dining_table": {
+    "file": "assets/images/furniture/dining_table.png",
+    "width": 137,
+    "height": 114,
+    "category": "furniture",
+    "notes": "dining_table sprite"
+  },
+  "furniture/lounge_sofa": {
+    "file": "assets/images/furniture/lounge_sofa.png",
+    "width": 137,
+    "height": 126,
+    "category": "furniture",
+    "notes": "lounge_sofa sprite"
+  },
+  "furniture/tv_stand": {
+    "file": "assets/images/furniture/tv_stand.png",
+    "width": 111,
+    "height": 142,
+    "category": "furniture",
+    "notes": "tv_stand sprite"
+  },
+  "furniture/aircon": {
+    "file": "assets/images/furniture/aircon.png",
+    "width": 111,
+    "height": 99,
+    "category": "furniture",
+    "notes": "aircon sprite"
+  },
+  "furniture/electric_fan": {
+    "file": "assets/images/furniture/electric_fan.png",
+    "width": 68,
+    "height": 143,
+    "category": "furniture",
+    "notes": "electric_fan sprite"
+  },
+  "furniture/refrigerator": {
+    "file": "assets/images/furniture/refrigerator.png",
+    "width": 87,
+    "height": 150,
+    "category": "furniture",
+    "notes": "refrigerator sprite"
+  },
+  "furniture/water_dispenser": {
+    "file": "assets/images/furniture/water_dispenser.png",
+    "width": 65,
+    "height": 148,
+    "category": "furniture",
+    "notes": "water_dispenser sprite"
+  },
+  "furniture/wardrobe": {
+    "file": "assets/images/furniture/wardrobe.png",
+    "width": 98,
+    "height": 150,
+    "category": "furniture",
+    "notes": "wardrobe sprite"
+  },
+  "furniture/shoe_rack": {
+    "file": "assets/images/furniture/shoe_rack.png",
+    "width": 105,
+    "height": 140,
+    "category": "furniture",
+    "notes": "shoe_rack sprite"
+  },
+  "furniture/pro_desk": {
+    "file": "assets/images/furniture/pro_desk.png",
+    "width": 637,
+    "height": 626,
+    "category": "furniture",
+    "notes": "pro_desk sprite"
+  },
+  "furniture/elite_desk": {
+    "file": "assets/images/furniture/elite_desk.png",
+    "width": 645,
+    "height": 622,
+    "category": "furniture",
+    "notes": "elite_desk sprite"
+  },
+  "furniture/streaming_booth": {
+    "file": "assets/images/furniture/streaming_booth.png",
+    "width": 675,
+    "height": 664,
+    "category": "furniture",
+    "notes": "streaming_booth sprite"
+  },
+  "furniture/gym_corner": {
+    "file": "assets/images/furniture/gym_corner.png",
+    "width": 669,
+    "height": 615,
+    "category": "furniture",
+    "notes": "gym_corner sprite"
+  },
+  "furniture/meeting_table": {
+    "file": "assets/images/furniture/meeting_table.png",
+    "width": 655,
+    "height": 635,
+    "category": "furniture",
+    "notes": "meeting_table sprite"
+  },
+  "furniture/merch_corner": {
+    "file": "assets/images/furniture/merch_corner.png",
+    "width": 597,
+    "height": 666,
+    "category": "furniture",
+    "notes": "merch_corner sprite"
+  },
+  "furniture/generator": {
+    "file": "assets/images/furniture/generator.png",
+    "width": 563,
+    "height": 633,
+    "category": "furniture",
+    "notes": "generator sprite"
+  },
+  "furniture/fiber_router": {
+    "file": "assets/images/furniture/fiber_router.png",
+    "width": 418,
+    "height": 608,
+    "category": "furniture",
+    "notes": "fiber_router sprite"
+  },
+  "furniture/trophy_case": {
+    "file": "assets/images/furniture/trophy_case.png",
+    "width": 426,
+    "height": 667,
+    "category": "furniture",
+    "notes": "trophy_case sprite"
+  },
+  "furniture/decor_plant": {
+    "file": "assets/images/furniture/decor_plant.png",
+    "width": 372,
+    "height": 480,
+    "category": "furniture",
+    "notes": "decor_plant sprite"
+  },
+  "furniture/decor_cactus": {
+    "file": "assets/images/furniture/decor_cactus.png",
+    "width": 192,
+    "height": 285,
+    "category": "furniture",
+    "notes": "decor_cactus sprite"
+  },
+  "furniture/decor_poster": {
+    "file": "assets/images/furniture/decor_poster.png",
+    "width": 288,
+    "height": 528,
+    "category": "furniture",
+    "notes": "decor_poster sprite"
+  },
+  "furniture/decor_neon_sign": {
+    "file": "assets/images/furniture/decor_neon_sign.png",
+    "width": 410,
+    "height": 457,
+    "category": "furniture",
+    "notes": "decor_neon_sign sprite"
+  },
+  "furniture/decor_team_banner": {
+    "file": "assets/images/furniture/decor_team_banner.png",
+    "width": 276,
+    "height": 552,
+    "category": "furniture",
+    "notes": "decor_team_banner sprite"
+  },
+  "furniture/decor_parol": {
+    "file": "assets/images/furniture/decor_parol.png",
+    "width": 432,
+    "height": 517,
+    "category": "furniture",
+    "notes": "decor_parol sprite"
+  },
+  "furniture/decor_framed_photo": {
+    "file": "assets/images/furniture/decor_framed_photo.png",
+    "width": 360,
+    "height": 480,
+    "category": "furniture",
+    "notes": "decor_framed_photo sprite"
+  },
+  "furniture/decor_wall_clock": {
+    "file": "assets/images/furniture/decor_wall_clock.png",
+    "width": 348,
+    "height": 396,
+    "category": "furniture",
+    "notes": "decor_wall_clock sprite"
+  },
+  "furniture/decor_bookshelf": {
+    "file": "assets/images/furniture/decor_bookshelf.png",
+    "width": 432,
+    "height": 540,
+    "category": "furniture",
+    "notes": "decor_bookshelf sprite"
+  },
+  "furniture/decor_bean_bag": {
+    "file": "assets/images/furniture/decor_bean_bag.png",
+    "width": 480,
+    "height": 409,
+    "category": "furniture",
+    "notes": "decor_bean_bag sprite"
+  },
+  "furniture/decor_banig_rug": {
+    "file": "assets/images/furniture/decor_banig_rug.png",
+    "width": 552,
+    "height": 310,
+    "category": "furniture",
+    "notes": "decor_banig_rug sprite"
+  },
+  "furniture/decor_fish_tank": {
+    "file": "assets/images/furniture/decor_fish_tank.png",
+    "width": 432,
+    "height": 480,
+    "category": "furniture",
+    "notes": "decor_fish_tank sprite"
+  },
+  "items/gadget_headset": {
+    "file": "assets/images/items/gadget_headset.png",
+    "width": 117,
+    "height": 126,
+    "category": "items",
+    "notes": "gadget_headset sprite"
+  },
+  "items/gadget_keyboard": {
+    "file": "assets/images/items/gadget_keyboard.png",
+    "width": 144,
+    "height": 85,
+    "category": "items",
+    "notes": "gadget_keyboard sprite"
+  },
+  "items/gadget_mouse": {
+    "file": "assets/images/items/gadget_mouse.png",
+    "width": 136,
+    "height": 129,
+    "category": "items",
+    "notes": "gadget_mouse sprite"
+  },
+  "items/gadget_monitor": {
+    "file": "assets/images/items/gadget_monitor.png",
+    "width": 137,
+    "height": 113,
+    "category": "items",
+    "notes": "gadget_monitor sprite"
+  },
+  "items/gadget_laptop": {
+    "file": "assets/images/items/gadget_laptop.png",
+    "width": 136,
+    "height": 115,
+    "category": "items",
+    "notes": "gadget_laptop sprite"
+  },
+  "items/gadget_phone": {
+    "file": "assets/images/items/gadget_phone.png",
+    "width": 75,
+    "height": 126,
+    "category": "items",
+    "notes": "gadget_phone sprite"
+  },
+  "items/gadget_ring_light": {
+    "file": "assets/images/items/gadget_ring_light.png",
+    "width": 81,
+    "height": 137,
+    "category": "items",
+    "notes": "gadget_ring_light sprite"
+  },
+  "items/gadget_microphone": {
+    "file": "assets/images/items/gadget_microphone.png",
+    "width": 110,
+    "height": 128,
+    "category": "items",
+    "notes": "gadget_microphone sprite"
+  },
+  "items/gadget_webcam": {
+    "file": "assets/images/items/gadget_webcam.png",
+    "width": 91,
+    "height": 103,
+    "category": "items",
+    "notes": "gadget_webcam sprite"
+  },
+  "items/gadget_router": {
+    "file": "assets/images/items/gadget_router.png",
+    "width": 130,
+    "height": 101,
+    "category": "items",
+    "notes": "gadget_router sprite"
+  },
+  "items/gadget_power_strip": {
+    "file": "assets/images/items/gadget_power_strip.png",
+    "width": 137,
+    "height": 116,
+    "category": "items",
+    "notes": "gadget_power_strip sprite"
+  },
+  "items/gadget_controller": {
+    "file": "assets/images/items/gadget_controller.png",
+    "width": 133,
+    "height": 94,
+    "category": "items",
+    "notes": "gadget_controller sprite"
+  },
+  "food/meal_adobo": {
+    "file": "assets/images/food/meal_adobo.png",
+    "width": 200,
+    "height": 177,
+    "category": "food",
+    "notes": "meal_adobo sprite"
+  },
+  "food/meal_sinigang": {
+    "file": "assets/images/food/meal_sinigang.png",
+    "width": 190,
+    "height": 176,
+    "category": "food",
+    "notes": "meal_sinigang sprite"
+  },
+  "food/meal_tapsilog": {
+    "file": "assets/images/food/meal_tapsilog.png",
+    "width": 200,
+    "height": 177,
+    "category": "food",
+    "notes": "meal_tapsilog sprite"
+  },
+  "food/meal_sisig": {
+    "file": "assets/images/food/meal_sisig.png",
+    "width": 203,
+    "height": 179,
+    "category": "food",
+    "notes": "meal_sisig sprite"
+  },
+  "food/meal_lechon_kawali": {
+    "file": "assets/images/food/meal_lechon_kawali.png",
+    "width": 204,
+    "height": 181,
+    "category": "food",
+    "notes": "meal_lechon_kawali sprite"
+  },
+  "food/meal_kare_kare": {
+    "file": "assets/images/food/meal_kare_kare.png",
+    "width": 200,
+    "height": 181,
+    "category": "food",
+    "notes": "meal_kare_kare sprite"
+  },
+  "food/meal_pancit_canton": {
+    "file": "assets/images/food/meal_pancit_canton.png",
+    "width": 202,
+    "height": 183,
+    "category": "food",
+    "notes": "meal_pancit_canton sprite"
+  },
+  "food/meal_fried_chicken": {
+    "file": "assets/images/food/meal_fried_chicken.png",
+    "width": 204,
+    "height": 182,
+    "category": "food",
+    "notes": "meal_fried_chicken sprite"
+  },
+  "food/meal_tinola": {
+    "file": "assets/images/food/meal_tinola.png",
+    "width": 192,
+    "height": 185,
+    "category": "food",
+    "notes": "meal_tinola sprite"
+  },
+  "food/snack_halo_halo": {
+    "file": "assets/images/food/snack_halo_halo.png",
+    "width": 336,
+    "height": 538,
+    "category": "food",
+    "notes": "snack_halo_halo sprite"
+  },
+  "food/snack_turon": {
+    "file": "assets/images/food/snack_turon.png",
+    "width": 504,
+    "height": 384,
+    "category": "food",
+    "notes": "snack_turon sprite"
+  },
+  "food/snack_banana_cue": {
+    "file": "assets/images/food/snack_banana_cue.png",
+    "width": 540,
+    "height": 372,
+    "category": "food",
+    "notes": "snack_banana_cue sprite"
+  },
+  "food/snack_fishball": {
+    "file": "assets/images/food/snack_fishball.png",
+    "width": 360,
+    "height": 516,
+    "category": "food",
+    "notes": "snack_fishball sprite"
+  },
+  "food/snack_kwek_kwek": {
+    "file": "assets/images/food/snack_kwek_kwek.png",
+    "width": 504,
+    "height": 516,
+    "category": "food",
+    "notes": "snack_kwek_kwek sprite"
+  },
+  "food/snack_taho": {
+    "file": "assets/images/food/snack_taho.png",
+    "width": 312,
+    "height": 525,
+    "category": "food",
+    "notes": "snack_taho sprite"
+  },
+  "food/snack_buko": {
+    "file": "assets/images/food/snack_buko.png",
+    "width": 396,
+    "height": 500,
+    "category": "food",
+    "notes": "snack_buko sprite"
+  },
+  "food/snack_sago_gulaman": {
+    "file": "assets/images/food/snack_sago_gulaman.png",
+    "width": 312,
+    "height": 525,
+    "category": "food",
+    "notes": "snack_sago_gulaman sprite"
+  },
+  "food/snack_pandesal": {
+    "file": "assets/images/food/snack_pandesal.png",
+    "width": 480,
+    "height": 420,
+    "category": "food",
+    "notes": "snack_pandesal sprite"
+  },
+  "food/snack_cup_noodles": {
+    "file": "assets/images/food/snack_cup_noodles.png",
+    "width": 492,
+    "height": 516,
+    "category": "food",
+    "notes": "snack_cup_noodles sprite"
+  },
+  "food/snack_coffee": {
+    "file": "assets/images/food/snack_coffee.png",
+    "width": 372,
+    "height": 426,
+    "category": "food",
+    "notes": "snack_coffee sprite"
+  },
+  "food/snack_energy_drink": {
+    "file": "assets/images/food/snack_energy_drink.png",
+    "width": 216,
+    "height": 444,
+    "category": "food",
+    "notes": "snack_energy_drink sprite"
+  },
+  "trophies/trophy_t1": {
+    "file": "assets/images/trophies/trophy_t1.png",
+    "width": 264,
+    "height": 336,
+    "category": "trophies",
+    "notes": "trophy_t1 sprite"
+  },
+  "trophies/trophy_t2": {
+    "file": "assets/images/trophies/trophy_t2.png",
+    "width": 336,
+    "height": 357,
+    "category": "trophies",
+    "notes": "trophy_t2 sprite"
+  },
+  "trophies/trophy_t3": {
+    "file": "assets/images/trophies/trophy_t3.png",
+    "width": 384,
+    "height": 492,
+    "category": "trophies",
+    "notes": "trophy_t3 sprite"
+  },
+  "trophies/trophy_t4": {
+    "file": "assets/images/trophies/trophy_t4.png",
+    "width": 552,
+    "height": 525,
+    "category": "trophies",
+    "notes": "trophy_t4 sprite"
+  },
+  "trophies/trophy_t5": {
+    "file": "assets/images/trophies/trophy_t5.png",
+    "width": 384,
+    "height": 544,
+    "category": "trophies",
+    "notes": "trophy_t5 sprite"
+  },
+  "trophies/trophy_t6": {
+    "file": "assets/images/trophies/trophy_t6.png",
+    "width": 336,
+    "height": 551,
+    "category": "trophies",
+    "notes": "trophy_t6 sprite"
+  },
+  "trophies/trophy_t7": {
+    "file": "assets/images/trophies/trophy_t7.png",
+    "width": 264,
+    "height": 550,
+    "category": "trophies",
+    "notes": "trophy_t7 sprite"
+  },
+  "trophies/award_mvp": {
+    "file": "assets/images/trophies/award_mvp.png",
+    "width": 264,
+    "height": 540,
+    "category": "trophies",
+    "notes": "award_mvp sprite"
+  },
+  "trophies/award_rookie": {
+    "file": "assets/images/trophies/award_rookie.png",
+    "width": 288,
+    "height": 516,
+    "category": "trophies",
+    "notes": "award_rookie sprite"
+  },
+  "trophies/award_streamer": {
+    "file": "assets/images/trophies/award_streamer.png",
+    "width": 240,
+    "height": 504,
+    "category": "trophies",
+    "notes": "award_streamer sprite"
+  },
+  "trophies/award_team": {
+    "file": "assets/images/trophies/award_team.png",
+    "width": 384,
+    "height": 468,
+    "category": "trophies",
+    "notes": "award_team sprite"
+  },
+  "trophies/award_play": {
+    "file": "assets/images/trophies/award_play.png",
+    "width": 336,
+    "height": 501,
+    "category": "trophies",
+    "notes": "award_play sprite"
+  },
+  "venues/venue_internet_cafe": {
+    "file": "assets/images/venues/venue_internet_cafe.png",
+    "width": 201,
+    "height": 165,
+    "category": "venues",
+    "notes": "venue_internet_cafe sprite"
+  },
+  "venues/venue_school_gym": {
+    "file": "assets/images/venues/venue_school_gym.png",
+    "width": 210,
+    "height": 171,
+    "category": "venues",
+    "notes": "venue_school_gym sprite"
+  },
+  "venues/venue_barangay_court": {
+    "file": "assets/images/venues/venue_barangay_court.png",
+    "width": 202,
+    "height": 171,
+    "category": "venues",
+    "notes": "venue_barangay_court sprite"
+  },
+  "venues/venue_town_arena": {
+    "file": "assets/images/venues/venue_town_arena.png",
+    "width": 205,
+    "height": 183,
+    "category": "venues",
+    "notes": "venue_town_arena sprite"
+  },
+  "venues/venue_provincial_hall": {
+    "file": "assets/images/venues/venue_provincial_hall.png",
+    "width": 210,
+    "height": 172,
+    "category": "venues",
+    "notes": "venue_provincial_hall sprite"
+  },
+  "venues/venue_regional_arena": {
+    "file": "assets/images/venues/venue_regional_arena.png",
+    "width": 205,
+    "height": 177,
+    "category": "venues",
+    "notes": "venue_regional_arena sprite"
+  },
+  "venues/venue_national_stadium": {
+    "file": "assets/images/venues/venue_national_stadium.png",
+    "width": 204,
+    "height": 192,
+    "category": "venues",
+    "notes": "venue_national_stadium sprite"
+  },
+  "venues/venue_apac_arena": {
+    "file": "assets/images/venues/venue_apac_arena.png",
+    "width": 210,
+    "height": 181,
+    "category": "venues",
+    "notes": "venue_apac_arena sprite"
+  },
+  "venues/venue_world_stadium": {
+    "file": "assets/images/venues/venue_world_stadium.png",
+    "width": 209,
+    "height": 205,
+    "category": "venues",
+    "notes": "venue_world_stadium sprite"
+  },
+  "places/place_sari_sari": {
+    "file": "assets/images/places/place_sari_sari.png",
+    "width": 195,
+    "height": 188,
+    "category": "places",
+    "notes": "place_sari_sari sprite"
+  },
+  "places/place_jeepney": {
+    "file": "assets/images/places/place_jeepney.png",
+    "width": 202,
+    "height": 165,
+    "category": "places",
+    "notes": "place_jeepney sprite"
+  },
+  "places/place_tricycle": {
+    "file": "assets/images/places/place_tricycle.png",
+    "width": 196,
+    "height": 159,
+    "category": "places",
+    "notes": "place_tricycle sprite"
+  },
+  "places/place_barangay_hall": {
+    "file": "assets/images/places/place_barangay_hall.png",
+    "width": 203,
+    "height": 183,
+    "category": "places",
+    "notes": "place_barangay_hall sprite"
+  },
+  "places/place_church": {
+    "file": "assets/images/places/place_church.png",
+    "width": 203,
+    "height": 194,
+    "category": "places",
+    "notes": "place_church sprite"
+  },
+  "places/place_palengke": {
+    "file": "assets/images/places/place_palengke.png",
+    "width": 197,
+    "height": 189,
+    "category": "places",
+    "notes": "place_palengke sprite"
+  },
+  "places/place_mall": {
+    "file": "assets/images/places/place_mall.png",
+    "width": 195,
+    "height": 194,
+    "category": "places",
+    "notes": "place_mall sprite"
+  },
+  "places/place_airport": {
+    "file": "assets/images/places/place_airport.png",
+    "width": 208,
+    "height": 185,
+    "category": "places",
+    "notes": "place_airport sprite"
+  },
+  "places/place_hotel": {
+    "file": "assets/images/places/place_hotel.png",
+    "width": 204,
+    "height": 194,
+    "category": "places",
+    "notes": "place_hotel sprite"
+  },
+  "icons/role_carry": {
+    "file": "assets/images/icons/role_carry.png",
+    "width": 125,
+    "height": 128,
+    "category": "icons",
+    "notes": "role_carry sprite"
+  },
+  "icons/role_mid": {
+    "file": "assets/images/icons/role_mid.png",
+    "width": 124,
+    "height": 128,
+    "category": "icons",
+    "notes": "role_mid sprite"
+  },
+  "icons/role_roamer": {
+    "file": "assets/images/icons/role_roamer.png",
+    "width": 124,
+    "height": 126,
+    "category": "icons",
+    "notes": "role_roamer sprite"
+  },
+  "icons/role_tank": {
+    "file": "assets/images/icons/role_tank.png",
+    "width": 125,
+    "height": 128,
+    "category": "icons",
+    "notes": "role_tank sprite"
+  },
+  "icons/role_support": {
+    "file": "assets/images/icons/role_support.png",
+    "width": 125,
+    "height": 125,
+    "category": "icons",
+    "notes": "role_support sprite"
+  },
+  "icons/stat_aim": {
+    "file": "assets/images/icons/stat_aim.png",
+    "width": 124,
+    "height": 125,
+    "category": "icons",
+    "notes": "stat_aim sprite"
+  },
+  "icons/stat_reaction": {
+    "file": "assets/images/icons/stat_reaction.png",
+    "width": 124,
+    "height": 125,
+    "category": "icons",
+    "notes": "stat_reaction sprite"
+  },
+  "icons/stat_sense": {
+    "file": "assets/images/icons/stat_sense.png",
+    "width": 125,
+    "height": 125,
+    "category": "icons",
+    "notes": "stat_sense sprite"
+  },
+  "icons/stat_teamwork": {
+    "file": "assets/images/icons/stat_teamwork.png",
+    "width": 125,
+    "height": 125,
+    "category": "icons",
+    "notes": "stat_teamwork sprite"
+  },
+  "icons/stat_mental": {
+    "file": "assets/images/icons/stat_mental.png",
+    "width": 124,
+    "height": 124,
+    "category": "icons",
+    "notes": "stat_mental sprite"
+  },
+  "icons/stat_stamina": {
+    "file": "assets/images/icons/stat_stamina.png",
+    "width": 124,
+    "height": 125,
+    "category": "icons",
+    "notes": "stat_stamina sprite"
+  },
+  "icons/badge_captain": {
+    "file": "assets/images/icons/badge_captain.png",
+    "width": 125,
+    "height": 124,
+    "category": "icons",
+    "notes": "badge_captain sprite"
+  },
+  "icons/nav_team": {
+    "file": "assets/images/icons/nav_team.png",
+    "width": 455,
+    "height": 456,
+    "category": "icons",
+    "notes": "nav_team sprite"
+  },
+  "icons/nav_plan": {
+    "file": "assets/images/icons/nav_plan.png",
+    "width": 456,
+    "height": 456,
+    "category": "icons",
+    "notes": "nav_plan sprite"
+  },
+  "icons/nav_compete": {
+    "file": "assets/images/icons/nav_compete.png",
+    "width": 456,
+    "height": 456,
+    "category": "icons",
+    "notes": "nav_compete sprite"
+  },
+  "icons/nav_build": {
+    "file": "assets/images/icons/nav_build.png",
+    "width": 455,
+    "height": 456,
+    "category": "icons",
+    "notes": "nav_build sprite"
+  },
+  "icons/nav_more": {
+    "file": "assets/images/icons/nav_more.png",
+    "width": 455,
+    "height": 456,
+    "category": "icons",
+    "notes": "nav_more sprite"
+  },
+  "icons/speed_pause": {
+    "file": "assets/images/icons/speed_pause.png",
+    "width": 456,
+    "height": 456,
+    "category": "icons",
+    "notes": "speed_pause sprite"
+  },
+  "icons/speed_1x": {
+    "file": "assets/images/icons/speed_1x.png",
+    "width": 456,
+    "height": 456,
+    "category": "icons",
+    "notes": "speed_1x sprite"
+  },
+  "icons/speed_2x": {
+    "file": "assets/images/icons/speed_2x.png",
+    "width": 456,
+    "height": 456,
+    "category": "icons",
+    "notes": "speed_2x sprite"
+  },
+  "icons/speed_4x": {
+    "file": "assets/images/icons/speed_4x.png",
+    "width": 456,
+    "height": 456,
+    "category": "icons",
+    "notes": "speed_4x sprite"
+  },
+  "icons/sound_on": {
+    "file": "assets/images/icons/sound_on.png",
+    "width": 455,
+    "height": 456,
+    "category": "icons",
+    "notes": "sound_on sprite"
+  },
+  "icons/sound_off": {
+    "file": "assets/images/icons/sound_off.png",
+    "width": 455,
+    "height": 456,
+    "category": "icons",
+    "notes": "sound_off sprite"
+  },
+  "icons/music": {
+    "file": "assets/images/icons/music.png",
+    "width": 456,
+    "height": 456,
+    "category": "icons",
+    "notes": "music sprite"
+  },
+  "icons/face_great": {
+    "file": "assets/images/icons/face_great.png",
+    "width": 408,
+    "height": 409,
+    "category": "icons",
+    "notes": "face_great sprite"
+  },
+  "icons/face_good": {
+    "file": "assets/images/icons/face_good.png",
+    "width": 408,
+    "height": 408,
+    "category": "icons",
+    "notes": "face_good sprite"
+  },
+  "icons/face_normal": {
+    "file": "assets/images/icons/face_normal.png",
+    "width": 408,
+    "height": 408,
+    "category": "icons",
+    "notes": "face_normal sprite"
+  },
+  "icons/face_tired": {
+    "file": "assets/images/icons/face_tired.png",
+    "width": 408,
+    "height": 408,
+    "category": "icons",
+    "notes": "face_tired sprite"
+  },
+  "icons/face_exhausted": {
+    "file": "assets/images/icons/face_exhausted.png",
+    "width": 408,
+    "height": 396,
+    "category": "icons",
+    "notes": "face_exhausted sprite"
+  },
+  "icons/rank_rookie": {
+    "file": "assets/images/icons/rank_rookie.png",
+    "width": 360,
+    "height": 358,
+    "category": "icons",
+    "notes": "rank_rookie sprite"
+  },
+  "icons/rank_amateur": {
+    "file": "assets/images/icons/rank_amateur.png",
+    "width": 360,
+    "height": 342,
+    "category": "icons",
+    "notes": "rank_amateur sprite"
+  },
+  "icons/rank_semipro": {
+    "file": "assets/images/icons/rank_semipro.png",
+    "width": 360,
+    "height": 357,
+    "category": "icons",
+    "notes": "rank_semipro sprite"
+  },
+  "icons/rank_pro": {
+    "file": "assets/images/icons/rank_pro.png",
+    "width": 359,
+    "height": 360,
+    "category": "icons",
+    "notes": "rank_pro sprite"
+  },
+  "icons/rank_star": {
+    "file": "assets/images/icons/rank_star.png",
+    "width": 528,
+    "height": 359,
+    "category": "icons",
+    "notes": "rank_star sprite"
+  },
+  "icons/rank_legend": {
+    "file": "assets/images/icons/rank_legend.png",
+    "width": 432,
+    "height": 437,
+    "category": "icons",
+    "notes": "rank_legend sprite"
+  },
+  "icons/level_up": {
+    "file": "assets/images/icons/level_up.png",
+    "width": 312,
+    "height": 348,
+    "category": "icons",
+    "notes": "level_up sprite"
+  },
+  "icons/strat_rush": {
+    "file": "assets/images/icons/strat_rush.png",
+    "width": 408,
+    "height": 396,
+    "category": "icons",
+    "notes": "strat_rush sprite"
+  },
+  "icons/strat_teamfight": {
+    "file": "assets/images/icons/strat_teamfight.png",
+    "width": 408,
+    "height": 396,
+    "category": "icons",
+    "notes": "strat_teamfight sprite"
+  },
+  "icons/strat_scale": {
+    "file": "assets/images/icons/strat_scale.png",
+    "width": 408,
+    "height": 396,
+    "category": "icons",
+    "notes": "strat_scale sprite"
+  },
+  "icons/strat_split": {
+    "file": "assets/images/icons/strat_split.png",
+    "width": 408,
+    "height": 396,
+    "category": "icons",
+    "notes": "strat_split sprite"
+  },
+  "icons/ui_settings": {
+    "file": "assets/images/icons/ui_settings.png",
+    "width": 384,
+    "height": 384,
+    "category": "icons",
+    "notes": "ui_settings sprite"
+  },
+  "icons/ui_back": {
+    "file": "assets/images/icons/ui_back.png",
+    "width": 384,
+    "height": 384,
+    "category": "icons",
+    "notes": "ui_back sprite"
+  },
+  "icons/ui_close": {
+    "file": "assets/images/icons/ui_close.png",
+    "width": 384,
+    "height": 384,
+    "category": "icons",
+    "notes": "ui_close sprite"
+  },
+  "icons/ui_plus": {
+    "file": "assets/images/icons/ui_plus.png",
+    "width": 384,
+    "height": 384,
+    "category": "icons",
+    "notes": "ui_plus sprite"
+  },
+  "icons/ui_lock": {
+    "file": "assets/images/icons/ui_lock.png",
+    "width": 384,
+    "height": 384,
+    "category": "icons",
+    "notes": "ui_lock sprite"
+  },
+  "icons/ui_new": {
+    "file": "assets/images/icons/ui_new.png",
+    "width": 384,
+    "height": 396,
+    "category": "icons",
+    "notes": "ui_new sprite"
+  },
+  "icons/ui_check": {
+    "file": "assets/images/icons/ui_check.png",
+    "width": 360,
+    "height": 384,
+    "category": "icons",
+    "notes": "ui_check sprite"
+  },
+  "icons/ui_warning": {
+    "file": "assets/images/icons/ui_warning.png",
+    "width": 384,
+    "height": 384,
+    "category": "icons",
+    "notes": "ui_warning sprite"
+  },
+  "effects/emote_zzz": {
+    "file": "assets/images/effects/emote_zzz.png",
+    "width": 504,
+    "height": 516,
+    "category": "effects",
+    "notes": "emote_zzz sprite"
+  },
+  "effects/emote_sweat": {
+    "file": "assets/images/effects/emote_sweat.png",
+    "width": 506,
+    "height": 516,
+    "category": "effects",
+    "notes": "emote_sweat sprite"
+  },
+  "effects/emote_heart": {
+    "file": "assets/images/effects/emote_heart.png",
+    "width": 506,
+    "height": 516,
+    "category": "effects",
+    "notes": "emote_heart sprite"
+  },
+  "effects/emote_sparkle": {
+    "file": "assets/images/effects/emote_sparkle.png",
+    "width": 504,
+    "height": 516,
+    "category": "effects",
+    "notes": "emote_sparkle sprite"
+  },
+  "effects/emote_angry": {
+    "file": "assets/images/effects/emote_angry.png",
+    "width": 504,
+    "height": 504,
+    "category": "effects",
+    "notes": "emote_angry sprite"
+  },
+  "effects/emote_music": {
+    "file": "assets/images/effects/emote_music.png",
+    "width": 505,
+    "height": 504,
+    "category": "effects",
+    "notes": "emote_music sprite"
+  },
+  "effects/emote_idea": {
+    "file": "assets/images/effects/emote_idea.png",
+    "width": 505,
+    "height": 504,
+    "category": "effects",
+    "notes": "emote_idea sprite"
+  },
+  "effects/emote_question": {
+    "file": "assets/images/effects/emote_question.png",
+    "width": 504,
+    "height": 504,
+    "category": "effects",
+    "notes": "emote_question sprite"
+  },
+  "effects/emote_exclaim": {
+    "file": "assets/images/effects/emote_exclaim.png",
+    "width": 504,
+    "height": 504,
+    "category": "effects",
+    "notes": "emote_exclaim sprite"
+  },
+  "effects/fx_coin": {
+    "file": "assets/images/effects/fx_coin.png",
+    "width": 505,
+    "height": 504,
+    "category": "effects",
+    "notes": "fx_coin sprite"
+  },
+  "effects/fx_confetti": {
+    "file": "assets/images/effects/fx_confetti.png",
+    "width": 505,
+    "height": 504,
+    "category": "effects",
+    "notes": "fx_confetti sprite"
+  },
+  "effects/fx_live_dot": {
+    "file": "assets/images/effects/fx_live_dot.png",
+    "width": 504,
+    "height": 504,
+    "category": "effects",
+    "notes": "fx_live_dot sprite"
+  },
+  "icons/event_brownout": {
+    "file": "assets/images/icons/event_brownout.png",
+    "width": 528,
+    "height": 522,
+    "category": "icons",
+    "notes": "event_brownout sprite"
+  },
+  "icons/event_typhoon": {
+    "file": "assets/images/icons/event_typhoon.png",
+    "width": 528,
+    "height": 505,
+    "category": "icons",
+    "notes": "event_typhoon sprite"
+  },
+  "icons/event_viral_clip": {
+    "file": "assets/images/icons/event_viral_clip.png",
+    "width": 528,
+    "height": 515,
+    "category": "icons",
+    "notes": "event_viral_clip sprite"
+  },
+  "icons/event_controversy": {
+    "file": "assets/images/icons/event_controversy.png",
+    "width": 528,
+    "height": 510,
+    "category": "icons",
+    "notes": "event_controversy sprite"
+  },
+  "icons/event_poaching": {
+    "file": "assets/images/icons/event_poaching.png",
+    "width": 528,
+    "height": 527,
+    "category": "icons",
+    "notes": "event_poaching sprite"
+  },
+  "icons/event_scam": {
+    "file": "assets/images/icons/event_scam.png",
+    "width": 528,
+    "height": 523,
+    "category": "icons",
+    "notes": "event_scam sprite"
+  },
+  "icons/event_bribe": {
+    "file": "assets/images/icons/event_bribe.png",
+    "width": 528,
+    "height": 528,
+    "category": "icons",
+    "notes": "event_bribe sprite"
+  },
+  "icons/event_burnout": {
+    "file": "assets/images/icons/event_burnout.png",
+    "width": 528,
+    "height": 528,
+    "category": "icons",
+    "notes": "event_burnout sprite"
+  },
+  "icons/event_pc_breakdown": {
+    "file": "assets/images/icons/event_pc_breakdown.png",
+    "width": 528,
+    "height": 527,
+    "category": "icons",
+    "notes": "event_pc_breakdown sprite"
+  },
+  "icons/event_patch_notes": {
+    "file": "assets/images/icons/event_patch_notes.png",
+    "width": 528,
+    "height": 525,
+    "category": "icons",
+    "notes": "event_patch_notes sprite"
+  },
+  "icons/event_fan_meetup": {
+    "file": "assets/images/icons/event_fan_meetup.png",
+    "width": 528,
+    "height": 528,
+    "category": "icons",
+    "notes": "event_fan_meetup sprite"
+  },
+  "icons/event_charity": {
+    "file": "assets/images/icons/event_charity.png",
+    "width": 528,
+    "height": 528,
+    "category": "icons",
+    "notes": "event_charity sprite"
+  },
+  "emblems/rival_kidlat": {
+    "file": "assets/images/emblems/rival_kidlat.png",
+    "width": 160,
+    "height": 185,
+    "category": "emblems",
+    "notes": "rival_kidlat sprite"
+  },
+  "emblems/rival_bakal": {
+    "file": "assets/images/emblems/rival_bakal.png",
+    "width": 158,
+    "height": 182,
+    "category": "emblems",
+    "notes": "rival_bakal sprite"
+  },
+  "emblems/rival_dagat": {
+    "file": "assets/images/emblems/rival_dagat.png",
+    "width": 160,
+    "height": 183,
+    "category": "emblems",
+    "notes": "rival_dagat sprite"
+  },
+  "emblems/rival_mayon": {
+    "file": "assets/images/emblems/rival_mayon.png",
+    "width": 160,
+    "height": 189,
+    "category": "emblems",
+    "notes": "rival_mayon sprite"
+  },
+  "emblems/rival_tarsier": {
+    "file": "assets/images/emblems/rival_tarsier.png",
+    "width": 178,
+    "height": 190,
+    "category": "emblems",
+    "notes": "rival_tarsier sprite"
+  },
+  "emblems/rival_pawikan": {
+    "file": "assets/images/emblems/rival_pawikan.png",
+    "width": 184,
+    "height": 184,
+    "category": "emblems",
+    "notes": "rival_pawikan sprite"
+  },
+  "emblems/rival_agila": {
+    "file": "assets/images/emblems/rival_agila.png",
+    "width": 168,
+    "height": 186,
+    "category": "emblems",
+    "notes": "rival_agila sprite"
+  },
+  "emblems/rival_banaue": {
+    "file": "assets/images/emblems/rival_banaue.png",
+    "width": 184,
+    "height": 186,
+    "category": "emblems",
+    "notes": "rival_banaue sprite"
+  },
+  "emblems/rival_siargao": {
+    "file": "assets/images/emblems/rival_siargao.png",
+    "width": 183,
+    "height": 180,
+    "category": "emblems",
+    "notes": "rival_siargao sprite"
+  },
+  "emblems/my_01": {
+    "file": "assets/images/emblems/my_01.png",
+    "width": 432,
+    "height": 480,
+    "category": "emblems",
+    "notes": "my_01 sprite"
+  },
+  "emblems/my_02": {
+    "file": "assets/images/emblems/my_02.png",
+    "width": 480,
+    "height": 480,
+    "category": "emblems",
+    "notes": "my_02 sprite"
+  },
+  "emblems/my_03": {
+    "file": "assets/images/emblems/my_03.png",
+    "width": 432,
+    "height": 480,
+    "category": "emblems",
+    "notes": "my_03 sprite"
+  },
+  "emblems/my_04": {
+    "file": "assets/images/emblems/my_04.png",
+    "width": 432,
+    "height": 456,
+    "category": "emblems",
+    "notes": "my_04 sprite"
+  },
+  "emblems/my_05": {
+    "file": "assets/images/emblems/my_05.png",
+    "width": 456,
+    "height": 492,
+    "category": "emblems",
+    "notes": "my_05 sprite"
+  },
+  "emblems/my_06": {
+    "file": "assets/images/emblems/my_06.png",
+    "width": 408,
+    "height": 492,
+    "category": "emblems",
+    "notes": "my_06 sprite"
+  },
+  "emblems/my_07": {
+    "file": "assets/images/emblems/my_07.png",
+    "width": 432,
+    "height": 431,
+    "category": "emblems",
+    "notes": "my_07 sprite"
+  },
+  "emblems/my_08": {
+    "file": "assets/images/emblems/my_08.png",
+    "width": 384,
+    "height": 452,
+    "category": "emblems",
+    "notes": "my_08 sprite"
+  },
+  "emblems/my_09": {
+    "file": "assets/images/emblems/my_09.png",
+    "width": 384,
+    "height": 468,
+    "category": "emblems",
+    "notes": "my_09 sprite"
+  },
+  "emblems/my_10": {
+    "file": "assets/images/emblems/my_10.png",
+    "width": 408,
+    "height": 420,
+    "category": "emblems",
+    "notes": "my_10 sprite"
+  },
+  "emblems/my_11": {
+    "file": "assets/images/emblems/my_11.png",
+    "width": 384,
+    "height": 456,
+    "category": "emblems",
+    "notes": "my_11 sprite"
+  },
+  "emblems/my_12": {
+    "file": "assets/images/emblems/my_12.png",
+    "width": 408,
+    "height": 420,
+    "category": "emblems",
+    "notes": "my_12 sprite"
+  },
+  "emblems/sponsor_lakas": {
+    "file": "assets/images/emblems/sponsor_lakas.png",
+    "width": 528,
+    "height": 528,
+    "category": "emblems",
+    "notes": "sponsor_lakas sprite"
+  },
+  "emblems/sponsor_voltedge": {
+    "file": "assets/images/emblems/sponsor_voltedge.png",
+    "width": 528,
+    "height": 522,
+    "category": "emblems",
+    "notes": "sponsor_voltedge sprite"
+  },
+  "emblems/sponsor_silog": {
+    "file": "assets/images/emblems/sponsor_silog.png",
+    "width": 528,
+    "height": 526,
+    "category": "emblems",
+    "notes": "sponsor_silog sprite"
+  },
+  "emblems/sponsor_kapeko": {
+    "file": "assets/images/emblems/sponsor_kapeko.png",
+    "width": 528,
+    "height": 521,
+    "category": "emblems",
+    "notes": "sponsor_kapeko sprite"
+  },
+  "emblems/sponsor_byteburger": {
+    "file": "assets/images/emblems/sponsor_byteburger.png",
+    "width": 528,
+    "height": 527,
+    "category": "emblems",
+    "notes": "sponsor_byteburger sprite"
+  },
+  "emblems/sponsor_bayanihan": {
+    "file": "assets/images/emblems/sponsor_bayanihan.png",
+    "width": 528,
+    "height": 527,
+    "category": "emblems",
+    "notes": "sponsor_bayanihan sprite"
+  },
+  "emblems/sponsor_gising": {
+    "file": "assets/images/emblems/sponsor_gising.png",
+    "width": 528,
+    "height": 528,
+    "category": "emblems",
+    "notes": "sponsor_gising sprite"
+  },
+  "emblems/sponsor_tindanet": {
+    "file": "assets/images/emblems/sponsor_tindanet.png",
+    "width": 528,
+    "height": 527,
+    "category": "emblems",
+    "notes": "sponsor_tindanet sprite"
+  },
+  "emblems/sponsor_sulit": {
+    "file": "assets/images/emblems/sponsor_sulit.png",
+    "width": 528,
+    "height": 528,
+    "category": "emblems",
+    "notes": "sponsor_sulit sprite"
+  },
+  "emblems/sponsor_pixelpinoy": {
+    "file": "assets/images/emblems/sponsor_pixelpinoy.png",
+    "width": 528,
+    "height": 527,
+    "category": "emblems",
+    "notes": "sponsor_pixelpinoy sprite"
+  },
+  "emblems/sponsor_skylink": {
+    "file": "assets/images/emblems/sponsor_skylink.png",
+    "width": 528,
+    "height": 528,
+    "category": "emblems",
+    "notes": "sponsor_skylink sprite"
+  },
+  "emblems/sponsor_kuryente": {
+    "file": "assets/images/emblems/sponsor_kuryente.png",
+    "width": 528,
+    "height": 528,
+    "category": "emblems",
+    "notes": "sponsor_kuryente sprite"
+  },
+  "effects_banner_kill": {
+    "file": "assets/images/effects/banner_kill.png",
+    "width": 552,
+    "height": 204,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_banner_multi": {
+    "file": "assets/images/effects/banner_multi.png",
+    "width": 528,
+    "height": 288,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_banner_ace": {
+    "file": "assets/images/effects/banner_ace.png",
+    "width": 552,
+    "height": 240,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_banner_clutch": {
+    "file": "assets/images/effects/banner_clutch.png",
+    "width": 552,
+    "height": 240,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_fx_hit_spark": {
+    "file": "assets/images/effects/fx_hit_spark.png",
+    "width": 432,
+    "height": 480,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_fx_explosion": {
+    "file": "assets/images/effects/fx_explosion.png",
+    "width": 504,
+    "height": 481,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_fx_shockwave": {
+    "file": "assets/images/effects/fx_shockwave.png",
+    "width": 434,
+    "height": 432,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_fx_beam": {
+    "file": "assets/images/effects/fx_beam.png",
+    "width": 506,
+    "height": 218,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_icon_skull": {
+    "file": "assets/images/effects/icon_skull.png",
+    "width": 312,
+    "height": 360,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_fx_shield": {
+    "file": "assets/images/effects/fx_shield.png",
+    "width": 482,
+    "height": 481,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_badge_vs": {
+    "file": "assets/images/effects/badge_vs.png",
+    "width": 432,
+    "height": 444,
+    "category": "effects",
+    "notes": ""
+  },
+  "effects_fx_lightsticks": {
+    "file": "assets/images/effects/fx_lightsticks.png",
+    "width": 466,
+    "height": 446,
+    "category": "effects",
+    "notes": ""
+  },
+  "caster_tonyo_talk": {
+    "file": "assets/images/characters/caster_tonyo_talk.png",
+    "width": 1136,
+    "height": 779,
+    "category": "characters",
+    "notes": ""
+  },
+  "caster_maya_talk": {
+    "file": "assets/images/characters/caster_maya_talk.png",
+    "width": 1132,
+    "height": 779,
+    "category": "characters",
+    "notes": ""
+  },
+  "caster_tonyo_idle": {
+    "file": "assets/images/characters/caster_tonyo_idle.png",
+    "width": 1114,
+    "height": 783,
+    "category": "characters",
+    "notes": ""
+  },
+  "caster_maya_idle": {
+    "file": "assets/images/characters/caster_maya_idle.png",
+    "width": 1114,
+    "height": 783,
+    "category": "characters",
+    "notes": ""
+  },
+  "furniture_streaming_booth_on1": {
+    "file": "assets/images/furniture/streaming_booth_on1.png",
+    "width": 675,
+    "height": 664,
+    "category": "furniture",
+    "notes": ""
+  },
+  "furniture_gym_corner_on1": {
+    "file": "assets/images/furniture/gym_corner_on1.png",
+    "width": 669,
+    "height": 615,
+    "category": "furniture",
+    "notes": ""
+  },
+  "furniture_merch_corner_on1": {
+    "file": "assets/images/furniture/merch_corner_on1.png",
+    "width": 597,
+    "height": 666,
+    "category": "furniture",
+    "notes": ""
+  },
+  "furniture_streaming_booth_on2": {
+    "file": "assets/images/furniture/streaming_booth_on2.png",
+    "width": 675,
+    "height": 664,
+    "category": "furniture",
+    "notes": ""
+  },
+  "furniture_gym_corner_on2": {
+    "file": "assets/images/furniture/gym_corner_on2.png",
+    "width": 669,
+    "height": 615,
+    "category": "furniture",
+    "notes": ""
+  },
+  "furniture_merch_corner_on2": {
+    "file": "assets/images/furniture/merch_corner_on2.png",
+    "width": 597,
+    "height": 666,
+    "category": "furniture",
+    "notes": ""
+  },
+  "banners_banner_t4": {
+    "file": "assets/images/banners/banner_t4.png",
+    "width": 1364,
+    "height": 1228,
+    "category": "banners",
+    "notes": ""
+  },
+  "banners_banner_t6": {
+    "file": "assets/images/banners/banner_t6.png",
+    "width": 1364,
+    "height": 1229,
+    "category": "banners",
+    "notes": ""
+  },
+  "match_seated_blue_focus": {
+    "file": "assets/images/characters/match/seated_blue_focus.png",
+    "width": 48,
+    "height": 48,
+    "category": "characters",
+    "notes": ""
+  },
+  "match_seated_blue_cheer": {
+    "file": "assets/images/characters/match/seated_blue_cheer.png",
+    "width": 48,
+    "height": 48,
+    "category": "characters",
+    "notes": ""
+  },
+  "match_seated_blue_slump": {
+    "file": "assets/images/characters/match/seated_blue_slump.png",
+    "width": 48,
+    "height": 48,
+    "category": "characters",
+    "notes": ""
+  },
+  "match_seated_red_focus": {
+    "file": "assets/images/characters/match/seated_red_focus.png",
+    "width": 48,
+    "height": 48,
+    "category": "characters",
+    "notes": ""
+  },
+  "match_seated_red_cheer": {
+    "file": "assets/images/characters/match/seated_red_cheer.png",
+    "width": 48,
+    "height": 48,
+    "category": "characters",
+    "notes": ""
+  },
+  "match_seated_red_slump": {
+    "file": "assets/images/characters/match/seated_red_slump.png",
+    "width": 48,
+    "height": 48,
+    "category": "characters",
+    "notes": ""
+  },
+  "match_seated_green_focus": {
+    "file": "assets/images/characters/match/seated_green_focus.png",
+    "width": 48,
+    "height": 48,
+    "category": "characters",
+    "notes": ""
+  },
+  "match_seated_yellow_focus": {
+    "file": "assets/images/characters/match/seated_yellow_focus.png",
+    "width": 48,
+    "height": 48,
+    "category": "characters",
+    "notes": ""
+  },
+  "match_seated_purple_focus": {
+    "file": "assets/images/characters/match/seated_purple_focus.png",
+    "width": 48,
+    "height": 48,
+    "category": "characters",
+    "notes": ""
+  },
+  "ui_ribbon": {
+    "file": "assets/images/ui/ribbon.png",
+    "width": 563,
+    "height": 281,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_bubble": {
+    "file": "assets/images/ui/bubble.png",
+    "width": 563,
+    "height": 281,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_row_frame": {
+    "file": "assets/images/ui/row_frame.png",
+    "width": 487,
+    "height": 395,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_hud_chip": {
+    "file": "assets/images/ui/hud_chip.png",
+    "width": 544,
+    "height": 441,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_ticker": {
+    "file": "assets/images/ui/ticker.png",
+    "width": 572,
+    "height": 479,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_tab_on": {
+    "file": "assets/images/ui/tab_on.png",
+    "width": 573,
+    "height": 479,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_tab_off": {
+    "file": "assets/images/ui/tab_off.png",
+    "width": 544,
+    "height": 479,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_toggle_on": {
+    "file": "assets/images/ui/toggle_on.png",
+    "width": 544,
+    "height": 469,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_toggle_off": {
+    "file": "assets/images/ui/toggle_off.png",
+    "width": 357,
+    "height": 188,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_star_full": {
+    "file": "assets/images/ui/star_full.png",
+    "width": 488,
+    "height": 488,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_star_half": {
+    "file": "assets/images/ui/star_half.png",
+    "width": 487,
+    "height": 488,
+    "category": "ui",
+    "notes": ""
+  },
+  "ui_star_empty": {
+    "file": "assets/images/ui/star_empty.png",
+    "width": 488,
+    "height": 488,
+    "category": "ui",
+    "notes": ""
+  },
+  "bg_awards_stage": {
+    "file": "assets/images/backgrounds/awards_stage.png",
+    "width": 720,
+    "height": 1280,
+    "category": "backgrounds",
+    "notes": ""
+  },
+  "bg_match_stage": {
+    "file": "assets/images/backgrounds/match_stage.png",
+    "width": 720,
+    "height": 1280,
+    "category": "backgrounds",
+    "notes": ""
+  },
+  "bg_match_stage_arena": {
+    "file": "assets/images/backgrounds/match_stage_arena.png",
+    "width": 720,
+    "height": 1280,
+    "category": "backgrounds",
+    "notes": ""
+  },
+  "bg_match_stage_community": {
+    "file": "assets/images/backgrounds/match_stage_community.png",
+    "width": 720,
+    "height": 1280,
+    "category": "backgrounds",
+    "notes": ""
+  },
+  "bg_match_stage_world": {
+    "file": "assets/images/backgrounds/match_stage_world.png",
+    "width": 720,
+    "height": 1280,
+    "category": "backgrounds",
+    "notes": ""
+  },
+  "face_fan_auntie": {
+    "file": "assets/images/characters/fan_auntie_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_fan_cosplayer": {
+    "file": "assets/images/characters/fan_cosplayer_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_fan_kagawad": {
+    "file": "assets/images/characters/fan_kagawad_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_fan_kid": {
+    "file": "assets/images/characters/fan_kid_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_fan_lolo": {
+    "file": "assets/images/characters/fan_lolo_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_fan_mascot": {
+    "file": "assets/images/characters/fan_mascot_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_fan_student": {
+    "file": "assets/images/characters/fan_student_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_fan_teen": {
+    "file": "assets/images/characters/fan_teen_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_fan_vlogger": {
+    "file": "assets/images/characters/fan_vlogger_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_f01": {
+    "file": "assets/images/characters/gamer_f01_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_f02": {
+    "file": "assets/images/characters/gamer_f02_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_f03": {
+    "file": "assets/images/characters/gamer_f03_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_f04": {
+    "file": "assets/images/characters/gamer_f04_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_f05": {
+    "file": "assets/images/characters/gamer_f05_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_f06": {
+    "file": "assets/images/characters/gamer_f06_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_f07": {
+    "file": "assets/images/characters/gamer_f07_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_f08": {
+    "file": "assets/images/characters/gamer_f08_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_f09": {
+    "file": "assets/images/characters/gamer_f09_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m01": {
+    "file": "assets/images/characters/gamer_m01_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m02": {
+    "file": "assets/images/characters/gamer_m02_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m03": {
+    "file": "assets/images/characters/gamer_m03_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m04": {
+    "file": "assets/images/characters/gamer_m04_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m05": {
+    "file": "assets/images/characters/gamer_m05_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m06": {
+    "file": "assets/images/characters/gamer_m06_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m07": {
+    "file": "assets/images/characters/gamer_m07_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m08": {
+    "file": "assets/images/characters/gamer_m08_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m09": {
+    "file": "assets/images/characters/gamer_m09_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_gamer_m10": {
+    "file": "assets/images/characters/gamer_m10_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_rival_agila": {
+    "file": "assets/images/characters/rival_agila_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_rival_bakal": {
+    "file": "assets/images/characters/rival_bakal_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_rival_banaue": {
+    "file": "assets/images/characters/rival_banaue_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_rival_dagat": {
+    "file": "assets/images/characters/rival_dagat_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_rival_kidlat": {
+    "file": "assets/images/characters/rival_kidlat_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_rival_mayon": {
+    "file": "assets/images/characters/rival_mayon_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_rival_pawikan": {
+    "file": "assets/images/characters/rival_pawikan_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_rival_siargao": {
+    "file": "assets/images/characters/rival_siargao_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_rival_tarsier": {
+    "file": "assets/images/characters/rival_tarsier_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_staff_analyst": {
+    "file": "assets/images/characters/staff_analyst_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_staff_coach": {
+    "file": "assets/images/characters/staff_coach_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_staff_cook": {
+    "file": "assets/images/characters/staff_cook_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_staff_guard": {
+    "file": "assets/images/characters/staff_guard_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_staff_manager": {
+    "file": "assets/images/characters/staff_manager_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_staff_mika": {
+    "file": "assets/images/characters/staff_mika_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_staff_producer": {
+    "file": "assets/images/characters/staff_producer_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_staff_psychologist": {
+    "file": "assets/images/characters/staff_psychologist_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "face_staff_scout": {
+    "file": "assets/images/characters/staff_scout_face.png",
+    "width": 48,
+    "height": 21,
+    "category": "faces",
+    "notes": ""
+  },
+  "app_icon": {
+    "file": "assets/images/app_icon.png",
+    "width": 512,
+    "height": 512,
+    "category": "system",
+    "notes": ""
   }
 }

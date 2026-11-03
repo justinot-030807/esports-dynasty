@@ -76,8 +76,15 @@ class MatchPrepAnalystReport extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.psychology, color: AppConstants.energyBlue, size: 14),
-              const SizedBox(width: 4),
+              Image.asset(
+                'assets/images/characters/staff_analyst/staff_analyst_front_idle.png',
+                width: 18,
+                height: 18,
+                fit: BoxFit.contain,
+                filterQuality: FilterQuality.none,
+                errorBuilder: (_, _, _) => const Icon(Icons.psychology, color: AppConstants.energyBlue, size: 14),
+              ),
+              const SizedBox(width: 6),
               Text(
                 analyst != null ? 'Analyst Report (Level ${analyst!.level})' : 'Analyst Report (Walang Analyst)',
                 style: const TextStyle(fontFamily: AppConstants.pixelFont, fontSize: 9, fontWeight: FontWeight.bold, color: AppConstants.energyBlue),
@@ -109,6 +116,14 @@ class MatchPrepStrategySelector extends StatelessWidget {
     required this.onStrategySelected,
   });
 
+  String _getStratIcon(String s) {
+    final l = s.toLowerCase();
+    if (l.contains('rush')) return 'assets/images/icons/strat_rush.png';
+    if (l.contains('fight') || l.contains('retake')) return 'assets/images/icons/strat_teamfight.png';
+    if (l.contains('scale') || l.contains('default')) return 'assets/images/icons/strat_scale.png';
+    return 'assets/images/icons/strat_split.png';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -124,6 +139,7 @@ class MatchPrepStrategySelector extends StatelessWidget {
             child: Row(
               children: strategies.map((strat) {
                 final isSel = selectedStrategy == strat;
+                final iconPath = _getStratIcon(strat);
                 return Padding(
                   padding: const EdgeInsets.only(right: 6),
                   child: InkWell(
@@ -134,14 +150,28 @@ class MatchPrepStrategySelector extends StatelessWidget {
                         color: isSel ? AppConstants.moneyGold : const Color(0xFF233458),
                         borderRadius: BorderRadius.circular(4),
                       ),
-                      child: Text(
-                        strat,
-                        style: TextStyle(
-                          fontFamily: AppConstants.pixelFont,
-                          fontSize: 9,
-                          fontWeight: FontWeight.bold,
-                          color: isSel ? AppConstants.bgDark : Colors.white,
-                        ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Image.asset(
+                            iconPath,
+                            width: 14,
+                            height: 14,
+                            fit: BoxFit.contain,
+                            filterQuality: FilterQuality.none,
+                            errorBuilder: (_, _, _) => const SizedBox(),
+                          ),
+                          const SizedBox(width: 4),
+                          Text(
+                            strat,
+                            style: TextStyle(
+                              fontFamily: AppConstants.pixelFont,
+                              fontSize: 9,
+                              fontWeight: FontWeight.bold,
+                              color: isSel ? AppConstants.bgDark : Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),

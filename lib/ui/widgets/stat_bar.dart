@@ -21,18 +21,41 @@ class StatBar extends StatelessWidget {
     return const Color(0xFFED8936); // Orange with sparkle
   }
 
+  String? _getStatIcon(String label) {
+    final l = label.toLowerCase();
+    if (l.contains('aim')) return 'assets/images/icons/stat_aim.png';
+    if (l.contains('react')) return 'assets/images/icons/stat_reaction.png';
+    if (l.contains('sense')) return 'assets/images/icons/stat_sense.png';
+    if (l.contains('team')) return 'assets/images/icons/stat_teamwork.png';
+    if (l.contains('mental')) return 'assets/images/icons/stat_mental.png';
+    if (l.contains('stamina')) return 'assets/images/icons/stat_stamina.png';
+    return null;
+  }
+
   @override
   Widget build(BuildContext context) {
     final clamped = value.clamp(0, 100);
     final barColor = _getColor(clamped);
+    final iconPath = _getStatIcon(label);
 
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 2.0),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
+          if (iconPath != null) ...[
+            Image.asset(
+              iconPath,
+              width: 14,
+              height: 14,
+              fit: BoxFit.contain,
+              filterQuality: FilterQuality.none,
+              errorBuilder: (_, _, _) => const SizedBox(),
+            ),
+            const SizedBox(width: 4),
+          ],
           SizedBox(
-            width: 75,
+            width: iconPath != null ? 70 : 75,
             child: Text(
               label,
               style: const TextStyle(

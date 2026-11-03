@@ -36,6 +36,16 @@ class BottomNav extends StatelessWidget {
     );
   }
 
+  String _getNavIconPath(NavTab tab) {
+    switch (tab) {
+      case NavTab.team: return 'assets/images/icons/nav_team.png';
+      case NavTab.plan: return 'assets/images/icons/nav_plan.png';
+      case NavTab.compete: return 'assets/images/icons/nav_compete.png';
+      case NavTab.build: return 'assets/images/icons/nav_build.png';
+      case NavTab.more: return 'assets/images/icons/nav_more.png';
+    }
+  }
+
   Widget _buildNavItem(NavTab tab, String label, IconData icon) {
     final isSelected = currentTab == tab;
 
@@ -48,10 +58,17 @@ class BottomNav extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                icon,
-                size: 24,
-                color: isSelected ? AppConstants.moneyGold : const Color(0xFF94A3B8),
+              Image.asset(
+                _getNavIconPath(tab),
+                width: 24,
+                height: 24,
+                fit: BoxFit.contain,
+                filterQuality: FilterQuality.none,
+                errorBuilder: (_, _, _) => Icon(
+                  icon,
+                  size: 24,
+                  color: isSelected ? AppConstants.moneyGold : const Color(0xFF94A3B8),
+                ),
               ),
               const SizedBox(height: 3),
               Text(

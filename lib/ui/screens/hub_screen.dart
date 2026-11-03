@@ -28,6 +28,7 @@ import '../dialogs/more_menu_sheet.dart';
 import '../dialogs/event_dialog.dart';
 import '../dialogs/divisions_dialog.dart';
 import '../dialogs/bankruptcy_dialog.dart';
+import '../dialogs/prologue_dialog.dart';
 import '../widgets/division_switcher_bar.dart';
 import 'house_view.dart';
 import 'hub_house_asset_loader.dart';
@@ -58,6 +59,23 @@ class _HubScreenState extends State<HubScreen> {
     _activeSpeed = widget.state.speedMultiplier;
     _loadAssets();
     _startGameLoop();
+
+    if (widget.state.storyFlags['prologue_seen'] != true) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        _pauseForModal();
+        showDialog(
+          context: context,
+          barrierDismissible: false,
+          builder: (_) => PrologueDialog(
+            state: widget.state,
+            onComplete: () {
+              Navigator.of(context).pop();
+              _resumeAfterModal();
+            },
+          ),
+        );
+      });
+    }
   }
 
   Future<void> _loadAssets() async {
@@ -284,11 +302,7 @@ class _HubScreenState extends State<HubScreen> {
           children: [
             TopBar(state: widget.state, onSpeedChanged: _onSpeedChanged, onLogoTapped: () {}),
             NewsTicker(newsItems: news),
-            DivisionSwitcherBar(
-              state: widget.state,
-              onDivisionChanged: () => setState(() {}),
-              onOpenManageDivisions: _openDivisionsDialog,
-            ),
+            DivisionSwitcherBar(state: widget.state, onDivisionChanged: () => setState(() {}), onOpenManageDivisions: _openDivisionsDialog),
             TutorialBanner(
               tutorial: widget.state.tutorial,
               onDismiss: () => setState(() => widget.state.tutorial.step++),
@@ -303,6 +317,8 @@ class _HubScreenState extends State<HubScreen> {
                           charIdle: _assets!.charIdle, charStep1: _assets!.charStep1, charStep2: _assets!.charStep2,
                           deskImage: _assets!.deskImage, bedImage: _assets!.bedImage,
                           kitchenImage: _assets!.kitchenImage, shelfImage: _assets!.shelfImage, roomBg: _assets!.roomBg,
+                          foodImage: _assets!.foodImage,
+                          stationImages: _assets!.stationImages,
                         )
                       : const Center(child: CircularProgressIndicator(color: AppConstants.moneyGold)),
                   if (_activeOverlayTab != null)

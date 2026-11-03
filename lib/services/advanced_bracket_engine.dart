@@ -330,18 +330,10 @@ class AdvancedBracketEngine {
     int stageIndex = 0,
   }) {
     final allMatches = <MatchNode>[];
-    final groupTeamsMap = <int, List<AiTeam>>{};
-    for (int g = 0; g < groupsCount; g++) {
-      groupTeamsMap[g] = [];
-    }
-
-    // Snake seeding
+    final groupTeamsMap = {for (int g = 0; g < groupsCount; g++) g: <AiTeam>[]};
     for (int i = 0; i < participants.length; i++) {
       int round = i ~/ groupsCount;
-      int gIdx = i % groupsCount;
-      if (round % 2 == 1) {
-        gIdx = groupsCount - 1 - gIdx; // reverse on odd rounds
-      }
+      int gIdx = round % 2 == 1 ? groupsCount - 1 - (i % groupsCount) : i % groupsCount;
       groupTeamsMap[gIdx]?.add(participants[i]);
     }
 

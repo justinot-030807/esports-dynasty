@@ -22,6 +22,11 @@ class _BuildTabState extends State<BuildTab> {
   String _selectedCategory = 'all';
   int _viewMode = 0; // 0 = Catalog, 1 = Placed (Sell)
 
+  String _getItemImagePath(String id) {
+    if (id.startsWith('gadget_')) return 'assets/images/items/$id.png';
+    return 'assets/images/furniture/$id.png';
+  }
+
   void _buyItem(String itemId, String name, int price, String station, int sx, int sy) {
     if (widget.state.money < price) {
       _showMessage('Kulang ang pera! Kailangan ng P$price.');
@@ -174,7 +179,7 @@ class _BuildTabState extends State<BuildTab> {
               color: const Color(0xFF162032),
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: ['all', 'pc', 'bed', 'kitchen', 'decor'].map((cat) {
+                children: ['all', 'pc', 'chair', 'bed', 'kitchen', 'decor', 'gadget', 'utility'].map((cat) {
                   final isSelected = _selectedCategory == cat;
                   return Padding(
                     padding: const EdgeInsets.only(right: 6, top: 4, bottom: 4),
@@ -225,16 +230,25 @@ class _BuildTabState extends State<BuildTab> {
                             Container(
                               width: 44,
                               height: 44,
+                              padding: const EdgeInsets.all(3),
                               decoration: BoxDecoration(
                                 color: const Color(0xFF0F172A),
                                 borderRadius: BorderRadius.circular(6),
                                 border: Border.all(color: const Color(0xFF334155), width: 1),
                               ),
-                              child: Icon(
-                                isUnlocked ? Icons.inventory_2 : Icons.lock,
-                                color: isUnlocked ? AppConstants.moneyGold : Colors.white38,
-                                size: 22,
-                              ),
+                              child: isUnlocked
+                                  ? Image.asset(
+                                      _getItemImagePath(item.id),
+                                      fit: BoxFit.contain,
+                                      filterQuality: FilterQuality.none,
+                                      errorBuilder: (_, _, _) => const Icon(Icons.inventory_2, color: AppConstants.moneyGold, size: 22),
+                                    )
+                                  : Image.asset(
+                                      'assets/images/icons/ui_lock.png',
+                                      fit: BoxFit.contain,
+                                      filterQuality: FilterQuality.none,
+                                      errorBuilder: (_, _, _) => const Icon(Icons.lock, color: Colors.white38, size: 22),
+                                    ),
                             ),
                             const SizedBox(width: 12),
 
@@ -322,7 +336,14 @@ class _BuildTabState extends State<BuildTab> {
                             ),
                             child: Row(
                               children: [
-                                const Icon(Icons.chair, color: AppConstants.energyBlue, size: 28),
+                                Image.asset(
+                                  _getItemImagePath(f.itemId),
+                                  width: 34,
+                                  height: 34,
+                                  fit: BoxFit.contain,
+                                  filterQuality: FilterQuality.none,
+                                  errorBuilder: (_, _, _) => const Icon(Icons.chair, color: AppConstants.energyBlue, size: 28),
+                                ),
                                 const SizedBox(width: 10),
                                 Expanded(
                                   child: Column(
