@@ -8,7 +8,8 @@ plugins {
 android {
     namespace = "com.esportsdynasty.esports_dynasty"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    // ndkVersion omitted to prevent unnecessary 1.5GB NDK download in CI
+    // ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
